@@ -35,7 +35,7 @@ var customScripts = {
                 });
                 return false;
             });
-            $(window).smartresize(function () {
+            $(document).smartresize(function () {
                 $container.isotope({
                     // update columnWidth to a percentage of container width
                     masonry: {
@@ -96,12 +96,11 @@ var customScripts = {
     },
     init: function () {
         customScripts.onePageNav();
-        
+        customScripts.profile();
         customScripts.fancybox();
-		customScripts.bannerHeight();
         customScripts.slider();
         customScripts.owlSlider();
-		customScripts.profile();
+        customScripts.bannerHeight();
     }
 }
 $('document').ready(function () {
