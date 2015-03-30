@@ -358,6 +358,7 @@ background: none;
     top: 0px;
     left: 0px;
     right: 0px;
+	height: 100%;
 }
 
     .banner-content h2 {
@@ -377,6 +378,7 @@ background: none;
 
 .da-slider {
     margin: 0 auto !important;
+	height: 100%;
 }
 
 .sub-heading {

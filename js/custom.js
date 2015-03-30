@@ -100,7 +100,7 @@ var customScripts = {
         customScripts.fancybox();
         customScripts.slider();
         customScripts.owlSlider();
-        customScripts.bannerHeight();
+        /* customScripts.bannerHeight(); */
     }
 }
 $('document').ready(function () {
