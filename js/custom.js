@@ -3,7 +3,9 @@
 var customScripts = {
     profile: function () {
         // portfolio
+		$('.isotopeWrapper').isotope({ filter: '*' });
         if ($('.isotopeWrapper').length) {
+		
             var $container = $('.isotopeWrapper');
             var $resize = $('.isotopeWrapper').attr('id');
             // initialize isotope
