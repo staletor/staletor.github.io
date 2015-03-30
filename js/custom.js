@@ -35,7 +35,7 @@ var customScripts = {
                 });
                 return false;
             });
-            $(document).smartresize(function () {
+            $('document').smartresize(function () {
                 $container.isotope({
                     // update columnWidth to a percentage of container width
                     masonry: {
