@@ -60,7 +60,7 @@ $(document).ready(function(){
 					backgroundColor: '#555'
 				});
 
-			}, {offset: '100px'});
+			});
 			
 		$('#home').waypoint(function() {
 
@@ -68,7 +68,7 @@ $(document).ready(function(){
 					backgroundColor: '#555'
 				});
 
-			}, {offset: '-100px'});
+			}, {offset: '-200px'});
 		
 		$('#aboutUs').waypoint(function() {
 
