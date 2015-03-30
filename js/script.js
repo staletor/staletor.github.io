@@ -60,7 +60,7 @@ $(document).ready(function(){
 					backgroundColor: '#555'
 				});
 
-			}, {offset: '400px'});
+			}, {offset: '100px'});
 			
 		$('#home').waypoint(function() {
 
