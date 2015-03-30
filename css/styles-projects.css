@@ -1,0 +1,204 @@
+
+.header-projects {
+	position: fixed;
+    width: 100%;
+    z-index: 50;
+    border-radius: 0;
+    top: 0px;
+	text-align:center;
+    border-bottom: 0px solid #555;
+	background-color:#4d6159;
+	transition: ease-in-out 200ms;
+	-webkit-transition: ease-in-out 200ms;
+	-moz-transition: ease-in-out 200ms;
+	-o-transition: ease-in-out 200ms;
+}
+
+.next-project {
+	right: 20px;
+	padding-right: 30px;
+	background: url(../images/arrowRight.png) center right no-repeat;
+	background-size: 20px 20px;
+}
+
+.previous-project {
+	left: 20px;
+	padding-left: 30px;
+	background: url(../images/arrowLeft.png) center left no-repeat;
+	background-size: 20px 20px;
+}
+
+.header-project-link {
+	position: absolute;
+	top: 50%;
+	margin-top:-15px;
+	color: #fff;
+	opacity:0.4;
+	height: 30px;
+	line-height: 30px;
+}
+
+.header-project-link:hover {
+	opacity:1;
+	text-decoration: none;
+}
+
+.parlex-back a {
+	opacity: 0.5;
+}
+
+.parlex-back a:hover {
+	opacity: 1;
+}
+
+.parlex-back .menu-link {
+	background: url(../images/menuIcon.png) center no-repeat;
+	background-size: 40px 40px;
+	padding:20px;
+	margin:80px;
+}
+
+.parlex-back .next-project {
+	right: 20px;
+	padding: 20px;
+	background: url(../images/arrowRight.png) center no-repeat;
+	background-size: 30px 30px;
+}
+
+.parlex-back .previous-project {
+	left: 20px;
+	padding: 20px;
+	background: url(../images/arrowLeft.png) center no-repeat;
+	background-size: 30px 30px;
+}
+
+.parlex-back .go-to-top {
+	padding: 20px;
+	background: url(../images/arrowUp.png) center no-repeat;
+	background-size: 30px 30px;
+}
+
+
+#navbar-header-project a {
+	opacity: 0.7;
+}
+
+#navbar-header-project a:hover {
+	opacity: 1;
+}
+
+.top {
+	height:70px;
+}
+
+#headImage {
+	margin-bottom: 30%;
+}
+
+#headImage img {
+	width: 100%;
+	height: auto;
+	position:fixed;
+	z-index:-10;
+}
+
+#headImage .container {
+	position:relative;
+	display:none;
+}
+
+#headImage .headText{
+	background: rgba( 255, 255, 255, 0.7);
+	position:absolute;
+	margin-top: 20%;
+	width: 100%;
+}
+
+#headImage .headText h1 {
+	text-align: center;
+}
+
+.auto-width {
+	width:100%;
+}
+
+.noPad {
+	padding: 0 !important;
+}
+
+.column {
+	padding-bottom: 20px;
+}
+
+#contactUs {
+	background: #E4E4E4;
+}
+
+.bg-parlex-genoa {
+padding-top: 0px;
+background-image: url('../images/portfolio/Genoa/GenoaParlex.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+.bg-parlex-birk {
+padding-top: 0px;
+background-image: url('../images/portfolio/Birk/BirkParlex.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+.bg-parlex-leeway {
+padding-top: 0px;
+background-image: url('../images/portfolio/Leeway/LeewayParlex.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+
+@media (min-width: 1200px) {
+	
+   
+
+
+
+}
+
+@media (min-width: 768px) {
+    
+
+}
+
+@media (max-width: 768px) {
+   #navbar-header-project img {
+		height: 50px;
+	}
+	
+	.top {
+		height:50px;
+	}
+}
+
+@media (max-width:760px) {
+    .header-project-link {
+		width:20px;
+		overflow: hidden;
+		color: rgba(255, 255, 255, 0);
+	}
+	
+	.header-project-link:hover {
+		color: rgba(255, 255, 255, 0);
+	}
+}
+
+@media (max-width: 480px) {
+   
+}
+
+@media (max-width: 320px) {
+    
+}
+
