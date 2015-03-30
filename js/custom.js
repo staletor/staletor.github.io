@@ -96,11 +96,12 @@ var customScripts = {
     },
     init: function () {
         customScripts.onePageNav();
-        customScripts.profile();
+        
         customScripts.fancybox();
+		customScripts.bannerHeight();
         customScripts.slider();
         customScripts.owlSlider();
-        customScripts.bannerHeight();
+		customScripts.profile();
     }
 }
 $('document').ready(function () {
