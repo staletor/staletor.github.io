@@ -98,7 +98,7 @@ var customScripts = {
     },
     init: function () {
         customScripts.onePageNav();
-        customScripts.profile();
+        /* customScripts.profile(); */
         customScripts.fancybox();
         customScripts.slider();
         customScripts.owlSlider();
