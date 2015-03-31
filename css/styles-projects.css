@@ -195,10 +195,13 @@ background-attachment: fixed;
 }
 
 @media (max-width: 480px) {
-   
+	#navbar-header-project img {
+		height: 40px;
+		margin-top:10px;
+	}
 }
 
 @media (max-width: 320px) {
-    
+
 }
 
