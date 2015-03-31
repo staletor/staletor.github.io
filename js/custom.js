@@ -3,7 +3,7 @@
 var customScripts = {
     profile: function () {
         // portfolio
-		$('.isotopeWrapper').isotope({ filter: '*' });
+		$('.isotopeWrapper').isotope({ filter: "*" });
         if ($('.isotopeWrapper').length) {
 		
             var $container = $('.isotopeWrapper');
@@ -98,7 +98,7 @@ var customScripts = {
     },
     init: function () {
         customScripts.onePageNav();
-        /* customScripts.profile(); */
+        customScripts.profile();
         customScripts.fancybox();
         customScripts.slider();
         customScripts.owlSlider();

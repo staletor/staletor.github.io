@@ -53,6 +53,10 @@ $(document).ready(function(){
         }); */
 		
 $(document).ready(function(){
+
+		$("#header").css({
+					backgroundColor: '#555'
+				});
 		
 		$('#home').waypoint(function() {
 
@@ -60,7 +64,7 @@ $(document).ready(function(){
 					backgroundColor: '#555'
 				});
 
-			}, {offset: '0px'});
+			}, {offset: '-1px'});
 			
 		$('#home').waypoint(function() {
 
