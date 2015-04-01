@@ -1185,6 +1185,12 @@ footer {
 	.marker-header {
 		height: 75px;
 	}
+	
+	.navbar-brand img {
+		height:40px;
+		margin-top:10px;
+		width: auto;
+	}	
 }
 
 @media (max-width: 320px) {
@@ -1221,6 +1227,8 @@ footer {
 	.marker-header {
 		height: 60px;
 	}
+	
+
 }
 
 #owl-demo .item {

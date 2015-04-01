@@ -134,28 +134,26 @@
 	background: #E4E4E4;
 }
 
-.bg-parlex-genoa {
-padding-top: 0px;
-background-image: url('../images/portfolio/Genoa/GenoaParlex.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
+.bg-parlex {
+	padding-top: 0px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
-.bg-parlex-birk {
-padding-top: 0px;
-background-image: url('../images/portfolio/Birk/BirkParlex.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
+.parlex-genoa {
+	background-image: url('../images/portfolio/Genoa/GenoaParlex.jpg');
+}
+.parlex-birk {
+	background-image: url('../images/portfolio/Birk/BirkParlex.jpg');
 }
 
-.bg-parlex-leeway {
-padding-top: 0px;
-background-image: url('../images/portfolio/Leeway/LeewayParlex.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
+.parlex-leeway {
+	background-image: url('../images/portfolio/Leeway/LeewayParlex.jpg');
+}
+
+.parlex-scsoftware {
+	background-image: url('../images/portfolio/SCSoftware/SCSoftwareParlex.jpg');
 }
 
 
