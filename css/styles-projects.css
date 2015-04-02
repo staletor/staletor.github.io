@@ -156,6 +156,10 @@
 	background-image: url('../images/portfolio/SCSoftware/SCSoftwareParlex.jpg');
 }
 
+.parlex-scapp {
+	background-image: url('../images/portfolio/SCApp/SCAppParlex.jpg');
+}
+
 
 @media (min-width: 1200px) {
 	
