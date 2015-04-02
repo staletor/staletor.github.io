@@ -160,6 +160,11 @@
 	background-image: url('../images/portfolio/SCApp/SCAppParlex.jpg');
 }
 
+.parlex-sketching {
+	background-image: url('../images/portfolio/Sketching/SketchingParlex.jpg');
+}
+
+
 
 @media (min-width: 1200px) {
 	
