@@ -440,6 +440,17 @@ background: none;
 	width: auto !important;
 }
 
+#profile-image {
+	width:160px;
+	height:160px;
+	border-radius:80px;
+	overflow:hidden;
+}
+
+.text-justify {
+	text-align:justify;
+}
+
 /*Intro Content*/
 #introText {
 padding:50px 0;
@@ -457,7 +468,8 @@ color: #5E5E5E;
 }
 .tileBox p{
     background-color: #f0f0f0;
-font-size: 15px;
+font-size: 1.1em;
+line-height: 1.4em;
 color: #777777;
 padding: 20px;
 margin: 0px;
