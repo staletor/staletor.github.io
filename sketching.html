@@ -179,15 +179,18 @@
     <script src="js/script.js"></script>
 	<script type="text/javascript" src="js/beforeafter/jquery-1.6.1.min.js"></script>
 	<script type="text/javascript" src="js/beforeafter/jquery-ui-1.8.13.custom.min.js"></script>
+	<script type="text/javascript" src="js/beforeafter/jquery.ui.touch-punch.min"></script>
 	<script type="text/javascript" src="js/beforeafter/jquery.beforeafter-1.4.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			$('#container').beforeAfter({
 				showFullLinks : false
 			});
+			$('#container').draggable();
 			$('#container1').beforeAfter({
 				showFullLinks : false
 			});
+			$('#container1').draggable();
 		});
 	</script>
 </body>
