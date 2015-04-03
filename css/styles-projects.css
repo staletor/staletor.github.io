@@ -134,6 +134,14 @@
 	background: #E4E4E4;
 }
 
+#big-before-after {
+	display:block;
+}
+
+#small-before-after {
+	display:none;
+}
+
 .bg-parlex {
 	padding-top: 0px;
 	background-size: cover;
@@ -187,6 +195,8 @@
 	.top {
 		height:50px;
 	}
+	
+	
 }
 
 @media (max-width:760px) {
@@ -198,6 +208,14 @@
 	
 	.header-project-link:hover {
 		color: rgba(255, 255, 255, 0);
+	}
+	
+	#big-before-after {
+		display:none;
+	}
+
+	#small-before-after {
+		display:block;
 	}
 }
 

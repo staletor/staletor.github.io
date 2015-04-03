@@ -63,14 +63,14 @@
         <div class="container">
             <div class="text-center">
             <h1>Sketching</h1>
-              <p>Sketching by hand and render in Photoshop.</p>
+              <p>Sketching by hand using a ballpoint pen and render in Photoshop.</p>
 			  <p>Welding gun early concept sketches.</p>
             </div>
         </div>
 
     </section>
 	
-	<section style="background:#fff;" class="secPad">
+	<section id="big-before-after" style="background:#fff;" class="secPad">
         <div class="container">
 			<div id="container" style="border:none;margin:0 auto;">
 				 <div><img alt="before" src="images/portfolio/Sketching/SketchingD2.jpg" width="720" height="550" /></div>
@@ -86,9 +86,25 @@
 			</div>
     </section>
 	
-	<section style="background:#ffffff;padding-top:0;" class="secPad">
-        <div class="container text-center">
-			<h2 style="margin-bottom:30px;">Other concept sketches</h2>
+	<section id="small-before-after" style="background:#fff;" class="secPad">
+        <div class="container">
+			<div id="container1" style="border:none;margin:0 auto;">
+				 <div><img alt="before" src="images/portfolio/Sketching/SketchingD2.jpg" width="300" height="229" /></div>
+				 <div><img alt="after" src="images/portfolio/Sketching/SketchingD1.jpg" width="300" height="229" /></div>
+			</div>
+        </div>
+		<div class="container text-center">
+			<div class="col-sm-3 column"></div>
+			<div class="col-sm-6 column">
+				<h2>Render with Photoshop</h2>
+				<p><i>Please use the handle to watch before and after version of the sketch.</i></p>
+				<p>I scanned my hand drawn sketches and used them as a foundation for the render in Photoshop. Colors, shading, texture and details were added to get a more realistic look to the sketch.</p>
+			</div>
+    </section>
+	
+	<section style="background:#ffffff;padding:10px 10% 50px;">
+        <div class="text-center">
+			<h2 style="margin-bottom:60px;">Other concept sketches</h2>
 			
 			<div class="col-sm-4 column">
 				<img class="auto-width" src="images/portfolio/Sketching/SketchingD3.jpg" />
@@ -99,6 +115,8 @@
 			<div class="col-sm-4 column">
 				<img class="auto-width" src="images/portfolio/Sketching/SketchingD5.jpg" />
             </div>
+			
+			<div class="clearfix"></div>
         </div>
 
     </section>
@@ -124,7 +142,7 @@
         <div class="container">
 			<div class="row text-center">
 				<p>&nbsp;</p>
-
+				<p>&copy;2015 Ståle Torger Stokke</p>
 				<p>&nbsp;</p>
 			</div>
 
@@ -153,6 +171,9 @@
 	<script type="text/javascript">
 		$(function(){
 			$('#container').beforeAfter({
+				showFullLinks : false
+			});
+			$('#container1').beforeAfter({
 				showFullLinks : false
 			});
 		});
