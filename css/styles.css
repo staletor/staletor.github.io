@@ -134,6 +134,11 @@ background: #E24040;
 	color:#fff;
 	margin: 4px;
 	line-height:42px;
+	opacity: 0.7;
+}
+
+.topHome:hover > .fa-2x {
+	opacity:1;
 }
 
 #home {
