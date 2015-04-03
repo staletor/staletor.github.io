@@ -9,7 +9,7 @@ $(document).ready(function(){
 				$("#topHome").css({
 					backgroundColor: '#555555'
 				});
-			}, {offset: '1px'});
+			});
 			
 		$('#home').waypoint(function() {
 
@@ -19,7 +19,7 @@ $(document).ready(function(){
 				$("#topHome").css({
 					backgroundColor: '#555555'
 				});
-			}, {offset: '-200px'});
+			}, {offset: '-100px'});
 		
 		$('#aboutUs').waypoint(function() {
 
