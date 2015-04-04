@@ -806,6 +806,7 @@ nav#filter {
         opacity: 0;
         position: absolute;
         width: 100%;
+        height:275px;
         left: 0;
         top: 0;
         color: rgba(220, 220, 220);
@@ -837,7 +838,7 @@ nav#filter {
 .portfolio-item .portfolio-desc .folio-info {
     top: -20px;
     padding: 30px;
-    height: 0;
+    height: 245px;
     opacity: 0;
     position: relative;
 }
