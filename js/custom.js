@@ -3,10 +3,8 @@
 var customScripts = {
     profile: function () {
         // portfolio
-
 	if ($('.isotopeWrapper').length) {
-			
-            var $container = $('.isotopeWrapper');
+		    var $container = $('.isotopeWrapper');
             var $resize = $('.isotopeWrapper').attr('id');
             // initialize isotope
             $container.isotope({
