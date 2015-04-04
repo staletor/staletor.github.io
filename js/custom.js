@@ -97,7 +97,6 @@ var customScripts = {
         });
     },
     init: function () {
-    	 $('.isotopeWrapper').isotope({ data-filter: '*' }); 
         customScripts.onePageNav();
         customScripts.profile();
         customScripts.fancybox();
