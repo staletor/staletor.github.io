@@ -3,7 +3,7 @@
 var customScripts = {
     profile: function () {
         // portfolio
-        
+
 	if ($('.isotopeWrapper').length) {
 			
             var $container = $('.isotopeWrapper');
