@@ -780,10 +780,6 @@ nav#filter {
     color: #fff !important;
 }
 
-.portfolio-items {
-    height: 610px !important;
-}
-
 .portfolio-items article img {
     width: 100%;
 }
@@ -810,7 +806,6 @@ nav#filter {
         opacity: 0;
         position: absolute;
         width: 100%;
-        height:275px;
         left: 0;
         top: 0;
         color: rgba(220, 220, 220);
@@ -842,7 +837,7 @@ nav#filter {
 .portfolio-item .portfolio-desc .folio-info {
     top: -20px;
     padding: 30px;
-    height: 245px;
+    height: 0;
     opacity: 0;
     position: relative;
 }
