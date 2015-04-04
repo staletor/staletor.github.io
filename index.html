@@ -601,25 +601,13 @@
 	<script src="js/jquery.waypoints.min.js" type="text/javascript"></script>
     <script src="js/owl-carousel/owl.carousel.js"></script>
 	<script src="js/jquery.imageorder"></script>
+	<script src="js/custom.js" type="text/javascript"></script>
 	
 	<script>
 		$(document).ready(function() {
 			$(document).imageOrder(".img-postload");
 		});
     </script>
-
-	<script type="text/javascript">
-		function downloadJSAtOnload() {
-		var element = document.createElement("script");
-		element.src = "js/custom.js";
-		document.body.appendChild(element);
-		}
-		if (window.addEventListener)
-		window.addEventListener("load", downloadJSAtOnload, false);
-		else if (window.attachEvent)
-		window.attachEvent("onload", downloadJSAtOnload);
-		else window.onload = downloadJSAtOnload;
-	</script>
 
 	
 </body>
