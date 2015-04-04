@@ -780,6 +780,10 @@ nav#filter {
     color: #fff !important;
 }
 
+.portfolio-items {
+    height: 610px;
+}
+
 .portfolio-items article img {
     width: 100%;
 }
