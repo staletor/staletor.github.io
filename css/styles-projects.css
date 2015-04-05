@@ -221,6 +221,29 @@
 	#small-before-after {
 		display:block;
 	}
+	
+	.parlex-genoa {
+		background-image: url('../images/portfolio/Genoa/GenoaParlex-small.jpg');
+	}
+	.parlex-birk {
+		background-image: url('../images/portfolio/Birk/BirkParlex-small.jpg');
+	}
+
+	.parlex-leeway {
+		background-image: url('../images/portfolio/Leeway/LeewayParlex-small.jpg');
+	}
+
+	.parlex-scsoftware {
+		background-image: url('../images/portfolio/SCSoftware/SCSoftwareParlex-small.jpg');
+	}
+
+	.parlex-scapp {
+		background-image: url('../images/portfolio/SCApp/SCAppParlex-small.jpg');
+	}
+
+	.parlex-sketching {
+		background-image: url('../images/portfolio/Sketching/SketchingParlex-small.jpg');
+	}
 }
 
 @media (max-width: 480px) {
