@@ -1209,8 +1209,7 @@ footer {
 	}
 	
 	#experience-header-image {
-		height: auto !important;
-		width: 100%;
+		height: 55 !important;
 	}
 	
 	.navbar-brand img {
