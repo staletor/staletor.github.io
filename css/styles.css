@@ -487,7 +487,7 @@ margin: 0px;
 /*parlex*/
 .bg-parlex {
 padding-top: 0px;
-background-image: url('../images/bouldering3.jpg');
+background-image: url('../images/bouldering.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
@@ -1153,6 +1153,10 @@ footer {
 	
 	.marker-header {
 		height: 90px;
+	}
+	
+	.bg-parlex {
+		background-image: url('../images/bouldering-small.jpg');
 	}
 }
 
