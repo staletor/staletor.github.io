@@ -504,10 +504,12 @@ font-weight: 600;
 padding-right: 0px;
 }
 .progress {
-border-radius: 0px;
-height: 15px;
-margin-top: 5px;
-background-color: #D6D6D6;
+	border-radius: 0px;
+	height: 15px;
+	margin-top: 5px;
+	background-color: #D6D6D6;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 .progress .progress-bar {
 background-color: #C4509F;
