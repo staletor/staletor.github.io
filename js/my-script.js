@@ -125,4 +125,5 @@ var myScripts = {
 }
 $('document').ready(function () {
     myScripts.headerColor();
+	$('.isotopeWrapper').isotope({ filter: '*' });
 });
