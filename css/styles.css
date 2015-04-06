@@ -17,7 +17,7 @@ body {
     font-size: 16px;
     font-family: 'Source Sans Pro', sans-serif;
     -webkit-font-smoothing: antialiased;
-    background: #E4E4E4;
+    background: #f1f1f1;
 }
 
 ::selection {
@@ -477,10 +477,10 @@ font-size: 58px;
 color: #5E5E5E;
 }
 .tileBox p{
-    background-color: #f0f0f0;
+    background-color: #777777;
 font-size: 1.1em;
 line-height: 1.4em;
-color: #777777;
+color: #ffffff;
 padding: 20px;
 margin: 0px;
 }
@@ -515,6 +515,10 @@ background-color: #C4509F;
 /*Skills*/
 
 /*Timeline*/
+
+#experience {
+    background:#ffffff;
+}
 
 #timeline {
   list-style: none;
@@ -607,7 +611,6 @@ display: inherit;
   padding: 20px 0;
 }
 #timeline .timeline-movement .timeline-item .timeline-panel {
-  background-color: #E4E4E4;
   color: #666;
   padding: 5px 10px;
   position: relative;
@@ -741,9 +744,7 @@ display: inherit;
     margin-bottom: 30px;
 }
 
-#portfolio {
-    background:#fff;
-}
+
 
     #portfolio img {
         width: 100%;
@@ -755,30 +756,30 @@ display: inherit;
     }
 
 nav#filter {
-    margin-bottom: 1.5em;
+    margin-bottom: 40px;
 }
 
     nav#filter li {
         display: inline-block;
-        margin: 0 0 0 5px;
+        margin: 0 0 20px 5px;
     }
 
     nav#filter a {
         padding: 4px 12px;
         line-height: 20px;
-        border: 1px solid #4d6159;
-		color: #4d6159;
+        border-bottom: 3px solid #f1f1f1;
+		color: #999;
         text-decoration: none;
     }
 	
 	nav#filter a:hover {
-		text-decoration: underline;
+		border-bottom: 3px solid #999;
 	}
-
-.current {
-    background: #4d6159;
-    color: #fff !important;
-}
+	
+	.current {
+		border-bottom: 3px solid #4d6159 !important;
+		color: #4d6159 !important;
+	}
 
 .portfolio-items article img {
     width: 100%;
@@ -791,6 +792,8 @@ nav#filter {
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
+	border: 1px solid #cccccc;
+	overflow:hidden;
 }
 
     .portfolio-item img {
@@ -816,11 +819,19 @@ nav#filter {
 }
 
 .portfolio-item:hover .portfolio-desc {
-    padding-top: 20%;
+    padding-top: 25%;
     height: 100%;
     transition: all 200ms ease-in-out 0s;
     opacity: 1;
-    background: rgba(61, 61, 61, 0.67);
+    background: rgba(234, 234, 234, 0.7);
+}
+
+.portfolio-item:hover  img {
+    -webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+	-ms-filter: blur(3px);
+	filter: blur(3px);
 }
 
 .portfolio-item .portfolio-desc a {
@@ -836,7 +847,7 @@ nav#filter {
 
 .portfolio-item .portfolio-desc .folio-info {
     top: -20px;
-    padding: 30px;
+    padding: 0 30px;
     height: 0;
     opacity: 0;
     position: relative;
@@ -852,9 +863,8 @@ nav#filter {
 .portfolio-item .portfolio-desc .folio-info h5 {
     text-transform: uppercase;
     text-align: center;
-    font-weight: bold;
-    font-size: 1.4em;
-	color: #ffffff;
+    font-size: 1.6em;
+	color: #555555;
 }
 
 .portfolio-item .portfolio-desc .folio-info p {
@@ -1109,9 +1119,6 @@ footer {
         padding: 0px;
     }
 
-        .portfolio-item .portfolio-desc .folio-info h5 {
-            font-size: 1em;
-        }
 
     .navbar-inverse .navbar-nav > li > a { 
         font-size: 1em;
@@ -1164,7 +1171,7 @@ footer {
     .banner-container {
         background-size: contain;
         margin-top: 50px;
-		height:380px;
+		height:340px;
     }
 
     .navbar-inverse .navbar-nav > li > a {
@@ -1174,19 +1181,19 @@ footer {
     }
 
 	.da-slider {
-        height:380px;
+        height:340px;
     }
 	
     .da-slide h2 {
         font-size: 22px;
         text-align: center;
         width: initial;
-        top: 220px;
+        top: 200px;
     }
 
     .da-slide p {
         width: 85%;
-        top: 240px;
+        top: 220px;
         height: 110px;
 		font-size:16px;
     }
@@ -1205,7 +1212,7 @@ footer {
     }
 
     .portfolio-item .portfolio-desc .folio-info h5 {
-        font-size: 11px;
+        font-size: 1.4em;
     }
 	
 	.marker-header {
@@ -1226,10 +1233,25 @@ footer {
 @media (max-width: 320px) {
     .banner-container {
         background-size: contain;
+		height:320px;
+    }
+	
+	.da-slider {
+        height:320px;
+    }
+	
+    .da-slide h2 {
+        font-size: 22px;
+        text-align: center;
+        width: initial;
+        top: 140px;
     }
 
-    .da-dots {
-        bottom: 2px;
+    .da-slide p {
+        width: 85%;
+        top: 160px;
+        height: 110px;
+		font-size:16px;
     }
 
     .grid .text-content {
