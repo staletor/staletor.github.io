@@ -14,10 +14,7 @@ var customScripts = {
                     columnWidth: $container.width() / $resize
                 }
             });
-            $("a[href='#top']").click(function () {
-                $("html, body").animate({ scrollTop: 0 }, "slow");
-                return false;
-            });
+
             $('.navbar-inverse').on('click', 'li a', function () {
                 $('.navbar-inverse .in').addClass('collapse').removeClass('in').css('height', '1px');
             });

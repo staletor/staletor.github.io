@@ -209,5 +209,15 @@
     <script src="js/jquery.cslider.js" type="text/javascript"></script>
     <script src="js/custom.js" type="text/javascript"></script>
     <script src="js/owl-carousel/owl.carousel.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			
+			$("a[href='#top']").click(function () {
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                return false;
+            });
+
+		});
+	</script>
 </body>
 </html>
