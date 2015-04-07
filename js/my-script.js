@@ -66,6 +66,28 @@ var myScripts = {
 
 			}, { offset: '-100px' });
 			
+		$('#portfolio').waypoint(function() {
+
+				$("#header").css({
+					backgroundColor: '#666666'
+				});
+				$("#topHome").css({
+					backgroundColor: '#666666'
+				});
+
+			}, { offset: '100px' });
+			
+		$('#portfolio').waypoint(function() {
+
+				$("#header").css({
+					backgroundColor: '#666666'
+				});
+				$("#topHome").css({
+					backgroundColor: '#666666'
+				});
+
+			}, { offset: '-100px' });
+			
 		$('#experience').waypoint(function() {
 
 				$("#header").css({
@@ -88,27 +110,7 @@ var myScripts = {
 
 			}, { offset: '-100px' });
 			
-		$('#portfolio').waypoint(function() {
-
-				$("#header").css({
-					backgroundColor: '#666666'
-				});
-				$("#topHome").css({
-					backgroundColor: '#666666'
-				});
-
-			}, { offset: '100px' });
-			
-		$('#portfolio').waypoint(function() {
-
-				$("#header").css({
-					backgroundColor: '#666666'
-				});
-				$("#topHome").css({
-					backgroundColor: '#666666'
-				});
-
-			}, { offset: '-100px' });
+		
 			
 		$('#contactUs').waypoint(function() {
 
