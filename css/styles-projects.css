@@ -7,7 +7,7 @@
     top: 0px;
 	text-align:center;
     border-bottom: 0px solid #555;
-	background-color:#4d6159;
+	background-color:#666666;
 	transition: ease-in-out 200ms;
 	-webkit-transition: ease-in-out 200ms;
 	-moz-transition: ease-in-out 200ms;
@@ -131,7 +131,7 @@
 }
 
 .topHome {
-	background: #4d6159;
+	background: #666666;
 }
 
 #contactUs {

@@ -477,7 +477,7 @@ font-size: 58px;
 color: #5E5E5E;
 }
 .tileBox p{
-    background-color: #777777;
+    background-color: #999999;
 font-size: 1.1em;
 line-height: 1.4em;
 color: #ffffff;
@@ -770,17 +770,17 @@ nav#filter {
         padding: 4px 12px;
         line-height: 20px;
         border-bottom: 3px solid #f1f1f1;
-		color: #999;
+		color: #A0A0A0;
         text-decoration: none;
     }
 	
 	nav#filter a:hover {
-		border-bottom: 3px solid #999;
+		border-bottom: 3px solid #A0A0A0;
 	}
 	
 	.current {
-		border-bottom: 3px solid #4d6159 !important;
-		color: #4d6159 !important;
+		border-bottom: 3px solid #333333 !important;
+		color: #333333 !important;
 	}
 
 .portfolio-items article img {

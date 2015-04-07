@@ -91,10 +91,10 @@ var myScripts = {
 		$('#portfolio').waypoint(function() {
 
 				$("#header").css({
-					backgroundColor: '#4d6159'
+					backgroundColor: '#666666'
 				});
 				$("#topHome").css({
-					backgroundColor: '#4d6159'
+					backgroundColor: '#666666'
 				});
 
 			}, { offset: '100px' });
@@ -102,10 +102,10 @@ var myScripts = {
 		$('#portfolio').waypoint(function() {
 
 				$("#header").css({
-					backgroundColor: '#4d6159'
+					backgroundColor: '#666666'
 				});
 				$("#topHome").css({
-					backgroundColor: '#4d6159'
+					backgroundColor: '#666666'
 				});
 
 			}, { offset: '-100px' });
