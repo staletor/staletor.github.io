@@ -29,6 +29,11 @@
 .da-slider-fb  .da-slide.da-slide-current{
 	left: 0px;
 }
+
+.da-slide a {
+	text-decoration:underline;
+}
+
 .da-slide h2,
 .da-slide p,
 .da-slide .da-link,
@@ -110,24 +115,21 @@
 .da-dots span {
     display: inline-block;
     position: relative;
-    width: 16px;
-    height: 16px;
-    border-radius: 8px;
-    background: none;
-    margin: 3px;
+    width: 24px;
+    height: 2px;
+    margin: 5px;
     cursor: pointer;
     box-shadow:none;
-    border: 2px solid #aaa;
+    background: #ccc;
 }
 .da-dots span.da-dots-current:after{
 	content: '';
-	width: 8px;
-	height: 8px;
+	width: 24px;
+	height: 4px;
 	position: absolute;
-	top: 2px;
-	left: 2px;
-	border-radius: 50%;
-	background: #aaa;
+	top: -1px;
+	left: 0px;
+	background: #333;
 }
 .da-arrows{
 	-moz-user-select: none;

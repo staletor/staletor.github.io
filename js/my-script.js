@@ -122,6 +122,24 @@ var myScripts = {
 				});
 
 			}, { offset: 'bottom-in-view' });
+			
+		$('#project-quote').waypoint(function() {
+
+				$("#project-navigator").css({
+					position: 'relative',
+					backgroundColor: 'rgba(0, 0, 0, 0)'
+				});
+
+			}, { offset: 'bottom-in-view' });
+			
+		$('#project-quote-reset').waypoint(function() {
+
+				$("#project-navigator").css({
+					position: 'fixed',
+					backgroundColor: 'rgba(0, 0, 0, 0.3)'
+				});
+
+			}, { offset: 'bottom-in-view' });
 	},
 
 }
@@ -134,4 +152,5 @@ $('document').ready(function () {
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 		return false;
 	});
+	
 });
