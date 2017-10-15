@@ -235,16 +235,27 @@ hr {
     transform: translateX(-50%);
 }
 
-.chat-option {
+.chat-option, .read-more-button {
     background: #8FAFC6;
     color: #ffffff;
     padding: 8px 14px;
-    display: none;
     border-radius: 18px;
     min-height: 36px;
 }
 
-.chat-option:hover {
+.read-more-button {
+    text-decoration: none;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 300ms ease;
+}
+
+.chat-option {
+    display: none;
+}
+
+.chat-option:hover, .read-more-button:hover {
     background: #83B7A8;
     cursor: pointer;
 }
@@ -415,7 +426,7 @@ hr {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #ccc;
+    background: #fff;
     text-align: center;
 }
 
@@ -489,18 +500,20 @@ a.control_prev.control-open, a.control_next.control-open {
 }
 
 .portfolio-project-container {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: auto;
+    height: 0;
     z-index: 10;
     background: #fff;
+    overflow: hidden;
+    transition: 0ms ease;
 }
 
 .portfolio-project-container.project-open {
-    display: block;
+    z-index: 12;
+    transition: 2000ms ease;
 }
 
 .headImage.project-open {
