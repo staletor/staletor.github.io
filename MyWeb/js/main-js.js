@@ -458,6 +458,8 @@ $(document).ready(function(){
     $('.headImage').css({ height: slideHeight });
     $('.headImage img').css({ height: slideHeight });
     $('.headContainer').css({ top: slideHeight/2 });
+    $('.control_next').css({ top: slideHeight/2 });
+    $('.control_prev').css({ top: slideHeight/2 });
 
     $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
 
@@ -515,11 +517,48 @@ $(document).ready(function(){
             e.stopPropagation();
         });
     }
+
+    function openproject(o) {
+        $(o).click(function () {
+            var projID = $(this).attr('href');
+            $(projID).addClass('project-open');
+            var totalHeight = 0;
+            $(projID).children().each(function () {
+                totalHeight = totalHeight + $(this).outerHeight(true);
+            });
+            $(projID).css({"height": totalHeight});
+            setTimeout(function () {
+                $(".control_prev").toggleClass("control-open");
+                $(".control_next").toggleClass("control-open");
+                $('.headImage').css({"height": slideHeight/2 });
+                $('.headImage').addClass("project-open");
+                $('.headContainer').css({"top": slideHeight/4 });
+                $('header').addClass('project-open');
+            }, 1);
+        });
+    }
     
-    toggleproject('#readSC');
-    toggleproject('#closeSC');
-    toggleproject('#readBirk');
-    toggleproject('#closeBirk');
+    function closeproject(o) {
+        $(o).click(function () {
+            var projID = $(this).attr('href');
+            $(projID).removeClass('project-open');
+            
+            setTimeout(function () {
+                $(".control_prev").toggleClass("control-open");
+                $(".control_next").toggleClass("control-open");
+                $('.headImage').css({"height": slideHeight });
+                $('.headImage').removeClass("project-open");
+                $('.headContainer').css({"top": slideHeight/2 });
+                $('header').removeClass('project-open');
+                $(projID).css({"height": "0px"});
+            }, 1);
+        });
+    }
+    
+    openproject('#readSC');
+    closeproject('#closeSC');
+    openproject('#readBirk');
+    closeproject('#closeBirk');
 
     var sdistance = 0;
     $(window).scroll(function() {
@@ -532,16 +571,16 @@ $(document).ready(function(){
     function closestickytop(r) {
         var $window = $(window);
         $window.scroll(function () {
-            if ($window.scrollTop() >= slideHeight / 2) {
-                $(r).css({"position": "fixed", "top": "30px"})
+            if ($window.scrollTop() >= slideHeight/2 - 114 ) {
+                $(r + " .headContainer").addClass("sticky-top");
             } else {
-                $(r).css({"position": "static", "top": "-50px"})
+                $(r + " .headContainer").removeClass("sticky-top");
             }
         });
     }
     
-    closestickytop('#closeSC');
-    closestickytop('#closeBirk');
+    closestickytop('#SCProject');
+    closestickytop('#BirkProject');
     
     
 });

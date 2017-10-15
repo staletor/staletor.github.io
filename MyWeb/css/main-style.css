@@ -428,6 +428,7 @@ hr {
     height: 100%;
     background: #fff;
     text-align: center;
+    z-index: 11;
 }
 
 a.control_prev, a.control_next {
@@ -447,6 +448,7 @@ a.control_prev, a.control_next {
     opacity: 0.6;
     cursor: pointer;
     transition: 300ms ease;
+    transform: translateY(-50%);
 }
 
 a.control_prev:hover, a.control_next:hover {
@@ -455,12 +457,12 @@ a.control_prev:hover, a.control_next:hover {
 }
 
 a.control_prev {
-    transform: translateX(-40px);
+    transform: translateX(-100%);
 }
 
 a.control_next {
     right: 0;
-    transform: translateX(40px);
+    transform: translateX(100%);
 }
 
 a.control_prev.control-open, a.control_next.control-open {
@@ -508,24 +510,25 @@ a.control_prev.control-open, a.control_next.control-open {
     z-index: 10;
     background: #fff;
     overflow: hidden;
-    transition: 0ms ease;
 }
 
 .portfolio-project-container.project-open {
     z-index: 12;
-    transition: 2000ms ease;
 }
 
 .headImage.project-open {
-    height: 400px !important;
 }
 
 .headImage.project-open img {
     transform: translateY(-40%);
 }
 
-.headContainer.project-open {
-    top: 200px !important;
+
+
+.headContainer.sticky-top {
+    position: fixed;
+    top: -60px !important;
+    transition-property: none;
 }
 
 
