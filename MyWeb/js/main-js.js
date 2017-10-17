@@ -492,6 +492,8 @@ $(document).ready(function(){
     $('a.control_next').click(function () {
         moveRight();
     });
+ 
+
 
     function toggleproject(o) {
         $(o).click(function (e) {
@@ -518,6 +520,23 @@ $(document).ready(function(){
         });
     }
 
+        $(window).on('keydown', function (e) {
+            if (e.keyCode === 37) // left
+                moveLeft();
+            else if (e.keyCode === 39) // right
+                moveRight();
+        });
+
+    $("#slider ul li").on( "swipeleft", swipeleftHandler );
+    function swipeleftHandler( event ){
+        moveRight()
+    }
+
+    $("#slider ul li").on( "swiperight", swiperightHandler );
+    function swiperightHandler( event ){
+        moveLeft()
+    }
+    
     function openproject(o) {
         $(o).click(function () {
             var projID = $(this).attr('href');
@@ -542,7 +561,6 @@ $(document).ready(function(){
         $(o).click(function () {
             var projID = $(this).attr('href');
             $(projID).removeClass('project-open');
-            
             setTimeout(function () {
                 $(".control_prev").toggleClass("control-open");
                 $(".control_next").toggleClass("control-open");
