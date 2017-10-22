@@ -245,9 +245,6 @@ hr {
 
 .read-more-button {
     text-decoration: none;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
     transition: 300ms ease;
 }
 
@@ -516,7 +513,7 @@ a.control_prev.control-open, a.control_next.control-open {
 
 .headImage img {
     width: auto;
-    height: 100%;
+    float: right;
     transition: 500ms ease;
 }
 
@@ -525,8 +522,39 @@ a.control_prev.control-open, a.control_next.control-open {
     top: 50%;
     left: 0;
     width: 100%;
+    transition: 400ms ease;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container-left {
+    border: 2px solid #5D6772;
+    position: relative;
+    padding: 20px;
+    width: 40%;
+}
+
+.container-left h1 {
+    position: absolute;
+    top: -35px;
+    left: -25px;
+    background: white;
+    margin: 0px;
+    padding: 10px;
+}
+
+.container-left .read-more-button {
+    position: absolute;
+    left: 20px;
+    bottom: -19px;
+    width: 120px;
     text-align: center;
-    transition: 300ms ease;
 }
 
 .portfolio-project-container {
@@ -551,12 +579,45 @@ a.control_prev.control-open, a.control_next.control-open {
     transform: translateY(-40%);
 }
 
-
+.project-open .headContainer {
+    position: fixed;
+}
 
 .headContainer.sticky-top {
-    position: fixed;
-    top: -60px !important;
-    transition-property: none;
+}
+
+.headContainer.sticky-top .container-left{
+}
+
+.right-wrapper {
+    float: right;
+    width: 65%;
+}
+
+.left-wrapper {
+    float: left;
+    width: 40%;
+}
+
+.color-box {
+    margin: 20px 0;
+    padding: 20px 20px 20px 15%;
+}
+
+.color-box.pink {
+    background: #F6BDD1;
+}
+
+.color-box.grey {
+    background: #DEE5E5;
+}
+
+.color-box.green {
+    background: #9DC5BB;
+}
+
+.color-box.blue {
+    background: #A7BED3;
 }
 
 .ui-loader {
@@ -565,6 +626,35 @@ a.control_prev.control-open, a.control_next.control-open {
 
 
 /* --- Responsive --- */
+
+@media only screen and (max-width: 1200px) {
+
+    .container {
+        width: 100%;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+    .headImage {
+    }
+
+    .headImage img {
+    }
+
+    .headContainer {
+    }
+
+    .container-left {
+    }
+    
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
 
 @media only screen and (max-width: 600px) {
     
@@ -578,6 +668,12 @@ a.control_prev.control-open, a.control_next.control-open {
     
     #chat-options-wrapper {
         width: 100%;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        height: auto;
+        min-height: 80px;
+        transition: 300ms ease;
     }
     
     .chat-bubble-left, .chat-bubble-right {
@@ -587,4 +683,83 @@ a.control_prev.control-open, a.control_next.control-open {
     .chat-line p, .chat-option {
         font-size: 0.9em;
     }
+    
+    .chat-option {
+        height: 36px;
+        flex-shrink: 0;
+        margin-bottom: 5px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    .headImage {
+        height: auto !important;
+    }
+
+    .headImage img {
+        height: auto !important;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .headImage.project-open {
+    }
+
+    .headImage.project-open img {
+        transform: translateY(-100px);
+    }
+
+    .headContainer {
+        top: auto !important;
+        margin-top: 0px;
+    }
+
+    .project-open .headContainer {
+        position: static;
+        margin-top: -100px;
+    }
+
+    .project-open .headContainer.sticky-top {
+        position: fixed;
+        margin-top: -462px;
+        background: white;
+        transition-property: none;
+    }
+
+    .container-left {
+        width: 100%;
+        text-align: center;
+    }
+    
+    a.control_next, a.control_prev {
+        display: none;
+    }
+    
+    .right-wrapper {
+        float: none;
+        width: 100%;
+    }
+    
+    .right-wrapper img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .color-box {
+        padding: 20px;
+    }
+
+    .container-left .read-more-button {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
 }

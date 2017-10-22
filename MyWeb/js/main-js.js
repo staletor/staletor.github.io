@@ -454,7 +454,7 @@ $(document).ready(function(){
 
     $('.headImage').css({ height: slideHeight });
     $('.headImage img').css({ height: slideHeight });
-    $('.headContainer').css({ top: slideHeight/2 });
+    $('.headContainer').css({ top: slideHeight/3 });
     $('.control_next').css({ top: slideHeight/2 });
     $('.control_prev').css({ top: slideHeight/2 });
 
@@ -542,7 +542,7 @@ $(document).ready(function(){
                 $("#portfolio-indicator").toggleClass("control-open");
                 $('.headImage').css({"height": slideHeight/2 });
                 $('.headImage').addClass("project-open");
-                $('.headContainer').css({"top": slideHeight/4 });
+                $('.headContainer').css({"top": slideHeight/8 });
                 $('header').addClass('project-open');
             }, 1);
         });
@@ -558,7 +558,7 @@ $(document).ready(function(){
                 $("#portfolio-indicator").toggleClass("control-open");
                 $('.headImage').css({"height": slideHeight });
                 $('.headImage').removeClass("project-open");
-                $('.headContainer').css({"top": slideHeight/2 });
+                $('.headContainer').css({"top": slideHeight/3 });
                 $('header').removeClass('project-open');
                 $(projID).css({"height": "0px"});
             }, 1);
