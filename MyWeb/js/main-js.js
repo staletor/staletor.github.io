@@ -462,8 +462,29 @@ $(document).ready(function(){
 
     $('#slider ul li').css({ width: slideWidth });
 
-    $('#slider ul li:last-child').prependTo('#slider ul');
+    $(window).resize(function () {
+        slideCount = $('#slider ul li').length;
+        slideWidth = $(window).width();
+        slideHeight = $('#portfolio-wrapper').height();
+        sliderUlWidth = slideCount * slideWidth;
+    
+        $('#slider').css({ width: slideWidth, height: slideHeight });
+    
+        $('.headImage').css({ height: slideHeight });
+        $('.headImage img').css({ height: slideHeight });
+        $('.headContainer').css({ top: slideHeight/3 });
+        $('.control_next').css({ top: slideHeight/2 });
+        $('.control_prev').css({ top: slideHeight/2 });
+    
+        $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+    
+        $('#slider ul li').css({ width: slideWidth });
+    
+        
+    });
 
+    $('#slider ul li:last-child').prependTo('#slider ul');
+    
     function moveLeft() {
         $('#slider ul').animate({
             left: + slideWidth
@@ -531,11 +552,13 @@ $(document).ready(function(){
         $(o).click(function () {
             var projID = $(this).attr('href');
             $(projID).addClass('project-open');
+            $(projID + ' .right-wrapper').addClass('project-open');
             var totalHeight = 0;
             $(projID).children().each(function () {
                 totalHeight = totalHeight + $(this).outerHeight(true);
             });
             $(projID).css({"height": totalHeight});
+            
             setTimeout(function () {
                 $(".control_prev").toggleClass("control-open");
                 $(".control_next").toggleClass("control-open");
@@ -544,6 +567,7 @@ $(document).ready(function(){
                 $('.headImage').addClass("project-open");
                 $('.headContainer').css({"top": slideHeight/8 });
                 $('header').addClass('project-open');
+                $('#slider .headContainer').addClass("project-open");
             }, 1);
         });
     }
@@ -552,6 +576,8 @@ $(document).ready(function(){
         $(o).click(function () {
             var projID = $(this).attr('href');
             $(projID).removeClass('project-open');
+            $(projID + ' .right-wrapper').removeClass('project-open');
+            $('#slider .headContainer').removeClass("project-open");
             setTimeout(function () {
                 $(".control_prev").toggleClass("control-open");
                 $(".control_next").toggleClass("control-open");
@@ -566,9 +592,9 @@ $(document).ready(function(){
     }
     
     openproject('#readSC');
-    closeproject('#closeSC');
+    closeproject('.closeSC');
     openproject('#readBirk');
-    closeproject('#closeBirk');
+    closeproject('.closeBirk');
 
     var sdistance = 0;
     $(window).scroll(function() {
@@ -581,16 +607,38 @@ $(document).ready(function(){
     function closestickytop(r) {
         var $window = $(window);
         $window.scroll(function () {
-            if ($window.scrollTop() >= slideHeight/2 - 114 ) {
-                $(r + " .headContainer").addClass("sticky-top");
+            if ($window.scrollTop() >= slideHeight/2 ) {
+                $(r + " .bottom").addClass("project-open");
             } else {
-                $(r + " .headContainer").removeClass("sticky-top");
+                $(r + " .bottom").removeClass("project-open");
             }
         });
     }
     
     closestickytop('#SCProject');
     closestickytop('#BirkProject');
-    
+
+    checkSize();
+
+    // run test on resize of the window
+    $(window).resize(checkSize);
+
+    //Function to the css rule
+    function checkSize(){
+        if ($(".right-wrapper").css("float") == "none" ){
+
+        }
+    }
+
+    if ($(".right-wrapper").css("float") == "none" ){
+
+        $(window).scroll(function() {
+            sdistance = Math.abs($(window).scrollTop());
+            var stranslate = "translateY(-" + sdistance/2 + "px)";
+            $(".headImage").css({"transform": stranslate, "-moz-transform": stranslate, "-webkit-transform": stranslate});
+            $(".headContainer").css({"transform": stranslate, "-moz-transform": stranslate, "-webkit-transform": stranslate});
+        });
+
+    }
     
 });
