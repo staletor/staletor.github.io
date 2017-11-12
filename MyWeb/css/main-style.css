@@ -73,10 +73,84 @@ hr {
     width: 600px;
     margin: 0 auto;
     height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .header-signature-image {
     height: 100%;
+}
+
+#main-menu {
+    position: relative;
+    height: 35px;
+}
+
+.menu-item-wrapper {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.menu-item {
+    background: #ffffff;
+    height: 10px;
+    width: 10px;
+    border-radius: 20px;
+    margin: 5px;
+    transition: 300ms ease;
+    pointer-events: none;
+}
+
+.menu-item-content {
+    opacity: 0;
+    transition: 0ms;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu-item-content a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#main-menu.menu-open .menu-item {
+    height: 36px;
+    width: 200px;
+    background: #8FAFC6;
+    pointer-events: auto;
+}
+
+#main-menu.menu-open .menu-item:hover {
+    background: #83B7A8;
+}
+
+#main-menu.menu-open .menu-item-content {
+    opacity: 1;
+    transition: 200ms ease;
+    transition-delay: 200ms;
+}
+
+#main-menu.menu-x #item-one {
+    width: 30px;
+    height: 5px;
+    transform: rotate(45deg);
+    margin-top: 15px;
+}
+
+
+#main-menu.menu-x #item-two {
+    width: 30px;
+    height: 5px;
+    transform: rotate(-45deg);
+    margin-top: -9px;
+}
+
+.spacefiller {
+    flex: auto;
 }
 
 #chat-wrapper {

@@ -91,10 +91,28 @@ $(document).ready(function(){
         var age = parseInt(dayDiff);
         $('#age').html(age + ' years old');
     }
-        
+
+    function togglemenu() {
+        $("#main-menu").toggleClass("menu-open");
+    }
+
+    function togglex() {
+        $("#main-menu").toggleClass("menu-x");
+    }
+
+    if (!$("#main-menu").hasClass("menu-x")) {   
+        $("#main-menu").on('click', function () {
+            togglemenu()
+        });
+    }
+        $("#main-menu.menu-x").on('click', function () {
+            toggleportfolio()
+        });
+
     function toggleportfolio() {
         $("#portfolio-wrapper").toggleClass("portfolio-open");
         $("#portfolio-indicator").toggleClass("control-open");
+        togglex();
         setTimeout(function () {
             $(".control_prev").toggleClass("control-open");
             $(".control_next").toggleClass("control-open");
@@ -102,9 +120,10 @@ $(document).ready(function(){
         }, 400);
     }
         
-     $(".portfolio-button").click(function () {
-        toggleportfolio()
+    $(".portfolio-button").click(function () {
+        toggleportfolio()     
     });
+        
 
     $(".clear-button").click(function () {
         localStorage.clear();
