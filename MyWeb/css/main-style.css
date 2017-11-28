@@ -893,6 +893,10 @@ a.control_prev.control-open, a.control_next.control-open {
         flex-shrink: 0;
         margin-bottom: 5px;
     }
+
+    #header-wrapper {
+        width: 100%;
+    }
 }
 
 /* Extra Small Devices, Phones */
