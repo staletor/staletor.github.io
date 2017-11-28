@@ -100,18 +100,10 @@ $(document).ready(function(){
         $("#main-menu").toggleClass("menu-x");
     }
 
-    if (!$("#main-menu").hasClass("menu-x")) {   
-        $("#main-menu").on('click', function () {
-            togglemenu()
-        });
-    }
-        $("#main-menu.menu-x").on('click', function () {
-            toggleportfolio()
-        });
-
     function toggleportfolio() {
         $("#portfolio-wrapper").toggleClass("portfolio-open");
         $("#portfolio-indicator").toggleClass("control-open");
+        $("#main-menu").removeClass('menu-open');
         togglex();
         setTimeout(function () {
             $(".control_prev").toggleClass("control-open");
@@ -119,8 +111,27 @@ $(document).ready(function(){
             
         }, 400);
     }
+ 
+    $("#main-menu").on('click', function (event) {
+            event.stopPropagation();
+            if ( $( this ).hasClass( "menu-x" ) ) {
+                toggleportfolio() 
+            }
+            else {
+                togglemenu()
+            }
+    });
+
+    $(".menu-open").click(function(e){
+        e.stopPropagation();
+    });
+
+    $(document).click(function(){
+        $("#main-menu").removeClass('menu-open');
+    });
         
-    $(".portfolio-button").click(function () {
+    $(".portfolio-button").click(function (event) {
+        event.stopPropagation();
         toggleportfolio()     
     });
         

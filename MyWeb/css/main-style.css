@@ -1,12 +1,22 @@
+:root{
+    --dark: #B7B8BA;
+    --darker: #404040;
+    --darkest: #353535;
+    --light: #EBEBEC;
+    --lighter: #F1F2F2;
+    --lightest: #FFF9F9;
+    --accent: #F3DE8A;
+}
+
 body {
-    background: #F4F4F4 ;
+    background: #fff;
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
 }
 
 header {
-    background: #5D6772;
+    background: var(--darker);
     height: 50px;
     width: 100%;
     position: fixed;
@@ -44,24 +54,28 @@ p {
     
 }
 
+p.serif {
+    font-family: 'Roboto Slab', serif;
+}
+
 a {
     
 }
 
 h1 {
-    
+    font-family: 'Roboto Slab', serif;
 }
 
 h2 {
-    
+    font-family: 'Roboto Slab', serif;
 }
 
 h3 {
-    
+    font-family: 'Roboto Slab', serif;
 }
 
 h4 {
-    
+    font-family: 'Roboto Slab', serif;
 }
 
 hr {
@@ -95,10 +109,9 @@ hr {
 
 .menu-item {
     background: #ffffff;
-    height: 10px;
-    width: 10px;
-    border-radius: 20px;
-    margin: 5px;
+    height: 7px;
+    width: 7px;
+    margin: 4px;
     transition: 300ms ease;
     pointer-events: none;
 }
@@ -108,24 +121,29 @@ hr {
     transition: 0ms;
     line-height: 36px;
     text-align: center;
-    color: #fff;
+    color: var(--darkest);
     cursor: pointer;
 }
 
 .menu-item-content a {
-    color: #fff;
+    color: var(--darkest);
     text-decoration: none;
 }
 
 #main-menu.menu-open .menu-item {
     height: 36px;
     width: 200px;
-    background: #8FAFC6;
+    background: #fff;
     pointer-events: auto;
+    margin: 0 4px;
 }
 
 #main-menu.menu-open .menu-item:hover {
-    background: #83B7A8;
+    background: var(--dark);
+}
+
+#main-menu.menu-open #item-three:hover {
+    background: var(--accent);
 }
 
 #main-menu.menu-open .menu-item-content {
@@ -149,18 +167,27 @@ hr {
     margin-top: -9px;
 }
 
+#item-three {
+    opacity: 1;
+    background: var(--accent);
+}
+
+#main-menu.menu-x #item-three {
+    opacity: 0;
+}
+
 .spacefiller {
     flex: auto;
 }
 
 #chat-wrapper {
-    padding: 18px 12px 70px;
+    padding: 18px 0px 70px;
     width: 600px;
     overflow-x: hidden;
     -ms-overflow-x: hidden;
     overflow-y: auto;
     -ms-overflow-y: auto;
-    background: #ffffff;
+    background: var(--light);
     margin: 0 auto;
     height: 100%;
 }
@@ -187,9 +214,7 @@ hr {
 
 .chat-bubble-left {
     padding: 8px 14px;
-    border-radius: 18px;
-    border-top-left-radius: 0;
-    background: #DEE5E5;
+    background: #ffffff;
     align-self: flex-start;
     max-width: 65%;
     min-height: 36px;
@@ -219,9 +244,7 @@ hr {
 .chat-bubble-right {
     padding: 8px 14px;
     margin: 10px 0;
-    border-radius: 18px;
-    border-top-right-radius: 0;
-    background: #83B7A8;
+    background: var(--darker);
     align-self: flex-end;
     color: #ffffff;
     max-width: 65%;
@@ -249,7 +272,7 @@ hr {
     height: 6px;
     float: left;
     margin-top: 7px;
-    background: #5D6772;
+    background: var(--dark);
     border-radius: 50%;
     opacity: 0;
     -webkit-animation: busy 1.5s infinite; /* Safari 4.0 - 8.0 */
@@ -294,11 +317,11 @@ hr {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    border-top: 2px solid #f4f4f4;
+    border-top: 2px solid #fff;
     width: 600px;
     height: 80px;
     overflow: hidden;
-    background: #ffffff;
+    background: var(--light);
     position: fixed;
     bottom: 0;
     left: 50%;
@@ -310,10 +333,9 @@ hr {
 }
 
 .chat-option, .read-more-button {
-    background: #8FAFC6;
-    color: #ffffff;
+    background: #fff;
+    color: var(--darkest);
     padding: 8px 14px;
-    border-radius: 18px;
     min-height: 36px;
 }
 
@@ -327,16 +349,17 @@ hr {
 }
 
 .chat-option:hover, .read-more-button:hover {
-    background: #83B7A8;
+    background: var(--darkest);
+    color: #fff;
     cursor: pointer;
 }
 
 .chat-option.chat-input {
     cursor: auto;
-    background: #DEE5E5;
+    background: #fff;
     flex-direction: row;
     align-items: center;
-    padding: 3px 3px 3px 14px;
+    padding: 0 0 0 14px;
 }
 
 .chat-input input[type=text] {
@@ -353,28 +376,33 @@ hr {
 
 #submit-name {
     cursor: pointer;
-    background: #8FAFC6;
+    background: var(--darker);
     color: #ffffff;
     padding: 6px 14px;
-    border-radius: 16px;
     margin-left: 6px;
     line-height: 15px;
     height: 30px;
 }
 
 #submit-name:hover {
-    background: #83B7A8;   
+    background: var(--darkest);   
 }
 
 .chat-large-link {
-    font-size: 24px;
-    color: #EF8FB4;
-    margin-left: 4px;
+    color: var(--darkest);
     text-decoration: none;
+    padding: 2px 4px;
+    font-family: 'Roboto Slab', serif;
+    -moz-box-shadow: inset 0 -4px 0 var(--accent);
+    -webkit-box-shadow: inset 0 -4px 0 var(--accent);
+    box-shadow: inset 0 -4px 0 var(--accent);
+    transition: 200ms;
 }
 
 .chat-large-link:hover {
-    text-decoration: underline;
+    -moz-box-shadow: inset 0 -24px 0 var(--accent);
+    -webkit-box-shadow: inset 0 -24px 0 var(--accent);
+    box-shadow: inset 0 -24px 0 var(--accent);
     cursor: pointer;
 }
 
@@ -414,7 +442,7 @@ hr {
 
 
 #chat-background {
-    background: #ffffff;
+    background: var(--light);
     width: 600px;
     position: absolute;
     top:0;
@@ -507,10 +535,10 @@ a.control_prev, a.control_next {
     top: 40%;
     z-index: 999;
     display: block;
-    line-height: 40px;
+    line-height: 180px;
     text-align: center;
     width: 40px;
-    height: 40px;
+    height: 180px;
     background: #2a2a2a;
     color: #fff;
     text-decoration: none;
@@ -519,7 +547,6 @@ a.control_prev, a.control_next {
     opacity: 0.6;
     cursor: pointer;
     transition: 300ms ease;
-    transform: translateY(-50%);
 }
 
 a.control_prev:hover, a.control_next:hover {
@@ -528,16 +555,16 @@ a.control_prev:hover, a.control_next:hover {
 }
 
 a.control_prev {
-    transform: translateX(-100%);
+    transform: translate(-100%, -50%);
 }
 
 a.control_next {
     right: 0;
-    transform: translateX(100%);
+    transform: translate(100%, -50%);
 }
 
 a.control_prev.control-open, a.control_next.control-open {
-    transform: translateX(0);
+    transform: translate(0, -50%);
 }
 
 #portfolio-indicator {
