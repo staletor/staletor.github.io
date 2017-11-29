@@ -30,6 +30,10 @@ header.project-open {
     transform: translateY(-100%);
 }
 
+header.wide-header {
+    background: var(--darkest);
+}
+
 main {
     width: 100%;
     position: fixed;
@@ -90,6 +94,7 @@ hr {
     display: flex;
     flex-direction: row;
     align-items: center;
+    background: var(--darkest)
 }
 
 .header-signature-image {
@@ -99,6 +104,17 @@ hr {
 #main-menu {
     position: relative;
     height: 35px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+#main-menu:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+#main-menu.menu-open:hover {
+    transform: scale(1);
 }
 
 .menu-item-wrapper {
@@ -121,8 +137,8 @@ hr {
     transition: 0ms;
     line-height: 36px;
     text-align: center;
-    color: var(--darkest);
     cursor: pointer;
+    color: var(--darkest);
 }
 
 .menu-item-content a {
@@ -142,8 +158,31 @@ hr {
     background: var(--dark);
 }
 
+@-webkit-keyframes colorfull {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+} 
+
+@keyframes colorfull {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+
 #main-menu.menu-open #item-three:hover {
-    background: var(--accent);
+    background: -webkit-repeating-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet,red,orange,yellow,green,blue,indigo,violet);
+    background: -o-repeating-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet,red,orange,yellow,green,blue,indigo,violet);
+    background: -moz-repeating-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet,red,orange,yellow,green,blue,indigo,violet);
+    background: repeating-linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet,red,orange,yellow,green,blue,indigo,violet);
+    background-size: 220%;
+    animation: colorfull 3s linear infinite;
+}
+
+#item-three .menu-item-content{
+    transition-property: none;
+}
+
+#main-menu.menu-open #item-three:hover .menu-item-content{
+    color: #fff;
 }
 
 #main-menu.menu-open .menu-item-content {
@@ -169,7 +208,6 @@ hr {
 
 #item-three {
     opacity: 1;
-    background: var(--accent);
 }
 
 #main-menu.menu-x #item-three {
@@ -273,7 +311,6 @@ hr {
     float: left;
     margin-top: 7px;
     background: var(--dark);
-    border-radius: 50%;
     opacity: 0;
     -webkit-animation: busy 1.5s infinite; /* Safari 4.0 - 8.0 */
     animation: busy 1.5s infinite;
@@ -288,8 +325,6 @@ hr {
 .typing-indicator-two {
     -webkit-animation-delay: 0.2s; /* Safari 4.0 - 8.0 */
     animation-delay: 0.2s;
-    margin-left: 3px;
-    margin-right: 3px;
 }
 
 .typing-indicator-three {   
@@ -581,18 +616,17 @@ a.control_prev.control-open, a.control_next.control-open {
 }
 
 #portfolio-indicator div {
-    height: 8px;
+    height: 0px;
     width: 8px;
     margin: 0 5px;
-    border: 4px solid #8FAFC6;
-    border-radius: 50%;
+    border: 2px solid var(--dark);
     transition: 400ms ease;
 }
 
 #portfolio-indicator div.active {
     height: 14px;
     width: 14px;
-    border: 2px solid #5D6772;
+    border: 2px solid var(--darkest);
 }
 
 .read-more {
@@ -638,30 +672,9 @@ a.control_prev.control-open, a.control_next.control-open {
 }
 
 .container-left {
-    border: 2px solid #5D6772;
     position: relative;
     padding: 20px;
     width: 40%;
-}
-
-.container-left h1 {
-    position: absolute;
-    top: -35px;
-    left: -25px;
-    background: white;
-    margin: 0px;
-    padding: 10px;
-}
-
-.container-left .read-more-button {
-    position: absolute;
-    left: 20px;
-    bottom: -20px;
-    width: 124px;
-    text-align: center;
-    border: 2px solid #fff;
-    border-radius: 50px;
-    height: 40px;
 }
 
 .portfolio-project-container {
@@ -677,6 +690,24 @@ a.control_prev.control-open, a.control_next.control-open {
 
 .portfolio-project-container.project-open {
     z-index: 12;
+}
+
+.project-frame {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    border: 0px solid var(--darkest);
+    transition: 200ms ease;
+    transition-delay: 0ms;
+}
+
+.project-open .project-frame {
+    border: 15px solid var(--darkest);
+    transition: 300ms ease;
+    transition-delay: 100ms;
 }
 
 .headImage.project-open {
@@ -897,6 +928,7 @@ a.control_prev.control-open, a.control_next.control-open {
     #header-wrapper {
         width: 100%;
     }
+
 }
 
 /* Extra Small Devices, Phones */

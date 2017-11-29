@@ -103,6 +103,7 @@ $(document).ready(function(){
     function toggleportfolio() {
         $("#portfolio-wrapper").toggleClass("portfolio-open");
         $("#portfolio-indicator").toggleClass("control-open");
+        $("header").toggleClass("wide-header");
         $("#main-menu").removeClass('menu-open');
         togglex();
         setTimeout(function () {
