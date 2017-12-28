@@ -141,8 +141,13 @@ $(document).ready(function(){
         localStorage.clear();
     });
 
-
+    $("#item-three").on('click', function () {
+            $('link[href="css/main-style.css"]').attr("href", "css/main-style-color.css");
+    });
     
+    $("#item-four").on('click', function () {
+            $('link[href="css/main-style-color.css"]').attr("href", "css/main-style.css");
+    });
 
     if (localStorage.getItem("visitor") === null) {
         addchatleft(welDivOne);
@@ -585,11 +590,12 @@ $(document).ready(function(){
             $(projID).addClass('project-open');
             $(projID + ' .right-wrapper').addClass('project-open');
             var totalHeight = 0;
-            $(projID).children().each(function () {
+            var imageHeight = $(projID + ' .headImage').height();
+            $(projID + ' .right-wrapper').children().each(function () {
                 totalHeight = totalHeight + $(this).outerHeight(true);
             });
-            $(projID).css({"height": totalHeight});
-            
+                 $(projID).css({"height": totalHeight + imageHeight});
+              
             setTimeout(function () {
                 $(".control_prev").toggleClass("control-open");
                 $(".control_next").toggleClass("control-open");
@@ -627,12 +633,12 @@ $(document).ready(function(){
     openproject('#readBirk');
     closeproject('.closeBirk');
 
-    var sdistance = 0;
+    /*var sdistance = 0;
     $(window).scroll(function() {
         sdistance = Math.abs($(window).scrollTop());
         var stranslate = "translateY(-" + sdistance + "px)";
         $(".headImage").css({"transform": stranslate, "-moz-transform": stranslate, "-webkit-transform": stranslate});
-    });
+    });*/
 
 
     function closestickytop(r) {
@@ -661,7 +667,7 @@ $(document).ready(function(){
         }
     }
 
-    if ($(".right-wrapper").css("float") == "none" ){
+    /*if ($(".right-wrapper").css("float") == "none" ){
 
         $(window).scroll(function() {
             sdistance = Math.abs($(window).scrollTop());
@@ -670,6 +676,6 @@ $(document).ready(function(){
             $(".headContainer").css({"transform": stranslate, "-moz-transform": stranslate, "-webkit-transform": stranslate});
         });
 
-    }
+    }*/
     
 });
