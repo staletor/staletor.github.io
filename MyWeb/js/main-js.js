@@ -643,8 +643,9 @@ $(document).ready(function(){
 
     function closestickytop(r) {
         var $window = $(window);
+        var scrollEnough = slideHeight/2 + 50;
         $window.scroll(function () {
-            if ($window.scrollTop() >= slideHeight/2 ) {
+            if ($window.scrollTop() >= scrollEnough) {
                 $(r + " .bottom").addClass("project-open");
             } else {
                 $(r + " .bottom").removeClass("project-open");
