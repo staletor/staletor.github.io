@@ -142,11 +142,11 @@ $(document).ready(function(){
     });
 
     $("#item-three").on('click', function () {
-            $('link[href="css/main-style.css"]').attr("href", "css/main-style-color.css");
+            $('link[title="colors-theme"]')[0].disabled=false;
     });
     
     $("#item-four").on('click', function () {
-            $('link[href="css/main-style-color.css"]').attr("href", "css/main-style.css");
+            $('link[title="colors-theme"]')[0].disabled=true;
     });
 
     if (localStorage.getItem("visitor") === null) {
