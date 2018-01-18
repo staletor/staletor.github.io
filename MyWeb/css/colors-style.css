@@ -103,7 +103,6 @@ header {
     border-top-left-radius: 0;
     background: var(--electric-blue);
     margin-left: 10px;
-    color: var(--blue);
 }
 
 .chat-bubble-right {

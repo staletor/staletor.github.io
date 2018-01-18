@@ -94,7 +94,12 @@ hr {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background: var(--darkest)
+    background: var(--darkest);
+    transition: 300ms ease;
+}
+
+#header-wrapper.wide-header {
+    width: 100%;
 }
 
 .header-signature-image {
@@ -647,6 +652,12 @@ a.control_prev.control-open, a.control_next.control-open {
     height: auto;
 }
 
+.read-next {
+    text-align: right;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
 .headImage {
     width: 100%;
     max-width: 1200px;
@@ -812,6 +823,9 @@ a.control_prev.control-open, a.control_next.control-open {
     .container-left {
         margin-left: 30px;
     }
+
+    
+
 }
 
 /* Medium Devices, Desktops */
@@ -861,7 +875,9 @@ a.control_prev.control-open, a.control_next.control-open {
         padding: 20px;
     }
 
-    
+    .read-next {
+       text-align: center;
+    }
 
     .project-frame {
         display: none;
