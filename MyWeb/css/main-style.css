@@ -27,7 +27,8 @@ header {
 }
 
 header.project-open {
-    transform: translateY(-100%);
+    position: absolute;
+    overflow: hidden;
 }
 
 header.wide-header {
@@ -530,7 +531,7 @@ hr {
     height: 100%;
     width: 100%;
     position: fixed;
-    background: #DEE5E5;
+    background: #FFF;
     transform: translateY(100%);
     transition: 300ms ease-in;
     z-index: 10;
@@ -550,6 +551,10 @@ hr {
     width: 100%;
     min-height: 100% ;
     background: #fff;
+}
+
+#portfolio-wrapper.project-open #portfolio-container {
+    display: none;
 }
 
 #slider {
@@ -621,7 +626,7 @@ a.control_prev.control-open, a.control_next.control-open {
     left: 50%;
     transform: translateX(-50%);
     padding-bottom: 30px;
-    z-index: 999;
+    z-index: 11;
     display: flex;
     flex-direction: row;
     align-items: center;

@@ -102,14 +102,33 @@ $(document).ready(function(){
 
     function toggleportfolio() {
         $("#portfolio-wrapper").toggleClass("portfolio-open");
-        $("#portfolio-indicator").toggleClass("control-open");
+        $(".portfolio-project-container").removeClass("project-open");
+        $(".portfolio-project-container").css({"height": "0px"});
         $("#main-menu").removeClass('menu-open');
+        $('.right-wrapper').removeClass('project-open');
+        $('#slider .headContainer').removeClass("project-open");
+        $("#portfolio-wrapper").removeClass('project-open');
+        setTimeout(function () {
+            $('.headImage').css({"height": slideHeight });
+            $('.headImage').removeClass("project-open");
+            $('.headContainer').css({"top": slideHeight/3 });
+            $('header').removeClass('project-open');
+        }, 1);
         togglex();
         setTimeout(function () {
-            $(".control_prev").toggleClass("control-open");
-            $(".control_next").toggleClass("control-open");
             $('#header-wrapper').toggleClass("wide-header");
-        }, 400);
+        }, 200);
+        if ( $("header").hasClass("project-open")) {
+            setTimeout(function () {
+                $(".control_prev").removeClass("control-open");
+                $(".control_next").removeClass("control-open");
+            }, 400);
+        } else {
+                setTimeout(function () {
+                    $(".control_prev").toggleClass("control-open");
+                    $(".control_next").toggleClass("control-open");
+                }, 400);
+            }
     }
  
     $("#main-menu").on('click', function (event) {
@@ -588,6 +607,7 @@ $(document).ready(function(){
             var projID = $(this).attr('href');
             $(projID).addClass('project-open');
             $(projID + ' .right-wrapper').addClass('project-open');
+            $("#portfolio-wrapper").addClass('project-open');
             var totalHeight = 0;
             setTimeout(function () {
                 $(projID + ' .right-wrapper').children().each(function () {
@@ -596,7 +616,6 @@ $(document).ready(function(){
                 $(projID).css({"height": totalHeight + slideHeight/2});
                 $(".control_prev").toggleClass("control-open");
                 $(".control_next").toggleClass("control-open");
-                $("#portfolio-indicator").toggleClass("control-open");
                 $('.headImage').css({"height": slideHeight/2 });
                 $('.headImage').addClass("project-open");
                 $('.headContainer').css({"top": slideHeight/8 });
@@ -612,10 +631,10 @@ $(document).ready(function(){
             $(projID).removeClass('project-open');
             $(projID + ' .right-wrapper').removeClass('project-open');
             $('#slider .headContainer').removeClass("project-open");
+            $("#portfolio-wrapper").removeClass('project-open');
             setTimeout(function () {
                 $(".control_prev").toggleClass("control-open");
                 $(".control_next").toggleClass("control-open");
-                $("#portfolio-indicator").toggleClass("control-open");
                 $('.headImage').css({"height": slideHeight });
                 $('.headImage').removeClass("project-open");
                 $('.headContainer').css({"top": slideHeight/3 });
@@ -631,6 +650,8 @@ $(document).ready(function(){
             $(projID).addClass('project-open');
             $(projID + ' .right-wrapper').addClass('project-open');
             moveRight();
+            $(window).scrollTop(0);
+            $("#portfolio-wrapper").addClass('project-open');
             var totalHeight = 0;
             setTimeout(function () {
                 $(projID + ' .right-wrapper').children().each(function () {
@@ -639,7 +660,6 @@ $(document).ready(function(){
                 $(projID).css({"height": totalHeight + slideHeight/2});
                 $(".control_prev").toggleClass("control-open");
                 $(".control_next").toggleClass("control-open");
-                $("#portfolio-indicator").toggleClass("control-open");
                 $('.headImage').css({"height": slideHeight/2 });
                 $('.headImage').addClass("project-open");
                 $('.headContainer').css({"top": slideHeight/8 });
