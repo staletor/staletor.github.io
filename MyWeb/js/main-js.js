@@ -38,6 +38,11 @@ $(document).ready(function(){
     var aboutContactOne = $('#about-contact-one');
     var chatEndOne = $('#chat-end-one');
     var chatEndTwo = $('#chat-end-two');
+    var moodOne = $("#visitor-mood-one");
+    var moodTwo = $("#visitor-mood-two");
+    var moodThree = $("#visitor-mood-three");
+    var moodSerious = $("#visitor-mood-serious");
+    var moodPlayful = $("#visitor-mood-playful");
     
     
      
@@ -183,12 +188,80 @@ $(document).ready(function(){
         $('.re-visitor-name').html(bla);
         addchatleft(welBackOne)
         setTimeout(function () {
-            addchatleft(welBackTwo);
-            showoption("#yes-portfolio-option");
-            showoption("#contact-option-two");
-            showoption("#not-visitor-option");
+            addchatleft(moodOne);
+            showoption("#mood-option-serious");
+            showoption("#mood-option-playful");
         }, 2400);
     }
+
+    $("#mood-option-serious").click(function(){
+        addchatright(moodSerious);
+        hideoption("#mood-option-serious");
+        hideoption("#mood-option-playful");
+        if ($('link[title="colors-theme"]').prop( "disabled" )) {
+            setTimeout(function(){
+                addchatleft(moodTwo);
+            }, 1000);
+            setTimeout(function(){
+                addchatleft(welBackTwo);
+                showoption("#yes-portfolio-option");
+                showoption("#contact-option-two");
+                showoption("#not-visitor-option")
+            }, 4000);
+        } else {
+            setTimeout(function(){
+                addchatleft(moodThree);
+            }, 1000);
+            setTimeout(function(){
+                $('link[title="colors-theme"]')[0].disabled=true;
+            }, 4000);
+            setTimeout(function(){
+                if (localStorage.getItem("visitor") === null) {
+                    
+                } else {
+                    addchatleft(welBackTwo);
+                    showoption("#yes-portfolio-option");
+                    showoption("#contact-option-two");
+                    showoption("#not-visitor-option")
+                }
+            }, 7000);
+        }
+    });
+
+    $("#mood-option-playful").click(function(){
+        addchatright(moodPlayful);
+        hideoption("#mood-option-serious");
+        hideoption("#mood-option-playful");
+        if ($('link[title="colors-theme"]').prop( "disabled" )) {
+            setTimeout(function(){
+                addchatleft(moodThree);
+            }, 1000);
+            setTimeout(function(){
+                addchatleft(welBackTwo);
+                showoption("#yes-portfolio-option");
+                showoption("#contact-option-two");
+                showoption("#not-visitor-option")
+            }, 4000);
+        } else {
+            setTimeout(function(){
+                addchatleft(moodTwo);
+            }, 1000);
+            setTimeout(function(){
+                $('link[title="colors-theme"]')[0].disabled=false;
+            }, 4000);
+            setTimeout(function(){
+                if (localStorage.getItem("visitor") === null) {
+                    
+                } else {
+                    addchatleft(welBackTwo);
+                    showoption("#yes-portfolio-option");
+                    showoption("#contact-option-two");
+                    showoption("#not-visitor-option")
+                }
+            }, 7000);
+        }
+    });
+
 
     $("#yes-portfolio-option").click(function(){
         addchatright(backChatOne);

@@ -204,7 +204,7 @@ hr {
 
 #main-menu.menu-x #item-one {
     width: 30px;
-    height: 5px;
+    height: 2px;
     transform: rotate(45deg);
     margin-top: 15px;
 }
@@ -212,9 +212,9 @@ hr {
 
 #main-menu.menu-x #item-two {
     width: 30px;
-    height: 5px;
+    height: 2px;
     transform: rotate(-45deg);
-    margin-top: -9px;
+    margin-top: -6px;
 }
 
 #item-three {
@@ -624,6 +624,19 @@ a.control_next {
 
 a.control_prev.control-open, a.control_next.control-open {
     transform: translate(0, -50%);
+}
+
+a.control_prev img, a.control_next img {
+    width: 20px;
+    height: 20px;
+}
+
+a.control_prev img {
+    transform: rotate(90deg);
+}
+
+a.control_next img {
+    transform: rotate(270deg);
 }
 
 #portfolio-indicator {

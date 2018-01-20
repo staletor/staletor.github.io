@@ -101,20 +101,6 @@ header {
     transition-delay: 200ms;
 }
 
-#main-menu.menu-x #item-one {
-    width: 30px;
-    height: 5px;
-    transform: rotate(45deg);
-    margin-top: 15px;
-}
-
-#main-menu.menu-x #item-two {
-    width: 30px;
-    height: 5px;
-    transform: rotate(-45deg);
-    margin-top: -9px;
-}
-
 #item-three {
     display: none;
 }
@@ -242,7 +228,7 @@ header {
 
 #submit-name {
     cursor: pointer;
-    background: #8FAFC6;
+    background: var(--violet);
     color: #ffffff;
     padding: 6px 14px;
     border-radius: 16px;
@@ -252,7 +238,7 @@ header {
 }
 
 #submit-name:hover {
-    background: #83B7A8;   
+    background: var(--pink);   
 }
 
 .chat-large-link {
@@ -292,7 +278,7 @@ header {
     height: 8px;
     width: 8px;
     margin: 0 5px;
-    border: 4px solid #8FAFC6;
+    border: 4px solid var(--lightest-blue);
     border-radius: 50%;
     transition: 400ms ease;
 }
@@ -300,9 +286,30 @@ header {
 #portfolio-indicator div.active {
     height: 14px;
     width: 14px;
-    border: 2px solid #5D6772;
+    border: 2px solid var(--electric-blue);
 }
 
+a.control_prev, a.control_next {
+    background: #fff;
+    border: 2px solid var(--lighter);
+    opacity: 1;
+}
+
+a.control_next {
+    border-width: 2px 0 2px 2px;
+}
+
+a.control_prev {
+    border-width: 2px 2px 2px 0;
+}
+
+a.control_prev:hover, a.control_next:hover {
+    background: var(--lighter);
+}
+
+a.control_prev img, a.control_next img {
+    filter: invert(0.7);
+}
 
 .container-left .read-more-button {
     width: 124px;
