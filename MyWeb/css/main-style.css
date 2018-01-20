@@ -6,6 +6,13 @@
     --lighter: #F1F2F2;
     --lightest: #FFF9F9;
     --accent: #F3DE8A;
+    --turquoise: #8AFCF6;
+    --yellow: #FFE66D;
+    --pink: #FF83C8;
+    --violet: #CAAEFF;
+    --electric-blue: #62EDF0;
+    --maximum-blue: #39A9DB;
+    --magic-mint: #ACFCD9;
 }
 
 body {
@@ -16,7 +23,7 @@ body {
 }
 
 header {
-    background: var(--darker);
+    background: #404040;
     height: 50px;
     width: 100%;
     position: fixed;
@@ -32,7 +39,7 @@ header.project-open {
 }
 
 header.wide-header {
-    background: var(--darkest);
+    background: #353535;
 }
 
 main {
@@ -95,7 +102,7 @@ hr {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background: var(--darkest);
+    background: #353535;
     transition: 300ms ease;
 }
 
@@ -144,11 +151,11 @@ hr {
     line-height: 36px;
     text-align: center;
     cursor: pointer;
-    color: var(--darkest);
+    color: #353535;
 }
 
 .menu-item-content a {
-    color: var(--darkest);
+    color: #353535;
     text-decoration: none;
 }
 
@@ -161,7 +168,7 @@ hr {
 }
 
 #main-menu.menu-open .menu-item:hover {
-    background: var(--dark);
+    background: #B7B8BA;
 }
 
 @-webkit-keyframes colorfull {
@@ -175,20 +182,18 @@ hr {
 }
 
 #main-menu.menu-open #item-three:hover {
-    background: -webkit-repeating-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet,red,orange,yellow,green,blue,indigo,violet);
-    background: -o-repeating-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet,red,orange,yellow,green,blue,indigo,violet);
-    background: -moz-repeating-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet,red,orange,yellow,green,blue,indigo,violet);
-    background: repeating-linear-gradient(to right,red,orange,yellow,green,blue,indigo,violet,red,orange,yellow,green,blue,indigo,violet);
+    background: -webkit-repeating-linear-gradient(left,#FF83C8,#FFE66D,#ACFCD9,#8AFCF6,#62EDF0,#39A9DB,#CAAEFF,#FF83C8,#FFE66D,#ACFCD9,#8AFCF6,#62EDF0,#39A9DB,#CAAEFF);
+    background: -o-repeating-linear-gradient(left,#FF83C8,#FFE66D,#ACFCD9,#8AFCF6,#62EDF0,#39A9DB,#CAAEFF,#FF83C8,#FFE66D,#ACFCD9,#8AFCF6,#62EDF0,#39A9DB,#CAAEFF);
+    background: -moz-repeating-linear-gradient(left,#FF83C8,#FFE66D,#ACFCD9,#8AFCF6,#62EDF0,#39A9DB,#CAAEFF,#FF83C8,#FFE66D,#ACFCD9,#8AFCF6,#62EDF0,#39A9DB,#CAAEFF);
+    background: repeating-linear-gradient(to right, #FF83C8, #FFE66D, #ACFCD9, #8AFCF6, #62EDF0, #39A9DB, #CAAEFF, #FF83C8, #FFE66D, #ACFCD9, #8AFCF6, #62EDF0, #39A9DB, #CAAEFF);
     background-size: 220%;
     animation: colorfull 3s linear infinite;
 }
 
 #item-three .menu-item-content{
     transition-property: none;
-}
-
-#main-menu.menu-open #item-three:hover .menu-item-content{
-    color: #fff;
+    font-family: 'Covered By Your Grace', sans-serif;
+    font-size: 1.4em;
 }
 
 #main-menu.menu-open .menu-item-content {
@@ -235,7 +240,7 @@ hr {
     -ms-overflow-x: hidden;
     overflow-y: auto;
     -ms-overflow-y: auto;
-    background: var(--light);
+    background: #EBEBEC;
     margin: 0 auto;
     height: 100%;
 }
@@ -292,7 +297,7 @@ hr {
 .chat-bubble-right {
     padding: 8px 14px;
     margin: 10px 0;
-    background: var(--darker);
+    background: #404040;
     align-self: flex-end;
     color: #ffffff;
     max-width: 65%;
@@ -319,8 +324,9 @@ hr {
     width: 6px;
     height: 6px;
     float: left;
+    margin-right: 3px;
     margin-top: 7px;
-    background: var(--dark);
+    background: #B7B8BA;
     opacity: 0;
     -webkit-animation: busy 1.5s infinite; /* Safari 4.0 - 8.0 */
     animation: busy 1.5s infinite;
@@ -366,7 +372,7 @@ hr {
     width: 600px;
     height: 80px;
     overflow: hidden;
-    background: var(--light);
+    background: #EBEBEC;
     position: fixed;
     bottom: 0;
     left: 50%;
@@ -379,7 +385,7 @@ hr {
 
 .chat-option {
     background: #fff;
-    color: var(--darkest);
+    color: #353535;
     padding: 8px 14px;
     min-height: 36px;
 }
@@ -387,7 +393,7 @@ hr {
 .read-more-button {
     text-decoration: none;
     transition: 300ms ease;
-    background: var(--darker);
+    background: #404040;
     color: #fff;
     padding: 8px 24px;
     min-height: 36px;
@@ -398,7 +404,7 @@ hr {
 }
 
 .chat-option:hover, .read-more-button:hover {
-    background: var(--darkest);
+    background: #353535;
     color: #fff;
     cursor: pointer;
 }
@@ -425,7 +431,7 @@ hr {
 
 #submit-name {
     cursor: pointer;
-    background: var(--darker);
+    background: #404040;
     color: #ffffff;
     padding: 6px 14px;
     margin-left: 6px;
@@ -434,24 +440,24 @@ hr {
 }
 
 #submit-name:hover {
-    background: var(--darkest);   
+    background: #353535;   
 }
 
 .chat-large-link {
-    color: var(--darkest);
+    color: #353535;
     text-decoration: none;
     padding: 2px 4px;
     font-family: 'Roboto Slab', serif;
-    -moz-box-shadow: inset 0 -4px 0 var(--accent);
-    -webkit-box-shadow: inset 0 -4px 0 var(--accent);
-    box-shadow: inset 0 -4px 0 var(--accent);
+    -moz-box-shadow: inset 0 -4px 0 #F3DE8A;
+    -webkit-box-shadow: inset 0 -4px 0 #F3DE8A;
+    box-shadow: inset 0 -4px 0 #F3DE8A;
     transition: 200ms;
 }
 
 .chat-large-link:hover {
-    -moz-box-shadow: inset 0 -24px 0 var(--accent);
-    -webkit-box-shadow: inset 0 -24px 0 var(--accent);
-    box-shadow: inset 0 -24px 0 var(--accent);
+    -moz-box-shadow: inset 0 -24px 0 #F3DE8A;
+    -webkit-box-shadow: inset 0 -24px 0 #F3DE8A;
+    box-shadow: inset 0 -24px 0 #F3DE8A;
     cursor: pointer;
 }
 
@@ -491,7 +497,7 @@ hr {
 
 
 #chat-background {
-    background: var(--light);
+    background: #EBEBEC;
     width: 600px;
     position: absolute;
     top:0;
@@ -637,14 +643,14 @@ a.control_prev.control-open, a.control_next.control-open {
     height: 0px;
     width: 8px;
     margin: 0 5px;
-    border: 2px solid var(--dark);
+    border: 2px solid #B7B8BA;
     transition: 400ms ease;
 }
 
 #portfolio-indicator div.active {
     height: 14px;
     width: 14px;
-    border: 2px solid var(--darkest);
+    border: 2px solid #353535;
 }
 
 .read-more {
@@ -734,13 +740,13 @@ a.control_prev.control-open, a.control_next.control-open {
     bottom: 0;
     left: 0;
     pointer-events: none;
-    border: 0px solid var(--darkest);
+    border: 0px solid #353535;
     transition: 200ms ease;
     transition-delay: 0ms;
 }
 
 .project-open .project-frame {
-    border: 15px solid var(--darkest);
+    border: 15px solid #353535;
     transition: 300ms ease;
     transition-delay: 100ms;
 }
@@ -777,19 +783,19 @@ a.control_prev.control-open, a.control_next.control-open {
 }
 
 .color-box.pink {
-    background: var(--lighter);
+    background: #F1F2F2;
 }
 
 .color-box.grey {
-    background: var(--light);
+    background: #EBEBEC;
 }
 
 .color-box.green {
-    background: var(--lighter);
+    background: #F1F2F2;
 }
 
 .color-box.blue {
-    background: var(--light);
+    background: #EBEBEC;
 }
 
 .ui-loader {

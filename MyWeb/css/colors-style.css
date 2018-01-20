@@ -12,8 +12,11 @@
     --pink: #FF83C8;
     --light-blue: #A0DDFF;
     --lightest-blue: #C7E5F1;
-    --violet: #D4BEFE;
+    --violet: #CAAEFF;
     --electric-blue: #62EDF0;
+    --ocean-green: #43C59E;
+    --maximum-blue: #39A9DB;
+    --magic-mint: #ACFCD9;
 }
 
 
@@ -52,11 +55,17 @@ header {
 }
 
 #header-wrapper {
-    background: var(--dark);
+    background: #fff;
+    border-bottom: 2px solid var(--lighter);
+}
+
+.header-signature-image {
+    filter: invert(0.7);
+    -webkit-filter: invert(0.7);
 }
 
 .menu-item {
-    background: #ffffff;
+    background: var(--darkest);
     border-radius: 20px;
 }
 
@@ -77,12 +86,13 @@ header {
 #main-menu.menu-open .menu-item {
     height: 36px;
     width: 200px;
-    background: var(--lightest-blue);
     pointer-events: auto;
+    background: var(--darkest);
+    margin-bottom: 5px;
 }
 
 #main-menu.menu-open .menu-item:hover {
-    background: var(--light-blue);
+    background: var(--pink);
 }
 
 #main-menu.menu-open .menu-item-content {
@@ -98,7 +108,6 @@ header {
     margin-top: 15px;
 }
 
-
 #main-menu.menu-x #item-two {
     width: 30px;
     height: 5px;
@@ -113,6 +122,12 @@ header {
 #item-four {
     opacity: 1;
     display: block;
+    font-family: 'Roboto Slab', serif;
+}
+
+#main-menu.menu-open #item-four:hover {
+    background: var(--dark);
+    color: var(--lighter);
 }
 
 #main-menu.menu-x #item-four {
@@ -136,20 +151,8 @@ header {
     margin: 10px 10px 10px 0;
     border-radius: 18px;
     border-top-right-radius: 0;
-    background:  linear-gradient(to bottom right, var(--pink), var(--violet));
+    background:  var(--pink);
     color: #ffffff; 
-}
-
-.chat-large-link {
-    font-family: 'Covered By Your Grace', sans-serif;
-    font-size: 22px;
-}
-
-.chat-large-link:hover {
-    -moz-box-shadow: inset 0 -34px 0 var(--accent);
-    -webkit-box-shadow: inset 0 -34px 0 var(--accent);
-    box-shadow: inset 0 -34px 0 var(--accent);
-    cursor: pointer;
 }
 
 .typing-indicator-one, .typing-indicator-two, .typing-indicator-three {
@@ -254,15 +257,17 @@ header {
 
 .chat-large-link {
     text-decoration: none;
+    font-family: 'Covered By Your Grace', sans-serif;
+    font-size: 22px;
     -moz-box-shadow: inset 0 -4px 0 var(--yellow);
     -webkit-box-shadow: inset 0 -4px 0 var(--yellow);
     box-shadow: inset 0 -4px 0 var(--yellow);
 }
 
 .chat-large-link:hover {
-    -moz-box-shadow: inset 0 -24px 0 var(--yellow);
-    -webkit-box-shadow: inset 0 -24px 0 var(--yellow);
-    box-shadow: inset 0 -24px 0 var(--yellow);
+    -moz-box-shadow: inset 0 -34px 0 var(--yellow);
+    -webkit-box-shadow: inset 0 -34px 0 var(--yellow);
+    box-shadow: inset 0 -34px 0 var(--yellow);
 }
 
 #chat-background {
@@ -319,7 +324,7 @@ header {
 }
 
 .color-box.green {
-    background: linear-gradient(to bottom right, var(--turquoise), var(--light-blue));
+    background: linear-gradient(to bottom right, var(--turquoise), var(--magic-mint));
 }
 
 .color-box.blue {
