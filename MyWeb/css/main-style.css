@@ -121,9 +121,18 @@ hr {
     margin-right: 10px;
 }
 
-#main-menu:hover {
-    transform: scale(1.08);
+#main-menu:hover {    
     cursor: pointer;
+}
+
+#main-menu:hover .menu-item {    
+    cursor: pointer;
+    width: 20px;
+}
+
+#main-menu.menu-x:hover {    
+    cursor: pointer;
+    transform: scale(1.08);
 }
 
 #main-menu.menu-open:hover {
@@ -138,9 +147,9 @@ hr {
 
 .menu-item {
     background: #ffffff;
-    height: 7px;
-    width: 7px;
-    margin: 4px;
+    height: 5px;
+    width: 5px;
+    margin: 5px;
     transition: 300ms ease;
     pointer-events: none;
 }
@@ -441,6 +450,20 @@ hr {
 
 #submit-name:hover {
     background: #353535;   
+}
+
+#mood-option-serious.chat-option.show-option {
+}
+
+#mood-option-serious-two.chat-option.show-option {
+    display: none;
+}
+
+#mood-option-playful.chat-option.show-option {
+}
+
+#mood-option-playful-two.chat-option.show-option {
+    display: none;
 }
 
 .chat-large-link {

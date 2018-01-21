@@ -67,6 +67,9 @@ header {
 .menu-item {
     background: var(--darkest);
     border-radius: 20px;
+    height: 7px;
+    width: 7px;
+    margin: 4px;
 }
 
 .menu-item-content {
@@ -239,6 +242,22 @@ header {
 
 #submit-name:hover {
     background: var(--pink);   
+}
+
+#mood-option-serious.chat-option.show-option {
+    display: none;
+}
+
+#mood-option-serious-two.chat-option.show-option {
+    display: block;
+}
+
+#mood-option-playful.chat-option.show-option {
+    display: none;
+}
+
+#mood-option-playful-two.chat-option.show-option {
+    display: block;
 }
 
 .chat-large-link {

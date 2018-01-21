@@ -13,6 +13,7 @@ $(document).ready(function(){
     var welDivOne = $('#chat-welcome-one');
     var welDivTwo = $('#chat-welcome-two');
     var welDivThree = $('#chat-welcome-three');
+    var welDivFour = $('#chat-welcome-four');
     var fineDiv = $('#you-fine-chat');
     var aboutMeChat = $('#about-me-chat');
     var aboutMeMoreChat = $('#about-me-more-chat');
@@ -181,16 +182,15 @@ $(document).ready(function(){
                 $("#txt_name").focus();
             }, 2700);
         }, 2400);
-
-    }
-    else {
+    } else {
         var bla = localStorage.getItem("visitor", bla);
         $('.re-visitor-name').html(bla);
         addchatleft(welBackOne)
         setTimeout(function () {
-            addchatleft(moodOne);
-            showoption("#mood-option-serious");
-            showoption("#mood-option-playful");
+            addchatleft(welBackTwo);
+            showoption("#yes-portfolio-option");
+            showoption("#not-visitor-option");
+            showoption("#contact-option-two");
         }, 2400);
     }
 
@@ -198,17 +198,56 @@ $(document).ready(function(){
         addchatright(moodSerious);
         hideoption("#mood-option-serious");
         hideoption("#mood-option-playful");
-        if ($('link[title="colors-theme"]').prop( "disabled" )) {
+        hideoption("#mood-option-serious-two");
+        hideoption("#mood-option-playful-two");
+        removeoption("#mood-option-serious");
+        removeoption("#mood-option-serious-two");
+        removeoption("#mood-option-playful");
+        removeoption("#mood-option-playful-two");
             setTimeout(function(){
                 addchatleft(moodTwo);
             }, 1000);
             setTimeout(function(){
-                addchatleft(welBackTwo);
-                showoption("#yes-portfolio-option");
-                showoption("#contact-option-two");
-                showoption("#not-visitor-option")
+                addchatleft(welDivFour);
+                showoption("#about-me-option");
+                showoption("#about-work-option");
             }, 4000);
-        } else {
+
+    });
+
+    $("#mood-option-playful").click(function(){
+        addchatright(moodPlayful);
+        hideoption("#mood-option-serious");
+        hideoption("#mood-option-playful");
+        hideoption("#mood-option-serious-two");
+        hideoption("#mood-option-playful-two");
+        removeoption("#mood-option-serious");
+        removeoption("#mood-option-serious-two");
+        removeoption("#mood-option-playful");
+        removeoption("#mood-option-playful-two");
+            setTimeout(function(){
+                addchatleft(moodThree);
+            }, 1000);
+            setTimeout(function(){
+                $('link[title="colors-theme"]')[0].disabled=false;
+            }, 4000);
+            setTimeout(function(){
+                addchatleft(welDivFour);
+                showoption("#about-me-option");
+                showoption("#about-work-option");
+            }, 5000);
+    });
+
+    $("#mood-option-serious-two").click(function(){
+        addchatright(moodSerious);
+        hideoption("#mood-option-serious");
+        hideoption("#mood-option-playful");
+        hideoption("#mood-option-serious-two");
+        hideoption("#mood-option-playful-two");
+        removeoption("#mood-option-serious");
+        removeoption("#mood-option-serious-two");
+        removeoption("#mood-option-playful");
+        removeoption("#mood-option-playful-two");
             setTimeout(function(){
                 addchatleft(moodThree);
             }, 1000);
@@ -216,52 +255,32 @@ $(document).ready(function(){
                 $('link[title="colors-theme"]')[0].disabled=true;
             }, 4000);
             setTimeout(function(){
-                if (localStorage.getItem("visitor") === null) {
-                    
-                } else {
-                    addchatleft(welBackTwo);
-                    showoption("#yes-portfolio-option");
-                    showoption("#contact-option-two");
-                    showoption("#not-visitor-option")
-                }
-            }, 7000);
-        }
+                addchatleft(welDivFour);
+                showoption("#about-me-option");
+                showoption("#about-work-option");
+            }, 5000);
+
     });
 
-    $("#mood-option-playful").click(function(){
+    $("#mood-option-playful-two").click(function(){
         addchatright(moodPlayful);
         hideoption("#mood-option-serious");
         hideoption("#mood-option-playful");
-        if ($('link[title="colors-theme"]').prop( "disabled" )) {
-            setTimeout(function(){
-                addchatleft(moodThree);
-            }, 1000);
-            setTimeout(function(){
-                addchatleft(welBackTwo);
-                showoption("#yes-portfolio-option");
-                showoption("#contact-option-two");
-                showoption("#not-visitor-option")
-            }, 4000);
-        } else {
+        hideoption("#mood-option-serious-two");
+        hideoption("#mood-option-playful-two");
+        removeoption("#mood-option-serious");
+        removeoption("#mood-option-serious-two");
+        removeoption("#mood-option-playful");
+        removeoption("#mood-option-playful-two");
             setTimeout(function(){
                 addchatleft(moodTwo);
             }, 1000);
             setTimeout(function(){
-                $('link[title="colors-theme"]')[0].disabled=false;
+                addchatleft(welDivFour);
+                showoption("#about-me-option");
+                showoption("#about-work-option");
             }, 4000);
-            setTimeout(function(){
-                if (localStorage.getItem("visitor") === null) {
-                    
-                } else {
-                    addchatleft(welBackTwo);
-                    showoption("#yes-portfolio-option");
-                    showoption("#contact-option-two");
-                    showoption("#not-visitor-option")
-                }
-            }, 7000);
-        }
     });
-
 
     $("#yes-portfolio-option").click(function(){
         addchatright(backChatOne);
@@ -326,8 +345,10 @@ $(document).ready(function(){
         removeoption("#you-fine-option");
         setTimeout(function(){
             addchatleft(welDivThree);
-            showoption("#about-me-option");
-            showoption("#about-work-option");
+            showoption("#mood-option-serious");
+            showoption("#mood-option-playful");
+            showoption("#mood-option-serious-two");
+            showoption("#mood-option-playful-two");
         }, 600);
         
     });
@@ -341,8 +362,10 @@ $(document).ready(function(){
         removeoption("#you-fine-option");
         setTimeout(function(){
             addchatleft(welDivThree);
-            showoption("#about-me-option");
-            showoption("#about-work-option");
+            showoption("#mood-option-serious");
+            showoption("#mood-option-playful");
+            showoption("#mood-option-serious-two");
+            showoption("#mood-option-playful-two");
         }, 600);
     });
     $('#txt_name').keyup(function(e){
@@ -676,7 +699,7 @@ $(document).ready(function(){
     }
     
     function openproject(o) {
-        $(o).click(function () {
+        $(o).click(function (event) {
             var projID = $(this).attr('href');
             $(projID).addClass('project-open');
             $(projID + ' .right-wrapper').addClass('project-open');
@@ -695,11 +718,12 @@ $(document).ready(function(){
                 $('header').addClass('project-open');
                 $('#slider .headContainer').addClass("project-open");
             }, 1);
+            event.stopPropagation();
         });
     }
     
     function closeproject(o) {
-        $(o).click(function () {
+        $(o).click(function (event) {
             var projID = $(this).attr('href');
             $(projID).removeClass('project-open');
             $(projID + ' .right-wrapper').removeClass('project-open');
@@ -714,11 +738,12 @@ $(document).ready(function(){
                 $('header').removeClass('project-open');
                 $(projID).css({"height": "0px"});
             }, 1);
+            event.stopPropagation();
         });
     }
 
     function nextproject(o,p) {
-        $(o).click(function () {
+        $(o).click(function (event) {
             var projID = p;
             $(projID).addClass('project-open');
             $(projID + ' .right-wrapper').addClass('project-open');
@@ -739,6 +764,7 @@ $(document).ready(function(){
                 $('header').addClass('project-open');
                 $('#slider .headContainer').addClass("project-open");
             }, 1);
+            event.stopPropagation();
         });
     }
     
