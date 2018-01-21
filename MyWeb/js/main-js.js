@@ -615,16 +615,16 @@ $(document).ready(function(){
     $(window).resize(function () {
         slideCount = $('#slider ul li').length;
         slideWidth = $(window).width();
-        slideHeight = $('#portfolio-wrapper').height();
+        //slideHeight = $('#portfolio-wrapper').height();
         sliderUlWidth = slideCount * slideWidth;
     
         $('#slider').css({ width: slideWidth, height: slideHeight });
     
-        $('.headImage').css({ height: slideHeight });
+        /*$('.headImage').css({ height: slideHeight });
         $('.headImage img').css({ height: slideHeight });
         $('.headContainer').css({ top: slideHeight/3 });
         $('.control_next').css({ top: slideHeight/2 });
-        $('.control_prev').css({ top: slideHeight/2 });
+        $('.control_prev').css({ top: slideHeight/2 });*/
     
         $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
     
