@@ -855,6 +855,18 @@ a.control_next img {
     transform: translate(-50%, 0);
 }
 
+.double-image {
+    display: flex;
+    flex-direction: row;
+    -webkit-align-items: flex-start; /* Safari */
+    align-items: flex-start;
+}
+
+.double-image img {
+    width: 50%;
+    height: auto;
+}
+
 /* --- Responsive --- */
 
 @media only screen and (max-width: 1200px) {

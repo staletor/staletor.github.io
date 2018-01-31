@@ -773,6 +773,9 @@ $(document).ready(function(){
     openproject('#readBirk');
     closeproject('.closeBirk');
     nextproject('#readBirkNext', '#BirkProject');
+    openproject('#readGenoa');
+    closeproject('.closeGenoa');
+    nextproject('#readGenoaNext', '#GenoaProject');
 
     function closestickytop(r) {
         var $window = $(window);
