@@ -37,6 +37,18 @@
             }
         });
     </script>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61504782-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
     
 </head>
 <body>
@@ -414,6 +426,20 @@
                 <ul>
                     <li>
                         <div class="headImage">
+                            <img src="images/portfolio/CPSlider.png" />
+                        </div>
+                        <div class="headContainer" >
+                            <div class="container">
+                                <div class="container-left">
+                                    <h1>CheckPoint</h1>
+                                    <p>UX design, IWMAC AS</p>
+                                    <a href="#CPProject" id="readCP" class="read-more-button">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="headImage">
                             <img src="images/portfolio/SCSlider2.jpg" />
                         </div>
                         <div class="headContainer" >
@@ -426,7 +452,7 @@
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <!--<li>
                         <div class="headImage">
                             <img src="images/portfolio/BirkSlider2.jpg" />
                         </div>
@@ -436,6 +462,21 @@
                                     <h1>Birk</h1>
                                     <p>A Scandinavian fireplace tool set</p>
                                     <a href="#BirkProject" id="readBirk" class="read-more-button">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </li>-->
+                    <li>
+                        <div class="headImage">
+                            <img src="images/portfolio/LeewaySlider.png" />
+                        </div>
+                        <div class="headContainer" >
+                            <div class="container">
+                                <div class="container-left">
+                                    <h1>Leeway</h1>
+                                    <p>UX design, emotions and ability</p>
+                                    <a href="#LeewayProject" id="readLeeway" class="read-more-button">Read more</a>
                                 </div>
                             </div>
                         </div>
@@ -455,15 +496,86 @@
                             </div>
                         </div>
                     </li>
-                    <li style="background: #aaa;">SLIDE 4</li>
+                    <li>
+                        <div class="headImage">
+                            <img src="images/portfolio/WFSlider.png" />
+                        </div>
+                        <div class="headContainer" >
+                            <div class="container">
+                                <div class="container-left">
+                                    <h1>WordFindR</h1>
+                                    <p>UX design, word puzzle game</p>
+                                    <a href="#WFProject" id="readWF" class="read-more-button">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="headImage">
+                            <img src="images/portfolio/SketchSlider.png" />
+                        </div>
+                        <div class="headContainer" >
+                            <div class="container">
+                                <div class="container-left">
+                                    <h1>Sketching</h1>
+                                    <p>With ballpoint pen, render in Photoshop.</p>
+                                    <a href="#SketchProject" id="readSketch" class="read-more-button">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div id="portfolio-indicator">
-                <div></div><div></div><div></div><div></div>
+                <div></div><div></div><div></div><div></div><div></div><div></div>
             </div>
         </div>        
     </div>
 
+    <div id="CPProject" class="portfolio-project-container">
+        <div>
+            <div class="headImage">
+                <img src="images/portfolio/CPSlider.png" />
+            </div>
+            <div class="headContainer" >
+                <div class="container">
+                    <div class="container-left">
+                        <h1>CheckPoint</h1>
+                        <p>UX design, IWMAC AS</p>
+                        <a href="#CPProject" class="closeCP read-more-button">Close</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="right-wrapper">
+                    <div class="color-box blue">
+                        <h2>Eco-system</h2>
+                        <p>Software, App and service for golf swing analysis.</p><p><a href="https://www.swingcatalyst.com" target="blank">Product link</a>  &nbsp;&nbsp;&nbsp;|  &nbsp;&nbsp;&nbsp;<a href="https://itunes.apple.com/id/app/swing-catalyst/id714031170?mt=8" target="blank">App Store link</a></p>
+                        <p >Swing Catalyst app is connected to the Online webportal and the Swing Catalyst software via Online. Videos and communication can be shared directly from the app to others with an Online account.</p>
+                    </div>
+                    <img src="images/portfolio/SCApp/SCAppD2.jpg" />
+                    <div class="color-box grey">
+                        <h2>Software</h2>
+                        <p>Automatic highest possible frame rate when recording. Timer function for recording yourself. Aim guides for all angles. Automatic video trimming before and after impact.</p>
+                    </div>
+                    <div class="color-box green">
+                        <h2>App</h2>
+                        <p>Drawing tools, frame stepping and zoom to highlight and analyze your technique. Side by side video comparison with other golf swings.</p>
+                    </div>
+                    <div class="color-box pink">
+                        <h2>Sharing</h2>
+                        <p>Share videos and communicate with others via Online</p>
+                    </div>
+                    <div class="read-next">
+                        <a href="#CPProject" id="readSCNext" class="closeCP read-more-button">Next project</a>
+                    </div>
+                </div>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="project-frame"></div>
+        <a href="#CPProject" class="closeCP read-more-button bottom">Close</a>
+    </div>
     <div id="SCProject" class="portfolio-project-container">
         <div>
             <div class="headImage">
@@ -499,7 +611,7 @@
                         <p>Share videos and communicate with others via Online</p>
                     </div>
                     <div class="read-next">
-                        <a href="#SCProject" id="readBirkNext" class="closeSC read-more-button">Next project</a>
+                        <a href="#SCProject" id="readLeewayNext" class="closeSC read-more-button">Next project</a>
                     </div>
                 </div>
             </div>
@@ -509,7 +621,7 @@
         <a href="#SCProject" class="closeSC read-more-button bottom">Close</a>
     </div>
 
-    <div id="BirkProject" class="portfolio-project-container">
+    <!-- <div id="BirkProject" class="portfolio-project-container">
         <div>
             <div class="headImage">
                 <img src="images/portfolio/BirkSlider2.jpg" />
@@ -552,6 +664,55 @@
         </div>
         <div class="project-frame"></div>
         <a href="#BirkProject" class="closeBirk read-more-button bottom">Close</a>
+    </div> -->
+
+    <div id="LeewayProject" class="portfolio-project-container">
+        <div>
+            <div class="headImage">
+                <img src="images/portfolio/LeewaySlider.png" />
+            </div>
+            <div class="headContainer" >
+                <div class="container">
+                    <div class="container-left">
+                        <h1>Leeway</h1>
+                        <p>UX design, emotions and ability</p>
+                        <a href="#LeewayProject" class="closeLeeway read-more-button">Close</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="right-wrapper">
+                    <div class="color-box blue">
+                        <h2>In-depth interviews</h2>
+                        <p>Identify the emotional responses connected to the use of a camera and shooting photos. I interviewed 8 people between 20-34 years old.</p>
+                        <p><strong>The conlusion:</strong><br />Both genders shows a desire to take good photos. A technical advanced appearance may discourage those without a technical interest. However the desire to be percieved by others as a skilled photographer, may still be present. Good photos gives pride and enables the desire to evolve. It's important to trigger the ability to capture good photos early to ensure continued use.</p>
+                    </div>
+                    <div class="double-image">
+                        <img src="images/portfolio/Leeway/LeewayD1.jpg"/>
+                        <img src="images/portfolio/Leeway/LeewayD2.jpg"/>
+                    </div>
+                    <div class="color-box green">
+                        <h2>Shape associations test</h2>
+                        <p>Identify the emotional responses associated with holding and touching shapes. I tested 8 people between 20-27 years old.</p>
+                        <p><strong>The conlusion:</strong><br />Safe to hold was an important emotion: "I don't want to drop my camera." Many of the users wanted a camera that gives credibility as someone interested in photography, but shouldn't be too advanced to use.</p>
+                    </div>
+                    <div class="double-image">
+                        <img src="images/portfolio/Leeway/LeewayD7.jpg"/>
+                        <img src="images/portfolio/Leeway/LeewayD9.jpg"/>
+                    </div>
+                    <div class="color-box pink">
+                        <h2>Philosophy</h2>
+                        <p>With a good lens and interesting angles it is easier to shoot good photos. The camera must suppert the most common lense mount, to provide access to a wide selection of good lenses. A cylindrical camera extended by the lense, creates a tubular shape which makes it easy to control the direction you are shooting. Bluetooth connection between phone and camera encourage the photographer to shoot from other interesting angles.</p>
+                    </div>
+                    <div class="read-next">
+                        <a href="#LeewayProject" id="readGenoaNext" class="closeLeeway read-more-button">Next project</a>
+                    </div>
+                </div>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="project-frame"></div>
+        <a href="#LeewayProject" class="closeLeeway read-more-button bottom">Close</a>
     </div>
 
     <div id="GenoaProject" class="portfolio-project-container">
@@ -570,10 +731,10 @@
             </div>
             <div class="container">
                 <div class="right-wrapper">
-                    <div class="color-box pink">
-                        <h2>Genoa lounge chair - the road towards production</h2>
+                    <div class="color-box grey">
+                        <h2>The road towards production</h2>
                         <p>Master thesis - Industrial design engineering Norwegian University of Technology and Science 2012</p>
-                        <p>A lounge chair for the home and public areas. From concept to production. An expansion of the Spinnaker series by Hødnebø. Master thesis in cooperation with Spinnaker Norway AS.</p>
+                        <p>Genoa is a lounge chair for homes and public areas, expanding the Spinnaker series. The goal of the thesis was to bring the chair from concept to production. The project was in cooperation with Spinnaker Norway AS.</p>
                     </div>
                     <div class="double-image">
                         <img src="images/portfolio/Genoa/genoaD2.jpg">
@@ -583,7 +744,7 @@
                         <img src="images/portfolio/Genoa/genoaD6.jpg">
                         <img src="images/portfolio/Genoa/genoaProto2.jpg">
                     </div>
-                    <div class="color-box grey">
+                    <div class="color-box green">
                         <h2>prototype</h2>
                         <p>A prototype was built to test both the concept and production methods. Real methods were used in collaboration with potential sub-contractors.</p>
                     </div>
@@ -595,12 +756,12 @@
                         <img src="images/portfolio/Genoa/genoaD10.jpg">
                         <img src="images/portfolio/Genoa/genoaD9.jpg"/>
                     </div>
-                    <div class="color-box pink">
+                    <div class="color-box blue">
                         <h2>production</h2>
-                        <p>Alot of attention was given to the choice of materials and assembly of the chair. Stringers made of spring steel for a comfy feel, held together by brackets and steel tubes. The sailcloth is strapped to a steel tube seat frame, using industrial velcro for easy assembly. The pillow has soft outer layers for comfort and a firm core for stability. Split into three parts with extra padding in the middle part for improved lumbar support.</p>
+                        <p>Alot of attention was given to the choice of materials and assembly of the chair. Stringers made of spring steel for a comfy feel, held together by brackets and steel tubes. The sailcloth is strapped to a steel tube seat frame, using industrial velcro for easy assembly. The pillow has a soft outer layers for comfort and a firm core for stability. Split into three parts with extra padding in the middle part for improved lumbar support.</p>
                     </div>
                     <div class="read-next">
-                        <!--<a href="#GenoaProject" id="readBirkNext" class="closeGenoa read-more-button">Next project</a>-->
+                        <a href="#GenoaProject" id="readWFNext" class="closeGenoa read-more-button">Next project</a>
                     </div>
                 </div>
             </div>
@@ -608,6 +769,106 @@
         </div>
         <div class="project-frame"></div>
         <a href="#GenoaProject" class="closeGenoa read-more-button bottom">Close</a>
+    </div>
+    <div id="WFProject" class="portfolio-project-container">
+        <div>
+            <div class="headImage">
+                <img src="images/portfolio/WFSlider.png" />
+            </div>
+            <div class="headContainer" >
+                <div class="container">
+                    <div class="container-left">
+                        <h1>WordFindR</h1>
+                        <p>UX design, word puzzle game</p>
+                        <a href="#WFProject" class="closeWF read-more-button">Close</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="right-wrapper">
+                    <div class="color-box blue">
+                        <h2>Eco-system</h2>
+                        <p>Software, App and service for golf swing analysis.</p><p><a href="https://www.swingcatalyst.com" target="blank">Product link</a>  &nbsp;&nbsp;&nbsp;|  &nbsp;&nbsp;&nbsp;<a href="https://itunes.apple.com/id/app/swing-catalyst/id714031170?mt=8" target="blank">App Store link</a></p>
+                        <p >Swing Catalyst app is connected to the Online webportal and the Swing Catalyst software via Online. Videos and communication can be shared directly from the app to others with an Online account.</p>
+                    </div>
+                    <img src="images/portfolio/SCApp/SCAppD2.jpg" />
+                    <div class="color-box grey">
+                        <h2>Software</h2>
+                        <p>Automatic highest possible frame rate when recording. Timer function for recording yourself. Aim guides for all angles. Automatic video trimming before and after impact.</p>
+                    </div>
+                    <div class="color-box green">
+                        <h2>App</h2>
+                        <p>Drawing tools, frame stepping and zoom to highlight and analyze your technique. Side by side video comparison with other golf swings.</p>
+                    </div>
+                    <div class="color-box pink">
+                        <h2>Sharing</h2>
+                        <p>Share videos and communicate with others via Online</p>
+                    </div>
+                    <div class="read-next">
+                        <a href="#WFProject" id="readSketchNext" class="closeWF read-more-button">Next project</a>
+                    </div>
+                </div>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="project-frame"></div>
+        <a href="#WFProject" class="closeWF read-more-button bottom">Close</a>
+    </div>
+    <div id="SketchProject" class="portfolio-project-container">
+        <div>
+            <div class="headImage">
+                <img src="images/portfolio/SketchSlider.png" />
+            </div>
+            <div class="headContainer" >
+                <div class="container">
+                    <div class="container-left">
+                        <h1>Sketching</h1>
+                        <p>With ballpoint pen, render in Photoshop.</p>
+                        <a href="#SketchProject" class="closeSketch read-more-button">Close</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="right-wrapper">
+                    <div id="before-after-wrapper">
+                        <div id="before-after-container">
+                            <div><img alt="before" src="images/portfolio/Sketching/SketchingD2.jpg" width="720" height="550" /></div>
+                            <div><img alt="after" src="images/portfolio/Sketching/SketchingD1.jpg" width="720" height="550" /></div>
+                        </div>
+                    </div>
+                    <div id="before-after-wrapper-small">
+                        <div id="before-after-container-small">
+                            <div><img alt="before" src="images/portfolio/Sketching/SketchingD2.jpg" width="300" height="229" /></div>
+                            <div><img alt="after" src="images/portfolio/Sketching/SketchingD1.jpg" width="300" height="229" /></div>
+                        </div>
+                    </div>
+                    <div class="color-box blue">
+                        <h2>Render with Photoshop</h2>
+                        <p><i>Please use the handle to view before and after version of the sketch.</i></p>
+                        <p>I scanned my hand drawn sketches and used them as a foundation for the render in Photoshop. Colors, shading, texture and details were added to get a more realistic look to the sketch.</p>
+                    </div>
+                    <img src="images/portfolio/SCApp/SCAppD2.jpg" />
+                    <div class="color-box grey">
+                        <h2>Software</h2>
+                        <p>Automatic highest possible frame rate when recording. Timer function for recording yourself. Aim guides for all angles. Automatic video trimming before and after impact.</p>
+                    </div>
+                    <div class="color-box green">
+                        <h2>App</h2>
+                        <p>Drawing tools, frame stepping and zoom to highlight and analyze your technique. Side by side video comparison with other golf swings.</p>
+                    </div>
+                    <div class="color-box pink">
+                        <h2>Sharing</h2>
+                        <p>Share videos and communicate with others via Online</p>
+                    </div>
+                    <div class="read-next">
+                        <a href="#SketchProject" id="readCPNext" class="closeSketch read-more-button">Next project</a>
+                    </div>
+                </div>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <div class="project-frame"></div>
+        <a href="#SketchProject" class="closeSketch read-more-button bottom">Close</a>
     </div>
 
     <!-- PORTFOLIO END -->

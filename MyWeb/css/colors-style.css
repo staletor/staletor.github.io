@@ -199,6 +199,7 @@ header {
     padding: 8px 14px;
     border-radius: 18px;
     min-height: 36px;
+    box-shadow: none;
 }
 
 .read-more-button {
@@ -208,6 +209,7 @@ header {
 
 .chat-option:hover, .read-more-button:hover {
     background: #FF83C8;
+    box-shadow: none;
 }
 
 .chat-option.chat-input {

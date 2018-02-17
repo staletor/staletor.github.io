@@ -768,14 +768,27 @@ $(document).ready(function(){
         });
     }
     
+    openproject('#readCP');
+    closeproject('.closeCP');
+    nextproject('#readCPNext', '#CPProject');
     openproject('#readSC');
     closeproject('.closeSC');
+    nextproject('#readSCNext', '#SCProject');
     openproject('#readBirk');
     closeproject('.closeBirk');
     nextproject('#readBirkNext', '#BirkProject');
+    openproject('#readLeeway');
+    closeproject('.closeLeeway');
+    nextproject('#readLeewayNext', '#LeewayProject');
     openproject('#readGenoa');
     closeproject('.closeGenoa');
     nextproject('#readGenoaNext', '#GenoaProject');
+    openproject('#readWF');
+    closeproject('.closeWF');
+    nextproject('#readWFNext', '#WFProject');
+    openproject('#readSketch');
+    closeproject('.closeSketch');
+    nextproject('#readSketchNext', '#SketchProject');
 
     function closestickytop(r) {
         var $window = $(window);
