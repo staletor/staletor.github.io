@@ -885,16 +885,18 @@ a.control_next img {
     height: auto;
 }
 
-#before-after-wrapper {
-    display: block;
-}
-
-#before-after-wrapper-small {
-    display: none;
-}
-
 #before-after-wrapper img, #before-after-wrapper-small img {
     max-width: auto;
+}
+
+.twentytwenty-horizontal .twentytwenty-after-label:before {
+    color: #353535;
+    background: #EBEBEC;
+}
+
+.twentytwenty-horizontal .twentytwenty-before-label:before {
+    color: #353535;
+    background: #EBEBEC; 
 }
 
 /* --- Responsive --- */

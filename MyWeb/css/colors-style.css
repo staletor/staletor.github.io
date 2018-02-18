@@ -369,3 +369,12 @@ a.control_prev img, a.control_next img {
     display: none;
 }
 
+.twentytwenty-horizontal .twentytwenty-after-label:before {
+    color: #353535;
+    background: #A0DDFF;
+}
+
+.twentytwenty-horizontal .twentytwenty-before-label:before {
+    color: #353535;
+    background: #A0DDFF; 
+}
