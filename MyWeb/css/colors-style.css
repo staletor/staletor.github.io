@@ -135,6 +135,10 @@ header {
     margin-left: 10px;
 }
 
+.chat-bubble-left::before {
+    display: none;
+}
+
 .chat-bubble-right {
     padding: 8px 14px;
     margin: 10px 10px 10px 0;
@@ -142,6 +146,10 @@ header {
     border-top-right-radius: 0;
     background:  #FF83C8;
     color: #ffffff; 
+}
+
+.chat-bubble-right::before {
+    display: none;
 }
 
 .typing-indicator-one, .typing-indicator-two, .typing-indicator-three {
