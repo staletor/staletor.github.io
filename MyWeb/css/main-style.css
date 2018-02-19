@@ -593,6 +593,12 @@ hr {
     text-transform: capitalize;
 }
 
+.me-image {
+    overflow: hidden;
+    margin-top: 5px;
+    margin-bottom: 4px
+}
+
 /* --- PORTFOLIO --- */
 
 #portfolio-wrapper {

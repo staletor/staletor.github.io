@@ -289,6 +289,10 @@ header {
     background: #ffffff;
 }
 
+.me-image {
+    border-radius: 9px;
+}
+
 /* --- PORTFOLIO --- */
 
 #portfolio-wrapper {
