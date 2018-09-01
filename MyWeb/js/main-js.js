@@ -802,8 +802,13 @@ $(document).ready(function(){
         });
     }
     
+    closestickytop('#CPProject');
     closestickytop('#SCProject');
     closestickytop('#BirkProject');
+    closestickytop('#LeewayProject');
+    closestickytop('#GenoaProject');
+    closestickytop('#WFProject');
+    closestickytop('#SketchProject');    
 
     checkSize();
 
@@ -827,5 +832,5 @@ $(document).ready(function(){
         });
 
     }*/
-    
+
 });
