@@ -874,19 +874,23 @@ a.control_next img {
 }
 
 .color-box.pink {
-    background: #F1F2F2;
+    /*background: #F1F2F2;*/
+    background: #FFF;
 }
 
 .color-box.grey {
-    background: #EBEBEC;
+    /*background: #EBEBEC;*/
+    background: #FFF;
 }
 
 .color-box.green {
-    background: #F1F2F2;
+    /*background: #F1F2F2;*/
+    background: #FFF;
 }
 
 .color-box.blue {
-    background: #EBEBEC;
+    /*background: #EBEBEC;*/
+    background: #FFF;
 }
 
 .ui-loader {
