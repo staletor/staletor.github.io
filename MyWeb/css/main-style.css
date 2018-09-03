@@ -105,6 +105,19 @@ hr {
     border-bottom: 1px solid #5D6772;
 }
 
+canvas {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+canvas.portfolio-open {
+    display: none;
+}
+
 #header-wrapper {
     width: 600px;
     margin: 0 auto;

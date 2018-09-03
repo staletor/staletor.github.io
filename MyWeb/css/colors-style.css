@@ -13,6 +13,7 @@
     --light-blue: #A0DDFF;
     --lightest-blue: #C7E5F1;
     --violet: #CAAEFF;
+    --violet-darker: #AA83FF;
     --electric-blue: #62EDF0;
     --ocean-green: #43C59E;
     --maximum-blue: #39A9DB;
@@ -51,7 +52,11 @@ h4 {
 }
 
 header {
-    background: #F1F2F2;
+    background: transparent;
+}
+
+canvas {
+    display: block;
 }
 
 #header-wrapper {
@@ -202,7 +207,7 @@ header {
 }
 
 .chat-option, .read-more-button {
-    background: #CAAEFF;
+    background: #B194FF;
     color: #ffffff;
     padding: 8px 14px;
     border-radius: 18px;
@@ -241,7 +246,7 @@ header {
 
 #submit-name {
     cursor: pointer;
-    background: #CAAEFF;
+    background: #B194FF;
     color: #ffffff;
     padding: 6px 14px;
     border-radius: 16px;
@@ -287,6 +292,7 @@ header {
 
 #chat-background {
     background: #ffffff;
+    box-shadow: 0 0 80px -10px rgba(0,0,0,0.2);
 }
 
 .me-image {
@@ -356,7 +362,7 @@ a.control_prev img, a.control_next img {
 }
 
 .color-box.pink {
-    background: linear-gradient(to bottom right, #FF83C8, #CAAEFF);
+    background: linear-gradient(to bottom right, #FF83C8, #B194FF);
 }
 
 .color-box.grey {
