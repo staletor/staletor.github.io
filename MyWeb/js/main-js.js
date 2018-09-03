@@ -108,7 +108,7 @@ $(document).ready(function(){
 
     function toggleportfolio() {
         $("#portfolio-wrapper").toggleClass("portfolio-open");
-        $("canvas").toggleClass("portfolio-open");
+        $("#canvas").toggleClass("portfolio-open");
         $(".portfolio-project-container").removeClass("project-open");
         $(".portfolio-project-container").css({"height": "0px"});
         $("#main-menu").removeClass('menu-open');
