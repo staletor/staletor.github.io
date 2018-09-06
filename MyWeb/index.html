@@ -65,8 +65,11 @@
 
     </script>
 
-    <!-- Bodymovin player -->
-    <script src="https://cdnjs.com/libraries/bodymovin" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script>
+
+    <!-- Bodymovin player 
+    <script src="https://cdnjs.com/libraries/bodymovin" type="text/javascript"></script>-->
     
 </head>
 <body>
@@ -78,6 +81,7 @@
     <header>
         <div id="header-wrapper">
             <img src="images/HeaderSignature.png" class="header-signature-image">
+            <img src="images/HeaderSignature_dark.png" class="header-signature-image dark">
             <div class="spacefiller"></div>
             <div id="main-menu">
                 <div class="menu-item-wrapper">
@@ -109,8 +113,10 @@
     <main id="main">
         <div id="chat-container">
             <div id="chat-background"></div>
-            <div id="chat-wrapper">
-                <!-- This is where chat content is appended -->
+            <div data-simplebar style="height: 100%;">
+                <div id="chat-wrapper">
+                    <!-- This is where chat content is appended -->
+                </div>
             </div>
         </div>
         <div id="chat-options-wrapper">
@@ -445,7 +451,7 @@
                 <ul>
                     <li>
                         <div class="headImage">
-                            <img src="images/portfolio/CPSlider.png" />
+                            <img src="images/portfolio/CPSlider2.png" />
                         </div>
                         <div class="headContainer" >
                             <div class="container">
@@ -554,7 +560,7 @@
     <div id="CPProject" class="portfolio-project-container">
         <div>
             <div class="headImage">
-                <img src="images/portfolio/CPSlider.png" />
+                <img src="images/portfolio/CPSlider2.png" />
             </div>
             <div class="headContainer" >
                 <div class="container">
@@ -731,8 +737,8 @@
                         <img src="images/portfolio/Leeway/LeewayD9.jpg"/>
                     </div>
                     <div class="color-box pink">
-                        <h2>Philosophy</h2>
-                        <p>With a good lens and interesting angles it is easier to shoot good photos. The camera must suppert the most common lense mount, to provide access to a wide selection of good lenses. A cylindrical camera extended by the lense, creates a tubular shape which makes it easy to control the direction you are shooting. Bluetooth connection between phone and camera encourage the photographer to shoot from other interesting angles.</p>
+                        <h2>The Concept</h2>
+                        <p>With a good lens and interesting angles it's easier to shoot good photos. The camera must support the most common lense mount, to provide access to a wide selection of good lenses. A cylindrical camera extended by the lense, creates a tubular shape which makes it easy to control the direction you are pointing the camera. Bluetooth connection between phone and camera encourages the photographer to take the camera away from eye height, and shoot from other interesting angles.</p>
                     </div>
                     <div class="read-next">
                         <a href="#LeewayProject" id="readGenoaNext" class="closeLeeway read-more-button">Next project</a>
@@ -861,7 +867,7 @@
                     </div>         
                     
                     <div class="read-next">
-                        <!--<a href="#SketchProject" id="readCPNext" class="closeSketch read-more-button">Next project</a>-->
+                        <a href="#SketchProject" id="readCPNext" class="closeSketch read-more-button">Next project</a>
                     </div>
                 </div>
             </div>

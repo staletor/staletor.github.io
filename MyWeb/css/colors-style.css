@@ -65,8 +65,11 @@ header {
 }
 
 .header-signature-image {
-    filter: invert(0.7);
-    -webkit-filter: invert(0.7);
+    display: none;
+}
+
+.header-signature-image.dark {
+    display: block;
 }
 
 .menu-item {

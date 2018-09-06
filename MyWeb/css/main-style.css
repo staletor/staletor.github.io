@@ -143,6 +143,11 @@ hr {
     height: 80%;
 }
 
+
+.header-signature-image.dark {
+    display: none;
+}
+
 #main-menu {
     position: relative;
     height: 35px;
@@ -688,7 +693,7 @@ hr {
 
 a.control_prev, a.control_next {
     position: fixed;
-    top: 40%;
+    top: 50vh;
     z-index: 999;
     display: block;
     line-height: 180px;
@@ -777,6 +782,7 @@ a.control_next img {
     text-align: right;
     padding-bottom: 50px;
     padding-top: 50px;
+    height: 150px;
 }
 
 .headImage {
@@ -1104,6 +1110,10 @@ a.control_next img {
 
 @media only screen and (max-width: 600px) {
     
+    main {
+        width: 100%;
+    }
+
     #chat-background {
         width: 100%;
     }
