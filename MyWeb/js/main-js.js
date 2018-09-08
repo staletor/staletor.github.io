@@ -673,14 +673,15 @@ $(document).ready(function(){
     $('a.control_next').click(function () {
         moveRight();
     });
- 
-    /* find a way to disable key input when not needed */
-        $(window).on('keydown', function (e) {
-            if (e.keyCode === 37) // left
-                moveLeft();
-            else if (e.keyCode === 39) // right
-                moveRight();
-        });
+        
+    $(window).on('keydown', function (e) {
+        if ((e.keyCode === 37) && ($("#portfolio-wrapper").hasClass("portfolio-open")) && (!$("#portfolio-wrapper").hasClass("project-open")))// left
+            moveLeft();
+        else if ((e.keyCode === 39) && ($("#portfolio-wrapper").hasClass("portfolio-open")) && (!$("#portfolio-wrapper").hasClass("project-open")))// right
+            moveRight();
+        else if ((e.keyCode === 27) && ($("#portfolio-wrapper").hasClass("portfolio-open"))) // close
+            toggleportfolio();
+    });
 
         
     $("#slider ul li").on( "swipeleft", swipeleftHandler );
