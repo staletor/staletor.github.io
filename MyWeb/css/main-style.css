@@ -630,7 +630,9 @@ hr {
 .me-image {
     overflow: hidden;
     margin-top: 5px;
-    margin-bottom: 4px
+    margin-bottom: 4px;
+    max-width: 300px;
+    width: 100%;
 }
 
 /* --- PORTFOLIO --- */
@@ -828,6 +830,11 @@ a.control_next img {
     padding-right: 20px;
 }
 
+.container.from-right {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .container-left {
     position: relative;
     padding: 20px;
@@ -879,7 +886,6 @@ a.control_next img {
 }
 
 .right-wrapper {
-    float: right;
     width: 65%;
 }
 
@@ -889,7 +895,6 @@ a.control_next img {
 }
 
 .left-wrapper {
-    float: left;
     width: 40%;
 }
 
@@ -1092,7 +1097,6 @@ a.control_next img {
     }
 
     .right-wrapper {
-        float: none;
         width: 100%;
     }
     
