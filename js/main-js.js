@@ -423,10 +423,10 @@ $(document).ready(function(){
                 showoption("#about-work-option");
                 showoption("#contact-option");
             }
-        }, 4000);
+        }, 7000);
         setTimeout(function () {
             scrolling();
-        }, 6100);
+        }, 9100);
     })
 
     $("#about-work-option").click(function(){
@@ -441,12 +441,12 @@ $(document).ready(function(){
         }, 800);
         setTimeout(function(){
             addchatleft(aboutWorkTwo);
-        }, 3500);
+        }, 6500);
         setTimeout(function(){
             addchatleft(aboutWorkThree);
             showoption("#show-portfolio-option");
             showoption("#not-portfolio-option");
-        }, 6500);
+        }, 14500);
     });
 
     

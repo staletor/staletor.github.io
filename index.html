@@ -1,646 +1,882 @@
-<!doctype html>
-<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="en-gb" class="no-js">
-<!--<![endif]-->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!--[if lt IE 9]> 
+    <!--[if lt IE 9]>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <![endif]-->
     <title>Ståle T. Stokke - Portfolio</title>
     <meta name="description" content="Såle Torger Stokke, MSc Industrial design engineer: portfolio, skills and experience.">
     <meta name="author" content="Ståle Torger Stokke">
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lte IE 8]>
-		<script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
-	<![endif]-->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
-    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/da-slider.css" />
-	
-    <!-- Owl Carousel Assets -->
-	<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
-	<!-- Theme Styling -->
-	<link rel="stylesheet" href="css/styles.css" />	
-    <!-- Font Awesome -->
-    <link href="font/css/font-awesome.min.css" rel="stylesheet">
-	
-	<!-- Google Analytics -->
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-61504782-1', 'auto');
-	  ga('send', 'pageview');
+    <link rel="stylesheet" href="css/main-style.css" />
+    <link rel="stylesheet" href="css/colors-style.css" title="colors-theme" disabled/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Permanent+Marker|Lato|Covered+By+Your+Grace" rel="stylesheet">
 
-	</script>
-	
-	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
+    <!-- Twenty twenty -->
+    <script src="js/jquery.event.move.js" type="text/javascript"></script>
+    <script src="js/jquery.twentytwenty.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/twentytwenty.css" type="text/css" media="screen" />
+    <script type="text/javascript">
+            $(function(){
+              $("#before-after-container").twentytwenty();
+            });
+    </script>
+
+    <script src="js/main-js.js" type="text/javascript"></script>
+    <script src="js/bubbles.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var minNumber = 1;
+            var maxNumber = 40;
+
+            var randomNumber = randomNumberFromRange(minNumber, maxNumber);
+
+            function randomNumberFromRange(min,max)
+            {
+                return Math.floor(Math.random()*(max-min+1)+min);
+            }
+
+            if (randomNumber % 2 === 0) { 
+                $('link[title="colors-theme"]')[0].disabled=false;
+            } else {
+                $('link[title="colors-theme"]')[0].disabled=true;
+            }
+        });
+
+    </script>
+
+    
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61504782-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script>
+
+    <!-- Bodymovin player 
+    <script src="https://cdnjs.com/libraries/bodymovin" type="text/javascript"></script>-->
+    
 </head>
-
 <body>
 
-    <header class="header" id="header">
-        <div class="container">
-            <nav class="navbar navbar-inverse" role="navigation">
-                <div class="navbar-header">
-                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="#top" class="navbar-brand scroll-top logo"><img src="images/HeaderSignature.png" /></a>
-                </div>
-                <!--/.navbar-header-->
-                <div id="main-nav" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav" id="mainNav">
-                        <li style="visibility:hidden" class="active"><a href="#home" class="scroll-link">Home</a></li>
-                        <li><a href="#aboutUs" class="scroll-link">About</a></li>
-                        <li><a href="#skills" class="scroll-link">Skills</a></li>
-                        <li><a href="#portfolio" class="scroll-link">Portfolio</a></li>
-                        <li><a href="#experience" class="scroll-link">Experience</a></li>
-						<li><a href="#contactUs" class="scroll-link">Contact</a></li>
-                    </ul>
-                </div>
-                <!--/.navbar-collapse-->
-            </nav>
-            <!--/.navbar-->
-        </div>
-        <!--/.container-->
-    </header>
-    <!--/.header-->
-    <div id="#top"></div>
-    <section id="home">
-        <div class="banner-container">
-		<img src="images/Slider/BackgroundSlider.jpg" />
-            <div class="banner-content">
-                <div id="da-slider" class="da-slider">
-                    <div class="da-slide">
-						<h2>Industrial Designer</h2>
-                        <p>MSc Industrial Design Engineering<br />Norwegian University of technology and Science (NTNU)<br /><a href="http://ststokke.com/birk.html">Birk</a></p>
-                        <div class="da-img"><img src="images/Slider/BirkSlider2.jpg" width="1920" height="800"></div>
-                    </div>
-                    <div class="da-slide">
-                        <h2>Product Design</h2>
-                        <p>From idea to production<br /><a href="http://ststokke.com/genoa.html">Genoa</a></p>
-                        <div class="da-img"><img src="images/Slider/GenoaSlider.jpg" width="1920" height="800"></div>
-                    </div>
-                    <div class="da-slide">
-                        <h2>Interaction Design</h2>
-                        <p>Finding new ways for technology to improve user experience.<br /><a href="http://ststokke.com/SCSoftware.html">Swing Catalyst Software</a></p>
-                        <div class="da-img"><img src="images/Slider/SCSlider2.jpg" width="1920" height="800"></div>
-                    </div>
-				<!--  <nav class="da-arrows">
-                        <span class="da-arrows-prev"></span>
-                        <span class="da-arrows-next"></span>
-                    </nav> -->
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--<section id="introText">
-        <div class="container">
-            <div class="text-center">
-            <h1>I love seeing the possibilities in technology.</h1>
-              <p></p>
-            </div>
-        </div>
-
-    </section>-->
-    <!--About-->
-    <section id="aboutUs" class="secPad">
-        <div class="container">
-            <div class="heading text-center" style="max-width:600px; margin:0 auto;">
-                <!-- Heading -->
-                <img class="marker-header" src="images/aboutMeHeader.png" />
-				<p><br /><img id="profile-image" src="images/aboutMeImage.jpg" width="160" height="160" /></p>
-				<br />
-                <p>
-					My name is Ståle Torger Stokke. I'm born in 1984 and I'm from the beautiful city Trondheim in Norway. I'm an Industrial Designer with a Masters degree in Industrial Design Engineering from The Norwegian University of Technology and Science (NTNU).
-				</p>
-				<p>
-					Other than my passion for good design I love to boulder and play football. I'm also responsible for the <a href="https://www.facebook.com/groups/designmagnet.trondheim/" target="blank">Designmagnet</a> group in Trondheim. When I'm not active with some sports or Designmagnet you can find me at a concert or hanging out with my friends. Well not all the time, even I need to rest a couple of hours each day.
-				</p>
-				<br />
-				<!-- <p>
-					My personal qualities are the ability to see the bigger picture in an early stage of the process and
-					manoeuvre the fuzzy front end in the development process. I am adaptable to different tasks due to a broad
-					educational base. And function both well within a group and with independent tasks. I understand the
-					importance of communication and I'm always looking to improve my skills. The ability to be humble
-					towards others point of view is not always easy, but necessary and rewarding. 
-				</p> -->
-            </div>
-            <div class="row">
-                <!-- item -->
-                <div class="col-md-4 text-center tileBox">
-                   <div class="txtHead"><img src="images/iterativeDesignIcon.png" height="60" width="60">
-                    <h3>Design <span class="id-color">Process</span></h3></div>
-                    <p>I believe in an iterative design process with user involvement. I see user involvement as a mean to ensure quality and as a tool for inspiration.<br />&nbsp;</p>
-                </div>
-                <!-- end: -->
-
-                <!-- item -->
-                <div class="col-md-4 text-center tileBox">
-                    <div class="txtHead"><img src="images/productDesignIcon.png" height="60" width="60">
-                    <h3>Product <span class="id-color">Design</span></h3></div>
-                    <p>Product design was my main focus during my studies. I love to create with my hands and explore the possibilities within a material.<br />&nbsp;</p>
-                </div>
-                <!-- end: -->
-
-                <!-- item -->
-                <div class="col-md-4 text-center tileBox">
-                    <div class="txtHead"><img src="images/interactionDesignIcon.png" height="60" width="60">
-                    <h3>Interaction <span class="id-color">Design</span></h3></div>
-                    <p>The last couple of years I've been working with interaction design for a complex technological use case. Making technology affordable through GUI is an exciting challenge.</p>
-                </div>
-                <!-- end: -->
-            </div>
-        </div>
-    </section>
-    <!--Quote-->
-    <section id="quote" class="bg-parlex">
-        <div class="parlex-back">
-            <div class="container secPad text-center">
-				<h2>Who says functional design can't be a little crazy?</h2><h3>Yes, that's me in the blue bouldering tights.</h3>
-            </div>
-            <!--/.container-->
-        </div>
-    </section>
+<div class="portfolio-button" style="position: fixed; left: 0; bottom:  0; z-index:1000;">Portfolio</div>
+<div class="clear-button" style="position: fixed; right: 0; bottom:  0; z-index:1000;">Clear</div>
+    <canvas id="canvas"></canvas>
     
-    <!--Skills-->
-    <section id="skills" class="secPad white">
-    	<div class="container">
-        <div class="heading text-center">
-                <!-- Heading -->
-                <img class="marker-header" src="images/skillsHeader.png">
-                <p>Here's a carefully selected choice of my many skills:</p>
+    <header>
+        <div id="header-wrapper">
+            <img src="images/HeaderSignature.png" class="header-signature-image">
+            <img src="images/HeaderSignature_dark.png" class="header-signature-image dark">
+            <div class="spacefiller"></div>
+            <div id="main-menu">
+                <div class="menu-item-wrapper">
+                    <div class="menu-item" id="item-one">
+                        <div class="menu-item-content portfolio-button">
+                            Portfolio
+                        </div>
+                    </div>
+                    <div class="menu-item" id="item-two">
+                        <div class="menu-item-content">
+                            <a href="mailto:st.stokke@gmail.com">st.stokke@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="menu-item" id="item-three">
+                        <div class="menu-item-content">
+                            Give me colors
+                        </div>
+                    </div>
+                    <div class="menu-item" id="item-four">
+                        <div class="menu-item-content">
+                            Shades of grey
+                        </div>
+                    </div>
+                </div>
             </div>
-        	<div class="row">
-                <div class="col-sm-6">
-                    <h2>Design <strong>Skills</strong></h2>
-                    <p class="mrgBtm20">
-                        
-                
-                    </p>
-					<div class="row">
-                        <div class="col-md-2 skilltitle">Sketching</div>
-                        <div class="col-md-8">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                                    <span class="sr-only">80% Complete</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 skilltitle">Photoshop</div>
-                        <div class="col-md-8">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                    <span class="sr-only">70% Complete</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 skilltitle">Illustrator</div>
-                        <div class="col-md-8">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
-                                    <span class="sr-only">85% Complete</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 skilltitle">Indesign</div>
-                        <div class="col-md-8">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                                    <span class="sr-only">80% Complete</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-					<div class="row">
-                        <div class="col-md-2 skilltitle">CAD</div>
-                        <div class="col-md-8">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                    <span class="sr-only">70% Complete</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <div id="chat-container">
+            <div id="chat-background"></div>
+            <div data-simplebar style="height: 100%;">
+                <div id="chat-wrapper">
+                    <!-- This is where chat content is appended -->
                 </div>
-				<div class="col-sm-6">
-                    <h2>Programming <strong>Skills</strong></h2>
-                    <p class="mrgBtm20">
-                        
+            </div>
+        </div>
+        <div id="chat-options-wrapper">
+            <div id="you-fine-option" class="chat-option chat-input">
+                <input id="txt_name" type="text" placeholder="Name" >
+                <div id="submit-name">send</div>
+            </div>
+            <div id="about-me-option" class="chat-option">
+                Tell me about yourself
+            </div>
+            <div id="about-me-more-option" class="chat-option remove-option">
+                Please tell me more about yourself
+            </div>
+            <div id="about-work-option" class="chat-option">
+                How do you work as a designer?
+            </div>
+            <div id="show-portfolio-option" class="chat-option">
+                Please show me your portfolio
+            </div>
+            <div id="not-portfolio-option" class="chat-option">
+                I'll take a look later
+            </div>
+            <div id="like-portfolio-option" class="chat-option">
+                Yes, I think it was great!
+            </div>
+            <div id="dislike-portfolio-option" class="chat-option">
+                I'm sorry! Not my cup of tea.
+            </div>
+            <div id="yes-portfolio-option" class="chat-option">
+                Yes, please!
+            </div>
+            <div id="contact-option" class="chat-option remove-option">
+                How may I contact you?
+            </div>
+            <div id="contact-option-two" class="chat-option">
+                How may I contact you?
+            </div>
+            <div id="not-visitor-option" class="chat-option">
+                I'm not <span class="re-visitor-name"></span>
+            </div>
+            <div id="show-portfolio-option-two" class="chat-option">
+                Please show me your portfolio
+            </div>
+            <div id="mood-option-serious" class="chat-option">
+                Serious
+            </div>
+            <div id="mood-option-playful" class="chat-option">
+                Playful
+            </div>
+            <div id="mood-option-serious-two" class="chat-option">
+                Serious
+            </div>
+            <div id="mood-option-playful-two" class="chat-option">
+                Playful
+            </div>
+        </div>
+
+        
+        
+    </main>
+    
+    <!-- CHAT CONTENT -->
+    
+    <div style="display: none">
+    
+        <div id="welcome-back-one" class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>Hi! Nice to see you again <span class="re-visitor-name"></span></p>
+            </div>
+        </div>
+    
+        <div id="welcome-back-two" class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>Back for another peek at my portfolio?</p>
+            </div>
+        </div>
+    
+        <div id="back-chat-one" class="chat-line">
+            <div class="chat-bubble-right">
+                <p>Yes, please!</p>
+            </div>
+        </div>
+    
+        <div id="back-chat-two" class="chat-line">
+            <div class="chat-bubble-right">
+                <p>I'm not <span class="re-visitor-name"></span></p>
+            </div>
+        </div>
+    
+        <div id="welcome-back-three" class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>I'm sorry! My mistake</p>
+            </div>
+        </div>
+
+        <div id="visitor-mood-one" class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>How do you feel today?</p>
+            </div>
+        </div>
+
+        <div id="visitor-mood-two" class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>Then I think this is the perfect theme for you.</p>
+            </div>
+        </div>
+
+        <div id="visitor-mood-three" class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>Give me a second, I'll change the theme to fit your mood.</p>
+            </div>
+        </div>
+
+        <div id="visitor-mood-serious" class="chat-line">
+            <div class="chat-bubble-right">
+                <p>Serious</p>
+            </div>
+        </div>
+
+        <div id="visitor-mood-playful" class="chat-line">
+            <div class="chat-bubble-right">
+                <p>Playful</p>
+            </div>
+        </div>
+    
+        <div id="chat-welcome-one" class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>Hi! And welcome to my website.</p>
+            </div>
+        </div>
+    
+        <div id="chat-welcome-two" class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>I'm Ståle! Who are you?</p>
+            </div>
+        </div>
+    
+        <div id="you-fine-chat" class="chat-line">
+            <div class="chat-bubble-right">
+                <p>My name is <span class="visitor-name"></span></p>
+            </div>
+        </div>
+    
+        <div id="chat-welcome-three"  class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>Nice to meet you <span class="visitor-name"></span>. How are you feeling today?</p>
+            </div>
+        </div>
+
+        <div id="chat-welcome-four"  class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>Let's get back to business. How may I help you?</p>
+            </div>
+        </div>
+    
+        <div id="about-me-chat" class="chat-line">
+            <div class="chat-bubble-right">
+                <p>Tell me about yourself</p>
+            </div>
+        </div>
+    
+        <div id="about-me-one" class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>My full name is Ståle Torger Stokke, and this is me <br><img class="me-image" src="images/ProfilGul.png"></p>
+            </div>
+        </div>
+    
+        <div id="about-me-two" class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>I'm an Industrial Designer with a Masters degree in Industrial Design Engineering from NTNU.</p>
+            </div>
+        </div>
+        <div id="about-me-three" class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>And I love the challenge of making complex technology user friendly.</p>
+            </div>
+        </div>
+    
+        <div id="about-me-more-chat" class="chat-line">
+            <div class="chat-bubble-right">
+                <p>Please tell me more about yourself</p>
+            </div>
+        </div>
+    
+        <div id="about-me-four" class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>I'm <span id="age"></span> from Trondheim, Norway. In my spare time I work a little on apps and websites, this one for instance. I also enjoy watching football and going to concerts.</p>
+            </div>
+        </div>
+        <div id="about-me-five" class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>Currently I'm working at <a class="chat-large-link" href="https://www.iwmac.com/" target="_blank">IWMAC AS</a>, creating services to monitor energy consumption. I have previously worked with sports analysis technology and as a design consultant.</p>
+            </div>
+        </div>
+    
+    
+        <div id="about-work-chat" class="chat-line">
+            <div class="chat-bubble-right">
+                <p>How do you work as a designer?</p>
+            </div>
+        </div>
+        <div id="about-work-one"  class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>I like to start with user research and observations to generate usefull insights. Then create a concept and a prototype that can be tested on users.</p>
+            </div>
+        </div>
+        <div id="about-work-two"  class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>The last couple of years I've also been responsible for linking business development with software development. This means working closely with software engineers to communicate the intention of a concept, and to ensure the outcome is as expected.</p>
+            </div>
+        </div>
+        <div id="about-work-three"  class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>Would you like to see some of my projects?</p>
+            </div>
+        </div>
+    
+        <div id="later-portfolio-chat" class="chat-line">
+            <div class="chat-bubble-right">
+                <p>I'll take a look later</p>
+            </div>
+        </div>
+    
+        <div id="about-portfolio-chat" class="chat-line">
+            <div class="chat-bubble-right">
+                <p>Please show me your portfolio</p>
+            </div>
+        </div>
+        <div id="about-portfolio-one"  class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>Are you ready?  <a class="portfolio-button chat-large-link" id="count_num">3</a></p>
+            </div>
+        </div>
+        <div id="about-portfolio-two"  class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>When you feel like it, here's a link to my <a class="portfolio-button chat-large-link" style="margin-left: 0;">Portfolio</a> Anything else I might help you with?</p>
+            </div>
+        </div>
+        <div id="about-portfolio-three"  class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>So what do think? Did you like it?</p>
+            </div>
+        </div>
+    
+        <div id="like-portfolio-chat" class="chat-line">
+            <div class="chat-bubble-right">
+                <p>Yes, I think it was great!</p>
+            </div>
+        </div>
+        <div id="about-portfolio-four"  class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>Thanks :)</p>
+            </div>
+        </div>
+    
+        <div id="dislike-portfolio-chat" class="chat-line">
+            <div class="chat-bubble-right">
+                <p>I'm sorry! Not my cup of tea.</p>
+            </div>
+        </div>
+        <div id="about-portfolio-five"  class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>I will continue improving then. Hope I can persuade you in a year or two.</p>
+            </div>
+        </div>
+    
+        <div id="contact-chat" class="chat-line">
+            <div class="chat-bubble-right">
+                <p>How may I contact you?</p>
+            </div>
+        </div>
+        <div id="about-contact-one"  class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>You may send an email to <a class="chat-large-link" href="mailto:st.stokke@gmail.com">st.stokke@gmail.com</a></p>
+            </div>
+        </div>
+    
+        <div id="chat-end-one"  class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>Oops! Time flies in good company. We have to catch up later, my dinner is ready.</p>
+            </div>
+        </div>
+        <div id="chat-end-two"  class="chat-line">
+            <div class="chat-bubble-left">
+                <div class="typing-indicator"><div class="typing-indicator-one"></div><div class="typing-indicator-two"></div><div class="typing-indicator-three"></div></div>
+                <p>Feel free to stick around. Talk to you later :)</p>
+            </div>
+        </div>
+    
+    
+    </div>
+    
+    <!-- CHAT CONTENT END -->
+
+
+    <!-- PORTFOLIO -->
+
+    <a href="#" class="control_next"><img src="images/ArrowDownWhite.svg"></a>
+    <a href="#" class="control_prev"><img src="images/ArrowDownWhite.svg"></a>
+    
+
+    <div id="portfolio-wrapper">
+        <div id="portfolio-container">
+            
+            <div id="slider">
                 
-                    </p>
-                    <div class="row">
-                        <div class="col-md-2 skilltitle">HTML</div>
-                        <div class="col-md-8">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                    <span class="sr-only">70% Complete</span>
+                <ul>
+                    <li>
+                        <div class="headImage">
+                            <img src="images/portfolio/CPSlider2.png" />
+                        </div>
+                        <div class="headContainer" >
+                            <div class="container">
+                                <div class="container-left">
+                                    <h1>CheckPoint</h1>
+                                    <p>UX design, IWMAC AS</p>
+                                    <a href="#CPProject" id="readCP" class="read-more-button">Read more</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 skilltitle">CSS</div>
-                        <div class="col-md-8">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-                                    <span class="sr-only">70% Complete</span>
+                    </li>
+                    <li>
+                        <div class="headImage">
+                            <img src="images/portfolio/SCSlider2.jpg" />
+                        </div>
+                        <div class="headContainer" >
+                            <div class="container">
+                                <div class="container-left">
+                                    <h1>Swing Catalyst</h1>
+                                    <p>UX design, Initial Force AS</p>
+                                    <a href="#SCProject" id="readSC" class="read-more-button">Read more</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 skilltitle">JavaScript</div>
-                        <div class="col-md-8">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
-                                    <span class="sr-only">5% Complete</span>
+                    </li>
+                    <!--<li>
+                        <div class="headImage">
+                            <img src="images/portfolio/BirkSlider2.jpg" />
+                        </div>
+                        <div class="headContainer" >
+                            <div class="container">
+                                <div class="container-left">
+                                    <h1>Birk</h1>
+                                    <p>A Scandinavian fireplace tool set</p>
+                                    <a href="#BirkProject" id="readBirk" class="read-more-button">Read more</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-2 skilltitle">XAML</div>
-                        <div class="col-md-8">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
-                                    <span class="sr-only">30% Complete</span>
+                        
+                    </li>-->
+                    <li>
+                        <div class="headImage">
+                            <img src="images/portfolio/LeewaySlider.png" />
+                        </div>
+                        <div class="headContainer" >
+                            <div class="container">
+                                <div class="container-left">
+                                    <h1>Leeway</h1>
+                                    <p>User research and insights</p>
+                                    <a href="#LeewayProject" id="readLeeway" class="read-more-button">Read more</a>
                                 </div>
                             </div>
                         </div>
-                    </div>      
-                </div>
+                        
+                    </li>
+                    <li>
+                        <div class="headImage">
+                            <img src="images/portfolio/GenoaSlider.jpg" />
+                        </div>
+                        <div class="headContainer" >
+                            <div class="container">
+                                <div class="container-left">
+                                    <h1>Genoa</h1>
+                                    <p>Master thesis - Industrial design</p>
+                                    <a href="#GenoaProject" id="readGenoa" class="read-more-button">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="headImage">
+                            <img src="images/portfolio/WFSlider.png" />
+                        </div>
+                        <div class="headContainer" >
+                            <div class="container">
+                                <div class="container-left">
+                                    <h1>WordFindR</h1>
+                                    <p>UX/UI design, word puzzle game</p>
+                                    <a href="#WFProject" id="readWF" class="read-more-button">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="headImage">
+                            <img src="images/portfolio/SketchSlider.png" />
+                        </div>
+                        <div class="headContainer" >
+                            <div class="container">
+                                <div class="container-left">
+                                    <h1>Sketching</h1>
+                                    <p>With ballpoint pen, render in Photoshop.</p>
+                                    <a href="#SketchProject" id="readSketch" class="read-more-button">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="portfolio-indicator">
+                <div></div><div></div><div></div><div></div><div></div><div></div>
             </div>
         </div>        
-    </section>
-    
- 
-   <!--Portfolio-->
-    <section id="portfolio" class="page-section section appear clearfix secPad">
-        <div class="container">
-
-            <div class="heading text-center">
-                <!-- Heading -->
-                <img class="marker-header" src="images/portfolioHeaderGrey.png">
-      
-            </div>
-
-            <div class="row">
-                <nav id="filter" class="col-md-12 text-center">
-                    <ul>
-                        <li><a href="#" class="current btn-theme btn-small" data-filter="*">All</a></li>
-                        <li><a href="#" class="btn-theme btn-small" data-filter=".productdesign">Product Design</a></li>
-                        <li><a href="#" class="btn-theme btn-small" data-filter=".interactiondesign">Interaction Design</a></li>
-                        <li><a href="#" class="btn-theme btn-small" data-filter=".otherdesign">Other</a></li>
-                    </ul>
-                </nav>
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="portfolio-items isotopeWrapper clearfix" id="3">
-
-                            <article class="col-sm-4 isotopeItem productdesign">
-                                <a href="/genoa.html">
-									<div class="portfolio-item">
-										<img src="images/portfolio/GenoaThumb.jpg" alt="" />
-										
-										<div class="portfolio-desc align-center">
-											<div class="folio-info">
-												<h5>Genoa</h5>
-											</div>
-										</div>
-										
-									</div>
-								</a>
-                            </article>
-
-                            <article class="col-sm-4 isotopeItem productdesign">
-                                <a href="/birk.html">
-									<div class="portfolio-item">
-										<img src="images/portfolio/BirkThumb.jpg" alt="" />
-										
-										<div class="portfolio-desc align-center">
-											<div class="folio-info">
-												<h5>Birk</h5>
-											</div>
-										</div>
-										
-									</div>
-								</a>
-                            </article>
-
-
-                            <article class="col-sm-4 isotopeItem productdesign">
-                                <a href="/leeway.html">
-									<div class="portfolio-item">
-										<img src="images/portfolio/LeewayThumb.jpg" alt="" />
-										
-										<div class="portfolio-desc align-center">
-											<div class="folio-info">
-												<h5>Leeway</h5>
-											</div>
-										</div>
-										
-									</div>
-								</a>
-                            </article>
-
-                            <article class="col-sm-4 isotopeItem interactiondesign">
-                                <a href="/SCSoftware.html">
-									<div class="portfolio-item">
-										<img src="images/portfolio/SCSoftwareThumb.jpg" alt="" />
-										
-										<div class="portfolio-desc align-center">
-											<div class="folio-info">
-												<h5>Swing Catalyst Software</h5>
-											</div>
-										</div>
-										
-									</div>
-								</a>
-                            </article>
-
-                            <article class="col-sm-4 isotopeItem interactiondesign">
-                                <a href="/SCApp.html">
-									<div class="portfolio-item">
-										<img src="images/portfolio/SCAppThumb.jpg" alt="" />
-										
-										<div class="portfolio-desc align-center">
-											<div class="folio-info">
-												<h5>Swing Catalyst App</h5>
-											</div>
-										</div>
-										
-									</div>
-								</a>
-                            </article>
-
-
-                            <article class="col-sm-4 isotopeItem otherdesign">
-                                <a href="/sketching.html">
-									<div class="portfolio-item">
-										<img src="images/portfolio/SketchingThumb.jpg" alt="" />
-										
-										<div class="portfolio-desc align-center">
-											<div class="folio-info">
-												<h5>Sketching</h5>
-											</div>
-										</div>
-										
-									</div>
-								</a>
-                            </article>
-							
-                        </div>
-
-                    </div>
-
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-	
-    <!--Experience-->
-    <section id="experience" class="secPad">
-    	<div class="container">     
-           <div class="heading text-center">
-                <!-- Heading -->
-                <img class="marker-header" id="experience-header-image" src="images/experienceHeader.png">
-            </div>
-    <div id="timeline">
-	
-	<div class="row timeline-movement">
-    
-    
-        <div class="timeline-badge">
-            <span class="timeline-balloon-date-day"></span>
-            <span class="timeline-balloon-date-month" style="top:15px;">2016<br />---</span>
-        </div>
-    
-        <div class="col-sm-offset-6 col-sm-6  timeline-item">
-            <div class="row">
-                <div class="col-sm-offset-1 col-sm-11">
-                    <div class="timeline-panel debits">
-                        <ul class="timeline-panel-ul">
-                            <li><span class="importo"><a href="http://www.iwmac.no/" target="_blank">IWMAC</a></span></li>
-                            <li><span class="causale">Interaction Designer</span> </li>
-                            <li><p><small class="text-muted"> October 2016 - present</small></p> </li>
-                        </ul>
-                    </div>
-    
-                </div>
-            </div>
-        </div>
-		
-	</div>
-	
-    <div class="row timeline-movement">
-    
-        <div class="timeline-badge">
-            <span class="timeline-balloon-date-day"></span>
-            <span class="timeline-balloon-date-month">2016<br />2012</span>
-        </div>
-    
-    
-        <div class="col-sm-6  timeline-item">
-            <div class="row">
-                <div class="col-sm-11">
-                    <div class="timeline-panel credits">
-                        <ul class="timeline-panel-ul">
-                            <li><span class="importo"><a href="https://www.swingcatalyst.com/" target="_blank">Initial Force AS</a></span></li>
-                            <li><span class="causale">Lead Designer<br /><a href="/SCSoftware.html">Swing Catalyst Software</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/SCApp.html">Swing Catalyst App</a></span> </li>
-                            <li><p><small class="text-muted"> September 2012 - September 2016</small></p> </li>
-                        </ul>
-                    </div>
-    
-                </div>
-            </div>
-        </div>
     </div>
-	
-    <div class="row timeline-movement">
-    
-    
-        <div class="timeline-badge">
-            <span class="timeline-balloon-date-day"></span>
-            <span class="timeline-balloon-date-month" style="top:15px;">2012</span>
-        </div>
-    
-        <div class="col-sm-offset-6 col-sm-6  timeline-item">
-            <div class="row">
-                <div class="col-sm-offset-1 col-sm-11">
-                    <div class="timeline-panel debits">
-                        <ul class="timeline-panel-ul">
-                            <li><span class="importo"><a href="http://eggsdesign.no/" target="_blank">Eggs Design</a></span></li>
-                            <li><span class="causale">Internship - Industrial design consultant</span> </li>
-                            <li><p><small class="text-muted"> February 2012 - July 2012</small></p> </li>
-                        </ul>
+
+    <div id="CPProject" class="portfolio-project-container">
+        <div>
+            <div class="headImage">
+                <img src="images/portfolio/CPSlider2.png" />
+            </div>
+            <div class="headContainer" >
+                <div class="container">
+                    <div class="container-left">
+                        <h1>CheckPoint</h1>
+                        <p>UX design, IWMAC AS</p>
+                        <a href="#CPProject" class="closeCP read-more-button">Close</a>
                     </div>
-    
+                </div>
+            </div>
+            <div class="container from-right">
+                <div class="right-wrapper">
+                    <div class="color-box blue">
+                        <h2>Food Safety Management Service</h2>
+                        <p>A digital service for everyone working with food safety within a company.</p><p><a href="https://www.iwmac.com/product/checkpoint/" target="blank">Product link</a></p>
+                        <p>At IWMAC we have created a service to make it easier for a company to comply with the regulations given by the food authorities. The service has three applications, each with a main focus. My responsibilty as a UX-designer has been user insights, and to be the link between business development and software development.</p>
+                    </div>
+                    <img src="images/portfolio/CP/CP_D1.png" />
+                    <div class="color-box green">
+                        <h2>The Employees</h2>
+                        <p>Most employees are required to do a set of daily measurements and tasks, in addition to customer service. When digitalizing their daily routines it was important for us to decrease the workload and time consumption compared to using pen and paper. The interface had to be intuitive, with simple and clear instructions on how to complete a task. The Probe app is created for the employees, and focuses on doing tasks and to automate temperature surveillance.</p>
+                    </div>
+                    <div class="color-box pink">
+                        <h2>The Store Manager</h2>
+                        <p>The store manager is the accountable part if an employee doesn't follow the routines. Live feedback on task completion was the most important focus for a store manager. The Manager app gives a live reflection on every task in Probe. When a task is completed in Probe, this is reflected live in Manager. When a deviation is reported in Probe, the report is sent directly to the Manager app. This gives the store manager the option to react instantly on every case.</p>
+                    </div>
+                    <img src="images/portfolio/CP/CP_D2.png" />
+                    <div class="color-box pink">
+                        <p>For more detailed information and statistics on performance the store manager can use the web application CheckPoint Dashboard. As on the Manager app, Dashboard also reflects any action done on Probe. In addition custom reports and statistics can be created to better evaluate the store's performance. Dashboard is also were the service can be managed. The store manager can set up which tasks should be done when and how.</p>
+                    </div>
+                    <img src="images/portfolio/CP/CP_D3.png" />
+                    <div class="color-box blue">
+                        <h2>Higher Management</h2>
+                        <p>Many stores are part of a chain. And most chains have a hierarchical structure. The Dashboard app can be configured with similar hierarchical structure, and give management on each level an overview of their responsible areas and stores. Tasks and routines decided by higher management can be managed and distributed to all stores in the chain. A high level of flexiblity in task management was important as every chain operates with different levels of top-down control.</p>
+                    </div>
+                    <div class="read-next">
+                        <a href="#CPProject" id="readSCNext" class="closeCP read-more-button">Next project</a>
+                    </div>
                 </div>
             </div>
         </div>
-		
-	</div>
-	
-	<div class="row timeline-movement">
-    
-    
-        <div class="timeline-badge">
-            <span class="timeline-balloon-date-day"></span>
-            <span class="timeline-balloon-date-month">2012<br />2006</span>
-        </div>
-    
-        <div class="col-sm-6  timeline-item">
-            <div class="row">
-                <div class="col-sm-11">
-                    <div class="timeline-panel credits">
-                        <ul class="timeline-panel-ul">
-                            <li><span class="importo">NTNU</span></li>
-                            <li><span class="causale">Education - MSc Industrial Design Engineering<br /><a href="/genoa.html">Genoa</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/leeway.html">Leeway</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/birk.html">Birk</a></span> </li>
-                            <li><p><small class="text-muted">August 2006 - January 2012</small></p> </li>
-                        </ul>
+        <div class="project-frame"></div>
+        <a href="#CPProject" class="closeCP read-more-button bottom">Close</a>
+    </div>
+    <div id="SCProject" class="portfolio-project-container">
+        <div>
+            <div class="headImage">
+                <img src="images/portfolio/SCSlider2.jpg" />
+            </div>
+            <div class="headContainer" >
+                <div class="container">
+                    <div class="container-left">
+                        <h1>Swing Catalyst</h1>
+                        <p>UX design, Initial Force AS</p>
+                        <a href="#SCProject" class="closeSC read-more-button">Close</a>
                     </div>
-    
+                </div>
+            </div>
+            <div class="container from-right">
+                <div class="right-wrapper">
+                    <div class="color-box blue">
+                        <h2>Eco-system</h2>
+                        <p>Software, App and service for golf swing analysis.</p><p><a href="https://www.swingcatalyst.com" target="blank">Product link</a>  &nbsp;&nbsp;&nbsp;|  &nbsp;&nbsp;&nbsp;<a href="https://itunes.apple.com/id/app/swing-catalyst/id714031170?mt=8" target="blank">App Store link</a></p>
+                        <p>As an in-house designer at Initial Force I worked with connecting the Swing Catalyst video analysis software with an app and a cloud service (Swing Catalyst Online). I was the designer of both the app and the service. The goal was to make communication between golf coach and student easier. We created a service were videos and communication could be shared directly between the 3 applications, and between all users of the service.</p>
+                    </div>
+                    <div style="position: relative;">
+                        <img src="images/vid_background.png" style="width: 100%; height: auto;">
+                        <iframe width="100%" height="100%" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0;" src="https://www.youtube.com/embed/vi_oCZp0Wak" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <p><em style="font-size: 11px;">Informational video explaining the Swing Catalyst applications and eco-system, Ståle Torger Stokke 2016</em></p>                  
+                    <div class="color-box grey">
+                        <h2>Software</h2>
+                        <p>With the advanced video analysis software a golf coach can receive swings captured by a student using the app. While recording a lesson the coach can do an analysis of the golf swing using comparison, slow motion and other tools. The lesson can then be sent back to the student with helpful tips on how to improve the golf swing.</p>
+                    </div>
+                    <div class="double-image" style="margin-top: 30px;">
+                        <img src="images/portfolio/SC/SCAppD1.jpg" />
+                        <img src="images/portfolio/SC/SCAppD2.jpg" />
+                    </div>
+                    <div class="color-box green">
+                        <h2>App</h2>
+                        <p>The app can be used to capture swings for sharing, or the users can do their own analysis of the swing. Basic tools for analysing your technique was included: drawing tools, frame stepping, zoom and side by side video comparison to other golf swings.</p>
+                    </div>
+                    <img src="images/portfolio/SC/SCSoftwareOnline.jpg" />
+                    <div class="color-box pink">
+                        <h2>Sharing</h2>
+                        <p>All videos captured with the app can be uploaded and shared with others on the cloud service, Swing Catalyst Online. Instant video sharing and availability across all applications was important to ensure our goal was accomplished.</p>
+                    </div>
+                    <div class="read-next">
+                        <a href="#SCProject" id="readLeewayNext" class="closeSC read-more-button">Next project</a>
+                    </div>
                 </div>
             </div>
         </div>
-    
-    
+        <div class="project-frame"></div>
+        <a href="#SCProject" class="closeSC read-more-button bottom">Close</a>
     </div>
-    <div class="row timeline-movement">
-    
-    
-        <div class="timeline-badge">
-            <span class="timeline-balloon-date-day"></span>
-            <span class="timeline-balloon-date-month" style="top:15px;">2011</span>
-        </div>
-    
-        <div class="col-sm-offset-6 col-sm-6  timeline-item">
-            <div class="row">
-                <div class="col-sm-offset-1 col-sm-11">
-                    <div class="timeline-panel debits">
-                        <ul class="timeline-panel-ul">
-                            <li><span class="importo">Summer Design Office</span></li>
-                            <li><span class="causale">Summer job - Design Consultant<!-- <br /><a href="#">Vegårshei</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Blue</a> --></span> </li>
-                            <li><p><small class="text-muted">June 2011 - August 2011</small></p> </li>
-                        </ul>
+
+    <!-- <div id="BirkProject" class="portfolio-project-container">
+        <div>
+            <div class="headImage">
+                <img src="images/portfolio/BirkSlider2.jpg" />
+            </div>
+            <div class="headContainer" >
+                <div class="container">
+                    <div class="container-left">
+                        <h1>Birk</h1>
+                        <p>A Scandinavian fireplace tool set</p>
+                        <a href="#BirkProject" class="closeBirk read-more-button">Close</a>
                     </div>
-    
+                </div>
+            </div>
+            <div class="container from-right">
+                <div class="right-wrapper">
+                    <div class="color-box pink">
+                        <h2>the concept</h2>
+                        <p>by Anders Kjøllesdal, Gregoire Bonnemaire and Ståle Torger Stokke</p>
+                        <p>A modern fireplace tool set in Scandinavian style. Based on traditional crafts. Made in high pressure laminate and steel.</p>
+                    </div>
+                    <div class="double-image">
+                        <img src="images/portfolio/Birk/birkProto.jpg"/>
+                        <img src="images/portfolio/Birk/birkD10.jpg"/>
+                    </div>
+                    <div class="color-box grey">
+                        <h2>physical model</h2>
+                        <p>The model was built using laminate, steel and foam. Traditional craft methods were used on the laminate and steel.</p>
+                    </div>
+                    <img src="images/portfolio/Birk/birkD7.jpg" />
+                    <div class="color-box pink">
+                        <h2>Birk</h2>
+                        <p>The Birk fireplace tool set consist of three tools: poker, broom and shovel.<br />Birk also comes with a firewood basket made in high pressure laminate.<br />In addition a shop display concept was presented for use in the Husfliden stores.</p>
+                    </div>
+                    <div class="read-next">
+                        <a href="#BirkProject" id="readGenoaNext" class="closeBirk read-more-button">Next project</a>
+                    </div>
                 </div>
             </div>
         </div>
-    
-    </div>
-	    <div class="row timeline-movement">
-    
-    
-        <div class="timeline-badge">
-            <span class="timeline-balloon-date-day"></span>
-            <span class="timeline-balloon-date-month">2010<br />2009</span>
-        </div>
+        <div class="project-frame"></div>
+        <a href="#BirkProject" class="closeBirk read-more-button bottom">Close</a>
+    </div> -->
 
-        <div class="col-sm-6  timeline-item">
-            <div class="row">
-                <div class="col-sm-11">
-                    <div class="timeline-panel credits">
-                        <ul class="timeline-panel-ul">
-                            <li><span class="importo">Politecnico di Torino</span></li>
-                            <li><span class="causale">Education - Exchange student Industrial Design</span> </li>
-                            <li><p><small class="text-muted">August 2009 - June 2010</small></p> </li>
-                        </ul>
+    <div id="LeewayProject" class="portfolio-project-container">
+        <div>
+            <div class="headImage">
+                <img src="images/portfolio/LeewaySlider.png" />
+            </div>
+            <div class="headContainer" >
+                <div class="container">
+                    <div class="container-left">
+                        <h1>Leeway</h1>
+                        <p>User research and insights</p>
+                        <a href="#LeewayProject" class="closeLeeway read-more-button">Close</a>
                     </div>
-    
+                </div>
+            </div>
+            <div class="container from-right">
+                <div class="right-wrapper">
+                    <div class="color-box blue">
+                        <h2>In-depth interviews</h2>
+                        <p>Identify the emotional responses connected to the use of a camera and shooting photos. I interviewed 8 people between 20-34 years old.</p>
+                        <p><strong>The conlusion:</strong><br />Both genders show a desire to capture good photos. A technical advanced appearance may discourage those without a technical interest. However the desire to be percieved by others as a skilled photographer, may still be present. Good photos encourage the user to develop further and explore new techniques. It's important to trigger the ability to capture good photos early to ensure continued use.</p>
+                    </div>
+                    <div class="double-image">
+                        <img src="images/portfolio/Leeway/LeewayD1.jpg"/>
+                        <img src="images/portfolio/Leeway/LeewayD2.jpg"/>
+                    </div>
+                    <div class="color-box green">
+                        <h2>Shape associations test</h2>
+                        <p>Identify the emotional responses associated with holding and touching shapes. I tested 8 people between 20-27 years old.</p>
+                        <p><strong>The conlusion:</strong><br />Safe to hold was an important emotion: "I don't want to drop my camera." Many of the users wanted a camera that gives credibility as someone interested in photography, but shouldn't be too advanced to use.</p>
+                    </div>
+                    <div class="double-image">
+                        <img src="images/portfolio/Leeway/LeewayD7.jpg"/>
+                        <img src="images/portfolio/Leeway/LeewayD9.jpg"/>
+                    </div>
+                    <div class="color-box pink">
+                        <h2>The Concept</h2>
+                        <p>With a good lens and interesting angles it's easier to shoot good photos. The camera must support the most common lense mount, to provide access to a wide selection of good lenses. A cylindrical camera extended by the lense, creates a tubular shape which makes it easy to control the direction you are pointing the camera. Bluetooth connection between phone and camera encourages the photographer to take the camera away from eye height, and shoot from other interesting angles.</p>
+                    </div>
+                    <div class="read-next">
+                        <a href="#LeewayProject" id="readGenoaNext" class="closeLeeway read-more-button">Next project</a>
+                    </div>
                 </div>
             </div>
         </div>
-    
-    
+        <div class="project-frame"></div>
+        <a href="#LeewayProject" class="closeLeeway read-more-button bottom">Close</a>
     </div>
-	
+
+    <div id="GenoaProject" class="portfolio-project-container">
+        <div>
+            <div class="headImage">
+                <img src="images/portfolio/GenoaSlider.jpg" />
+            </div>
+            <div class="headContainer" >
+                <div class="container">
+                    <div class="container-left">
+                        <h1>Genoa</h1>
+                        <p>Master thesis - Industrial Design</p>
+                        <a href="#GenoaProject" class="closeGenoa read-more-button">Close</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container from-right">
+                <div class="right-wrapper">
+                    <div class="color-box grey">
+                        <h2>The road towards production</h2>
+                        <p>Master thesis - Industrial design engineering Norwegian University of Technology and Science 2012</p>
+                        <p>Genoa is a lounge chair for homes and public areas, expanding the Spinnaker series. The goal of the thesis was to bring the chair from concept to production. The project was in cooperation with Spinnaker Norway AS.</p>
+                    </div>
+                    <div class="double-image">
+                        <img src="images/portfolio/Genoa/genoaD2.jpg">
+                        <img src="images/portfolio/Genoa/genoaSeilMaker2.jpg"/>
+                    </div>
+                    <div class="double-image">
+                        <img src="images/portfolio/Genoa/genoaD6.jpg">
+                        <img src="images/portfolio/Genoa/genoaProto2.jpg">
+                    </div>
+                    <div class="color-box green">
+                        <h2>prototype</h2>
+                        <p>A prototype was built to test both the concept and production methods. Real methods were used in collaboration with potential sub-contractors.</p>
+                    </div>
+                    <div class="double-image">
+                        <img src="images/portfolio/Genoa/genoaExploded.jpg">
+                        <img src="images/portfolio/Genoa/genoaRender.jpg">
+                    </div>
+                    <div class="double-image">
+                        <img src="images/portfolio/Genoa/genoaD10.jpg">
+                        <img src="images/portfolio/Genoa/genoaD9.jpg"/>
+                    </div>
+                    <div class="color-box blue">
+                        <h2>production</h2>
+                        <p>A lot of attention was given to the choice of materials and assembly of the chair. Stringers made of spring steel for a comfy feel, held together by brackets and steel tubes. The sailcloth is strapped to a steel tube seat frame, using industrial velcro for easy assembly. The pillow has a soft outer layers for comfort and a firm core for stability. Split into three parts with extra padding in the middle part for improved lumbar support.</p>
+                    </div>
+                    <div class="read-next">
+                        <a href="#GenoaProject" id="readWFNext" class="closeGenoa read-more-button">Next project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-frame"></div>
+        <a href="#GenoaProject" class="closeGenoa read-more-button bottom">Close</a>
     </div>
+    <div id="WFProject" class="portfolio-project-container">
+        <div>
+            <div class="headImage">
+                <img src="images/portfolio/WFSlider.png" />
+            </div>
+            <div class="headContainer" >
+                <div class="container">
+                    <div class="container-left">
+                        <h1>WordFindR</h1>
+                        <p>UX/UI design, word puzzle game</p>
+                        <a href="#WFProject" class="closeWF read-more-button">Close</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container from-right">
+                <div class="right-wrapper">
+                    <div class="color-box green">
+                        <h2>The project</h2>
+                        <p>This is a spare time project in collaboration with some friends. We had this simple idea about a word puzzle game, and created a prototype to test the game mechanics. It turned out to be a quite fast and engaging game between two people. So we decided to develop the game and try to get it published. We are still working on the last part, but soon maybe you too can try it.</p>
+                    </div>
+                    <img src="images/portfolio/WF/WFD1.png" />
+                    <div class="color-box blue">
+                        <h2>Layout and code</h2>
+                        <p>The app is built with Xamarin and the MvvmCross framework. I did the UI design and the layout coding. For the iOS app I built the layouts in Xcode using auto layout for adaptive behaviour. Layouts for Android I coded in Visual Studio, for both phone and tablet size screens. My friends did all the magic bits and pieces that makes the app actually work.</p>
+                    </div>
+                    <div class="read-next">
+                        <a href="#WFProject" id="readSketchNext" class="closeWF read-more-button">Next project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-frame"></div>
+        <a href="#WFProject" class="closeWF read-more-button bottom">Close</a>
     </div>
-    
-    </section>
-
-
-	<!--Contact -->
-    <section id="contactUs" class="page-section secPad">
-        <div class="container">
-
-            <div class="row">
-                <div class="heading text-center">
-                    <!-- Heading -->
-                    <img class="marker-header" src="images/contactHeader.png">
+    <div id="SketchProject" class="portfolio-project-container">
+        <div>
+            <div class="headImage">
+                <img src="images/portfolio/SketchSlider.png" />
+            </div>
+            <div class="headContainer" >
+                <div class="container">
+                    <div class="container-left">
+                        <h1>Sketching</h1>
+                        <p>With ballpoint pen, render in Photoshop.</p>
+                        <a href="#SketchProject" class="closeSketch read-more-button">Close</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container from-right">
+                <div class="right-wrapper">
+                    <div class="color-box pink">
+                        <h2>Render with Photoshop</h2>
+                        <p>I scanned my hand drawn sketches and used them as a foundation for the render in Photoshop. Colors, shading, texture and details were added to get a more realistic look to the sketch.</p>
+                    </div>
+                    <div id="before-after-container">
+                        <img src="images/portfolio/Sketching/SketchingD2.jpg" />
+                        <img src="images/portfolio/Sketching/SketchingD1.jpg" />
+                    </div>         
                     
-					<p><strong>st.stokke@gmail.com</strong></p>
+                    <div class="read-next">
+                        <a href="#SketchProject" id="readCPNext" class="closeSketch read-more-button">Next project</a>
+                    </div>
                 </div>
             </div>
-
         </div>
-        <!--/.container-->
-    </section>
-    <footer>
-        <div class="container">
-			<div class="row text-center">
-				<p>&nbsp;</p>
-				<p>&copy;2015 Ståle Torger Stokke</p>
-				<p>&nbsp;</p>
-			</div>
+        <div class="project-frame"></div>
+        <a href="#SketchProject" class="closeSketch read-more-button bottom">Close</a>
+    </div>
 
-            <div class="clear"></div>
-            <!--CLEAR FLOATS-->
-        </div>
-    </footer>
+    <!-- PORTFOLIO END -->
 
-    <a href="#top" id="topHome" class="topHome"><i class="fa fa-2x">&nbsp;</i></a>
-
-    <!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]-->
-    <script src="js/modernizr-latest.js"></script>
-    <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
-	<script src="js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="js/jquery.isotope.min.js" type="text/javascript"></script>
-	<script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-    <script src="js/jquery.nav.js" type="text/javascript"></script>
-    <script src="js/jquery.cslider.js" type="text/javascript"></script>
-	<script src="js/custom.js" type="text/javascript"></script>
-    <script src="js/owl-carousel/owl.carousel.js"></script>
-	<script src="js/jquery.waypoints.min.js" type="text/javascript"></script>
-
-	<script type="text/javascript">
-		function downloadJSAtOnload() {
-		var element = document.createElement("script");
-		element.src = "js/my-script.js";
-		document.body.appendChild(element);
-		}
-		if (window.addEventListener)
-		window.addEventListener("load", downloadJSAtOnload, false);
-		else if (window.attachEvent)
-		window.attachEvent("onload", downloadJSAtOnload);
-		else window.onload = downloadJSAtOnload;
-	</script>
-	
 </body>
+
+
+
 </html>
