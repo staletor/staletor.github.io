@@ -49,6 +49,7 @@ main {
     top: 50px;
     bottom: 0;
     left: 50%;
+    width: 600px;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);

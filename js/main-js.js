@@ -47,13 +47,26 @@ $(document).ready(function(){
     
     
      
-    function scrolling() {
+   /* function scrolling() {
         var totalHeight = 0;
+        var mainHeight = $("#main").height();
         $("#chat-wrapper").children().each(function(){
             totalHeight = totalHeight + $(this).outerHeight(true);
         });
-        $(".simplebar-scroll-content").animate({ scrollTop:totalHeight-$("#main").height()+100 }, 600);
+        $(".simplebar-content").animate({ scrollTop:totalHeight-mainHeight+100 }, 600);
         
+    } */
+
+    function scrolling() {
+        var totalHeight = 0;
+        var mainHeight = $("#main").height();
+        var scrollHeight = 0;
+        $("#chat-wrapper").children().each(function(){
+            totalHeight = totalHeight + $(this).outerHeight(true);
+            scrollHeight = totalHeight-mainHeight+100; 
+        });
+        $("#chat-wrapper").animate({ scrollTop:scrollHeight}, 600);
+        console.log(scrollHeight)
     }
     
     function addchatright(i) {
