@@ -7,6 +7,8 @@
 
 	body {
 		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
 	}
 
 	#wrapper {
@@ -18,15 +20,28 @@
 
 	#pdf-container {
 		border: 3px solid #e7b78a;
-    	width: 100%;
-    	height:  70vh;
+		width: 100%;
+		height:  70vh;
 	}
 
 	#pdf-no-support {
 		display: none;
 	}
 
+	@media only screen 
+	  and (max-device-width: 1024px)  {
 
+		#pdf-container {
+			display: none;
+		}
+
+		#pdf-no-support {
+			display: block;
+			border: 3px solid #e7b78a;
+			width: 100%;
+			padding: 24px;
+		}
+	}
 
 </style>
 </head>
@@ -36,7 +51,7 @@
 	<h1>This is a Heading</h1>
 	<p>This is a paragraph.</p>
 	<div id="pdf-container">
-		<iframe frameborder="0" src="images/VarselbrevNSP_Test.pdf" height="100%" width="100%"></iframe>
+		<iframe frameborder="0" src="images/VarselbrevNSP_Test.pdf#toolbar=0" height="100%" width="100%"></iframe>
 	</div>
 	<div id="pdf-no-support">
 		<p>Visning av PDF støttes dessverre ikke på iPhone eller iPad. Du må laste ned brevet for å kunne lese det. Hvis du vil klage på dette kan du <a href="https://discussions.apple.com/thread/250581755">legge inn en kommentar her</a></p>
