@@ -56,7 +56,20 @@
 	<div id="pdf-no-support">
 		<p>Visning av PDF støttes dessverre ikke på iPhone eller iPad. Du må laste ned brevet for å kunne lese det. Hvis du vil klage på dette kan du <a href="https://discussions.apple.com/thread/250581755">legge inn en kommentar her</a></p>
 	</div>
+	<h2>Embed tag</h2>
+	<div class="pdf-wrapper">
+		<embed src="images/VarselbrevNSP_Test.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="100%">
+	</div>
+	<h2>Javascript embed</h2>
+	<div class="pdf-wrapper">
+		<div id="pdf1" style="width:100%; height:100%;"></div>
+	</div>
 </div>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.7/pdfobject.js"></script>
+<script>
+	PDFObject.embed("images/VarselbrevNSP_Test.pdf#toolbar=0&navpanes=0&scrollbar=0", "#pdf1");
+</script>
+	
 </body>
 </html>
