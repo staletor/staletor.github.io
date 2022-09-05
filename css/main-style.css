@@ -21,7 +21,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 1.8em;
 }
 
@@ -31,9 +31,9 @@ main {
     padding: 20vh 32px;
 }
 
-* {
+/* {
     box-sizing: border-box;
-}
+}*/
 
 p {
    margin-top: 0;
@@ -59,12 +59,17 @@ h1 {
 }
 
 h2 {
+    font-family: 'Libre Baskerville', serif;
     font-size: 1.8em;
     font-weight: 700;
+    margin-inline-start: -2px;
 }
 
 h3 {
-    font-weight: 600;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
 }
 
 h4 {
@@ -100,7 +105,7 @@ p.no-margin {
   transform: translateY(120px);
   opacity: 0;
   transition: 800ms all ease;
-  padding-bottom: 2.4em;
+  padding-bottom: 2.8em;
 }
 .reveal.active{
   transform: translateY(0);
@@ -112,38 +117,52 @@ p.no-margin {
 }
 
 #red-button-container {
-    min-height: 140px;
+    min-height: 220px;
 }
 
 
 
 #red-button {
-    margin: 8px 0;
-    background: #CC2936;
-    height: 40px;
-    padding: 0 24px;
+    margin: 1em 0;
     font-size: 1.2em;
-    line-height: 40px;
+    line-height: 1.8em;
     color: #fff;
-    border: red;
-    border-radius: 8px;
+    padding: 8px 32px 8px;
+    border: 1px solid #37323E;
     cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
     transition: 100ms ease;
+    box-sizing: border-box;
+}
+
+#red-button:after {
+    content: "";
+    background-color: #CC2936;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: -7px;
+    left: -7px;
+    transition: 200ms ease;
 }
 
 
-#red-button:hover {
-    background: #AA222D;
+#red-button:hover:after {
+    top: 0px;
+    left: 0px;
 }
 
-#red-button:active {
-    background: #AA222D;
-    transform: translateY(2px);
+#red-button:active:after {
+    top: 7px;
+    left: 7px;
 }
 
 #red-button-result {
-    padding-top: 8px;
-    font-weight: 600;
+    padding-top: 0.8em;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
     font-size: 1.2em;
     color: #CC2936;
     opacity: 0;
