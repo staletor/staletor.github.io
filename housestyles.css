@@ -1,0 +1,175 @@
+
+
+/* styling som ikke er knytte til illustrasjon, bare gjenskape rammene i FSA */
+
+:root {
+  --green_1: #2F6341;
+  --violet_2: #806A89;
+}
+
+body {
+	font-family: "Verdana", sans-serif;	
+}
+
+#container {
+	margin: 0 auto;
+	max-width: 760px;
+	padding: 32px;
+}
+
+h5 {
+	margin: 0;
+} 
+
+
+
+/* styling for illustrasjon */
+
+
+* {
+	box-sizing: border-box;
+}
+
+#wrapper-illustrasjon {
+	display: grid;
+	grid-template-columns: auto;
+}
+
+#wrapper-illustrasjon ul {
+	padding-inline-start: 24px;
+}
+
+#wrapper-hus-a, #wrapper-hus-b {
+	border: 1px solid var(--green_1);
+	padding: 8px 24px 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#wrapper-hus-a {
+	margin-bottom: 24px;
+}
+
+#wrapper-hus-b {
+}
+
+.underline-header {
+	padding-bottom: 8px;
+	border-bottom: 1px solid #2F6341;
+}
+
+#hus-a-1, #hus-a-2, #hus-b-1, #hus-b-2 {
+	width: 230px;
+    padding: 64px 32px 24px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-radius: 6px;
+}
+
+#hus-a-1 {
+    background-image: url("Hus_X.svg");
+    border-color: var(--green_1);
+    margin-bottom: 16px;
+}
+
+#hus-a-2 {
+	background-image: url("Hus_X.svg");
+    border-color: var(--green_1);
+}
+
+
+#hus-b-1 {
+	background-image: url("Hus_X.svg");
+    border-color: var(--green_1);
+    margin-bottom: 16px;
+}
+
+#hus-b-2 {
+	background-image: url("Hus_Y.svg");
+    border-color: var(--violet_2);	
+}
+
+#boks-a, #boks-b{
+	z-index: 2;
+	background: #fff;
+	height: auto;
+	padding: 24px 32px 8px;
+	border-radius: 6px;
+}
+
+#boks-a {
+	max-width: 260px;
+	border: 2px solid var(--green_1);
+	margin-bottom: 16px;
+}
+
+#boks-b {
+	max-width: 210px;
+	border: 2px solid var(--violet_2);
+	transform: translateY(-24px);
+}
+
+
+/* Ipad */
+
+@media only screen and (min-width: 768px) {
+
+	#wrapper-illustrasjon {
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+
+	#wrapper-hus-a, #wrapper-hus-b {
+		height: 100%;
+	}
+
+	#wrapper-hus-a {
+		margin-right: 24px;
+	}
+
+}
+
+/* Desktop - Ipad landscape */
+
+@media only screen and (min-width: 1048px) {
+
+	#wrapper-hus-a, #wrapper-hus-b {
+	}
+
+	#wrapper-hus-a {
+	}
+
+	#wrapper-hus-b {
+	}
+
+	#hus-a-1 {
+		
+	}
+
+	#hus-a-2 {
+	}
+
+	#boks-a {
+	}
+
+	#hus-b-1 {
+
+	}
+
+	#hus-b-2 {
+		
+	}
+
+	#boks-b {
+	}
+
+}
+
+
+
+
+
