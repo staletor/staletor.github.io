@@ -21,15 +21,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Merriweather', serif;
-    font-size: 1.1em;
-    line-height: 1.8em;
-    text-rendering: geometricPrecision;
+    font-size: 1.2em;
 }
 
 main {
     max-width: 600px;
     margin: 0 auto;
-    padding: 20vh 32px;
+    padding: 15vh 32px;
 }
 
 /* {
@@ -37,8 +35,8 @@ main {
 }*/
 
 p {
-   margin-top: 0;
-   margin-bottom: 1.8em;
+    margin-top: 0;
+    margin-bottom: 1.8em;
 }
 
 a {
@@ -47,6 +45,10 @@ a {
     text-decoration: none;
     padding-bottom: 2px;
     transition: 200ms ease;
+    font-family: 'Bebas Neue';
+    font-size: 1.4em;
+    letter-spacing: 0.03em;
+    vertical-align: middle;
 }
 
 a:hover {
@@ -55,13 +57,17 @@ a:hover {
     text-decoration: none;
 }
 
+strong {
+    box-shadow: inset 0 0 0px 20px #F3DE8A;
+}
+
 h1 {
     
 }
 
 @keyframes letterspace {
     from {color:#fff; letter-spacing: 0.2em;}
-    to {color:#37323E; letter-spacing: 0.02em;}
+    to {color:#37323E; letter-spacing: 0.03em;}
 }
 
 h2 {
@@ -69,14 +75,14 @@ h2 {
     font-size: 2.8em;
     margin-inline-start: -2px;
     animation: letterspace 800ms;
-    text-shadow: 8px 8px #F3DE8A;
+    text-shadow: 6px 6px #F3DE8A;
 }
 
 h3 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6em;
+    font-size: 1.8em;
     margin-bottom: 0.5em;
-    text-shadow: 8px 8px #F3DE8A;
+    text-shadow: 4px 6px #F3DE8A;
 }
 
 h4 {
@@ -94,11 +100,13 @@ ul {
 li {
   list-style-type: '→';
   padding-inline-start: 8px;
+  margin-bottom: 0.5em;
 }
 
 ::marker {
     font-family: monospace;
     font-size: 1.5em;
+    text-shadow: 2px 3px #F3DE8A;
 }
 
 .screen-reader-only {
@@ -128,7 +136,6 @@ p.no-margin {
 .reveal h2, .reveal h3 {
   letter-spacing: 0.2em;
   transition: 800ms all ease;
-  text-shadow: 0px 0px #F3DE8A;
 }
 
 .reveal.active{
@@ -137,12 +144,11 @@ p.no-margin {
 }
 
 .reveal.active p {
-  line-height: 1.8em;
+  line-height: 2.2em;
 }
 
 .reveal.active h2, .reveal.active h3 {
-  letter-spacing: 0.02em;
-  text-shadow: 8px 8px #F3DE8A;
+  letter-spacing: 0.03em;
 }
 
 .reveal.less-padding{
@@ -211,6 +217,7 @@ p.no-margin {
 @media only screen and (max-width : 600px) {
     main {
         overflow-x: hidden;
+        padding:0 32px 32px 32px;
     }
 
 }
