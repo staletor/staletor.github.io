@@ -101,6 +101,7 @@ li {
   list-style-type: '→';
   padding-inline-start: 8px;
   margin-bottom: 0.5em;
+  line-height: 1.5em;
 }
 
 ::marker {
@@ -144,7 +145,7 @@ p.no-margin {
 }
 
 .reveal.active p {
-  line-height: 2.2em;
+  line-height: 2em;
 }
 
 .reveal.active h2, .reveal.active h3 {
