@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="css/main-style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Nunito+Sans:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Nunito+Sans:wght@200;300;400;600;700&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:wght@400;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     
 </head>
 <body>
@@ -23,7 +24,7 @@
             <p>
                 Lately I've been inspired to lower my digital carbon footprint and decided to replace my fancy webpage containing large images and javascript files with this simple text-based webpage. My goal is to present myself as a designer without unnecessary impact on the planet. Hopefully I'm able to do so... 
             </p>
-            <p style="text-align: right;">...and yes, there's more → just scroll down.</p>
+            <p style="text-align: right;">...and yes, there's more.<br>Just scroll down ↓</p>
         </div>
         <div class="reveal">
             <h2>Who am I</h2>
@@ -37,7 +38,7 @@
                 As a designer I’ve always been empathic towards the users, but I also love to discuss technology and business strategy. I believe a good designer must be able to create products that are desirable, feasible and viable without unnecessary impact on the planet. The later have recently become more important to me, trying to use digitalization to reduce environmental impact while still creating value and growth.
             </p>
         </div>
-        <div class="reveal">
+        <div class="reveal less-padding">
             <p style="margin-bottom: 0;">Another interest of mine is behavioral science. And with that in mind I will mention that:</p>
             <ul>
                 <li>there is <strong>only 1</strong> of me left in stock</li>
@@ -47,7 +48,7 @@
             <div id="red-button-container">
                 <button id="red-button">Red button</button>
                 <p id="red-button-result" aria-live="polite"></p>
-            </div>
+            </div>    
         </div>
         <div class="reveal less-padding">
             <h2>My work</h2>
@@ -118,16 +119,15 @@ function rndEl(){
 }
 function rndTx(){
     var tx = rndEl();
-    df.classList.remove("showtime");
+    de.classList.remove("showtime");
     setTimeout(function() {
-        df.classList.add("showtime");
+        de.classList.add("showtime");
         de.innerHTML = tx;
     }, 800);
 }
 rnd = Math.random;
-arr = ['Congratulations, you won! Want to win again?', 'So close! Maybe you should try again?', 'You lost! Double or nothing?', 'You lose! Try again!', 'Do you really think you can win?', 'How many times have you clicked on the red button?', 'Just one more time, right?', 'Give up! You will never win!', 'You came second. Not too bad!', 'Jackpot!', 'I think your luck is out. Maybe you should scroll down?'];
+arr = ['Congratulations, you win!', 'So close! Maybe you should try again?', 'You lost! Double or nothing?', 'You lose! Try again!', 'Do you really think you can win?', 'How many times have you clicked on the red button?', 'Just one more time, right?', 'Give up! You will never win!', 'You came second. Not too bad!', 'Jackpot!', 'I think your luck is out. Maybe you should scroll down?'];
 de = document.getElementById('red-button-result');
-df = document.getElementById('red-button-container');
 document.getElementById("red-button").addEventListener('click',rndTx,false);
 
 
