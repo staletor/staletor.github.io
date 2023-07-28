@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville:wght@400;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     
 </head>
-<body>
+<body id="the-body">
     
     <h1 class="screen-reader-only">Ståle Torger Stokke's webpage</h1>
     <main>
@@ -32,21 +32,32 @@
                 My name is Ståle Torger Stokke and I'm a Norwegian designer who works with digital products. You can characterize me as a UX designer, but I also dabble with service design. I've been doing this for over a decade and have been involved in start-ups, tech firms and public services. Currently I work at <a href="https://aboveit.no/">Aboveit</a> as a Senior Consultant and Team Lead for a small group of designers.
             </p>
         </div>
-        <div class="reveal less-padding">
+        <div class="reveal">
             <h2>My passion</h2>
             <p>
                 As a designer I’ve always been empathic towards the users, but I also love to discuss technology and business strategy. I believe a good designer must be able to create products that are desirable, feasible and viable without unnecessary impact on the planet. The later have recently become more important to me, trying to use digitalization to reduce environmental impact while still creating value and growth.
             </p>
             <p class="no-margin">Another interest of mine is behavioral science. And with that in mind I will mention that:</p>
             <ul>
-                <li>I'm a <strong>limited edition</strong></li>
+                <li>I am <strong>limited edition</strong> only</li>
                 <li>your <strong>competitors</strong> are most likely to hire me</li>
                 <li>you have <strong>less than 30</strong> years to contact me before I retire</li>
             </ul>
-            <p class="no-margin">And whatever you do, <strong>don’t push</strong> the red button:</p>
             <div id="red-button-container">
+                <div id="red-button-result" aria-live="polite">
+                    <p class="no-margin" id="no-show">And whatever you do, <strong>don’t push</strong> the red button:</p>
+                    <p class="no-margin" id="show1-text">Wow! You are brave. You are probably a little shaken right now? Bet you won't push the red button again?</p>
+                    <p class="no-margin" id="show2-text">Pugh! Nothing happened. You're lucky. Pushing the red button is a huge risk.</p>
+                    <p class="no-margin" id="show3-text">Welcome to the dark side. You will not be able to return to light mode.</p>
+                </div>
                 <button id="red-button">Red button</button>
-                <p id="red-button-result" aria-live="polite"></p>
+                <div class="counter" aria-live="polite">
+                  <div class="numbers">
+                    <div style="color: #CC2936;">3</div>
+                    <div style="color: #754ac7;">2</div>
+                    <div style="color: #22bbff;">1</div>
+                  </div>
+                </div>
             </div>    
         </div>
         <div class="reveal less-padding">
@@ -110,7 +121,34 @@
     window.addEventListener("scroll", reveal);
 
 </script>
+
 <script>
+    function rndEl(){
+        return arr[~~(rnd()*arr.length)];
+    }
+    function showtime(){
+        var tx = rndEl();
+        df.classList.add('showtime');
+        setTimeout(function() {
+            de.classList.remove('show1', 'show2', 'show3');
+        }, 2990);
+        setTimeout(function() {
+            de.classList.add(tx);
+            df.classList.remove('showtime');
+        }, 3000);
+    }
+    rnd = Math.random;
+    arr = ['show1', 'show2', 'show3'];
+    de = document.getElementById('the-body');
+    df = document.getElementById('red-button-container');
+    dg = document.getElementById('red-button');
+    dg.addEventListener('click',showtime,false);
+
+
+
+</script>
+
+<!--<script>
 function rndEl(){
     return arr[~~(rnd()*arr.length)];
 }
@@ -128,6 +166,6 @@ de = document.getElementById('red-button-result');
 document.getElementById("red-button").addEventListener('click',rndTx,false);
 
 
-</script>
+</script>-->
 
 </html>
