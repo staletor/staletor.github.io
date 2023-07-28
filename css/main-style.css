@@ -75,14 +75,14 @@ h2 {
     font-size: 2.8em;
     margin-inline-start: -2px;
     animation: letterspace 800ms;
-    text-shadow: 6px 6px #F3DE8A;
+    text-shadow: 4px 4px #F3DE8A, 8px 8px 0 #5BC0BE;
 }
 
 h3 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.8em;
     margin-bottom: 0.5em;
-    text-shadow: 4px 6px #F3DE8A;
+    text-shadow: 4px 4px #F3DE8A;
 }
 
 h4 {
@@ -107,7 +107,7 @@ li {
 ::marker {
     font-family: monospace;
     font-size: 1.5em;
-    text-shadow: 2px 3px #F3DE8A;
+    text-shadow: 2px 3px #F3DE8A, 4px 5px 0 #5BC0BE;
 }
 
 .screen-reader-only {
@@ -181,16 +181,17 @@ p.no-margin {
     border-radius: 30px;
     width: 100%;
     max-width: 360px;
-    box-shadow: 5px 5px 0 #CC2936;
+    box-shadow: 3px 3px 0 #E56399;
     transition: 200ms ease;
 }
 
 #red-button:hover {
-    box-shadow: 0px 0px 0 #CC2936;
+    box-shadow: 6px 6px 0 #E56399;
 }
 
 #red-button:active {
-    transform: translateY(8px);
+    transform: translateX(6px) translateY(6px);
+    box-shadow: 0 0 0 #E56399;
 }
 
 #red-button-result {
@@ -218,7 +219,7 @@ p.no-margin {
 @media only screen and (max-width : 600px) {
     main {
         overflow-x: hidden;
-        padding:0 32px 32px 32px;
+        padding:0 32px 20vh 32px;
     }
 
 }
