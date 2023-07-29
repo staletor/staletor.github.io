@@ -207,7 +207,7 @@ p.no-margin {
 
 #red-button {
     margin-top: 1em;
-    font-size: 1.2em;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.8em;
     height: 60px;
@@ -220,7 +220,7 @@ p.no-margin {
     box-sizing: border-box;
     border-radius: 30px;
     width: 100%;
-    max-width: 360px;
+    max-width: 260px;
     box-shadow: 3px 3px 0 #E56399;
     transition: 200ms ease;
 }
@@ -401,7 +401,7 @@ p.no-margin {
 }
 
 @keyframes breaking-button {
- 0% { transform: translateX(50px) rotate(0deg); width: 200px; border-left: 0; border-bottom-left-radius: 0; border-top-left-radius: 0}
+ 0% { transform: translateX(50px) rotate(0deg); width: 160px; border-left: 0; border-bottom-left-radius: 0; border-top-left-radius: 0}
  25% { transform: translateX(50px) rotate(-5deg);}
  50% { transform: translateX(50px) rotate(5deg);}
  75% { transform: translateX(50px) rotate(-5deg);}
@@ -425,7 +425,7 @@ p.no-margin {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     position: relative;
-    width: 200px;
+    width: 160px;
     padding-left: 2px;
     text-align: left;
     box-shadow: 4px 4px 0 #E56399;
@@ -435,13 +435,13 @@ p.no-margin {
     content: "Re";
     position: absolute;
     background: #fff;
-    font-size: 1.2em;
+    font-size: 24px;
     z-index: 10;
-    left: -125px;
-    top: 13px;
+    left: -109px;
+    top: 9px;;
     transform: rotate(-19deg);
     height: 52px;
-    width: 120px;
+    width: 100px;
     border: 2px solid #CC2936;
     border-right: 0;
     border-bottom-left-radius: 40px;
