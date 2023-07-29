@@ -426,6 +426,9 @@ p.no-margin {
     border-top-left-radius: 0;
     position: relative;
     width: 200px;
+    padding-left: 2px;
+    text-align: left;
+    box-shadow: 4px 4px 0 #E56399;
 }
 
 .show5 #red-button::before {
@@ -443,18 +446,12 @@ p.no-margin {
     border-right: 0;
     border-bottom-left-radius: 40px;
     border-top-left-radius: 40px;
-    box-shadow: -1px 3px 0 #E56399;
+    box-shadow: -1px 4px 0 #E56399;
     text-align: right;
     line-height: 1.8em;
     padding-top: 8px;
     padding-right: 4px;
     animation: breaking-text 400ms ease;
-}
-
-.show5 #red-button div {
-    font-size: 1.2em;
-    width: 270px;
-    margin-left: -104px;
 }
 
 .show5 #no-show, .show5 #show1-text, .show5 #show2-text, .show5 #show3-text, .show5 #show4-text {
@@ -467,6 +464,14 @@ p.no-margin {
 
 .show5 #show5-text {
     display: block;
+}
+
+.show5-hide {
+    display: inline-block;
+}
+
+.show5 .show5-hide {
+    display: none;
 }
 
 /* Small Devices, Phones */
