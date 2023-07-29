@@ -32,11 +32,13 @@
                 My name is Ståle Torger Stokke and I'm a Norwegian designer who works with digital products. You can characterize me as a UX designer, but I also dabble with service design. I've been doing this for over a decade and have been involved in start-ups, tech firms and public services. Currently I work at <a href="https://aboveit.no/">Aboveit</a> as a Senior Consultant and Team Lead for a small group of designers.
             </p>
         </div>
-        <div class="reveal">
+        <div class="reveal less-padding">
             <h2>My passion</h2>
             <p>
                 As a designer I’ve always been empathic towards the users, but I also love to discuss technology and business strategy. I believe a good designer must be able to create products that are desirable, feasible and viable without unnecessary impact on the planet. The later have recently become more important to me, trying to use digitalization to reduce environmental impact while still creating value and growth.
             </p>
+        </div>
+        <div class="reveal">
             <p class="no-margin">Another interest of mine is behavioral science. And with that in mind I will mention that:</p>
             <ul>
                 <li>I am <strong>limited edition</strong> only</li>
@@ -46,11 +48,13 @@
             <div id="red-button-container">
                 <div id="red-button-result" aria-live="polite">
                     <p class="no-margin" id="no-show">And whatever you do, <strong>don’t push</strong> the red button:</p>
-                    <p class="no-margin" id="show1-text">Wow! You are brave. You are probably a little shaken right now? Bet you won't push the red button again?</p>
-                    <p class="no-margin" id="show2-text">Pugh! Nothing happened. You're lucky. Pushing the red button is a huge risk.</p>
-                    <p class="no-margin" id="show3-text">Welcome to the dark side. You will not be able to return to light mode.</p>
+                    <p class="no-margin" id="show1-text">Wow! You are brave. And probably a little shaken right now. Bet you won't push the red button again?</p>
+                    <p class="no-margin" id="show2-text">Phew! Nothing happened. You're lucky :) Pushing the red button is a huge risk.</p>
+                    <p class="no-margin" id="show3-text">Welcome to the dark side ;)<br>Returning to light mode isn't an option.</p>
+                    <p class="no-margin" id="show4-text">You almost disappeared from me. Luckily I got you back. Now please, stay away from the red button.</p>
+                    <p class="no-margin" id="show5-text">Ooops! I think you've broken the red button :/ Maybe you should scroll down before you break something else.</p>
                 </div>
-                <button id="red-button">Red button</button>
+                <button id="red-button"><div>Red button</div></button>
                 <div class="counter" aria-live="polite">
                   <div class="numbers">
                     <div style="color: #CC2936;">3</div>
@@ -130,15 +134,15 @@
         var tx = rndEl();
         df.classList.add('showtime');
         setTimeout(function() {
-            de.classList.remove('show1', 'show2', 'show3');
-        }, 2990);
+            de.classList.remove('show1', 'show2', 'show3', 'show4', 'show5');
+        }, 3490);
         setTimeout(function() {
             de.classList.add(tx);
             df.classList.remove('showtime');
-        }, 3000);
+        }, 3500);
     }
     rnd = Math.random;
-    arr = ['show1', 'show2', 'show3'];
+    arr = ['show1', 'show2', 'show3', 'show2', 'show4', 'show5'];
     de = document.getElementById('the-body');
     df = document.getElementById('red-button-container');
     dg = document.getElementById('red-button');

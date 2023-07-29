@@ -16,7 +16,7 @@
 }
 
 body {
-    background: #fff;
+    background: #ffffff;
     color: #37323E;
     margin: 0;
     padding: 0;
@@ -25,8 +25,8 @@ body {
 }
 
 body.show3 {
-    background: #000;
-    color: #fff;
+    background: #151619;
+    color: #ffffff;
 }
 
 main {
@@ -91,7 +91,7 @@ h2 {
     font-size: 2.8em;
     margin-inline-start: -2px;
     animation: letterspace 800ms;
-    text-shadow: 4px 4px #F3DE8A, 8px 8px 0 #5BC0BE;
+    text-shadow: 6px 6px #8AFCF6;
 }
 
 .show3 h2 {
@@ -186,8 +186,9 @@ p.no-margin {
 }
 
 #red-button-container {
-    height: 180px;
-    margin-top: 40px;
+    height: auto;
+    min-height: 140px;
+    margin: 64px 0;
     padding: 32px;
     border: 4px solid #37323E;
     box-shadow: 8px 8px 0 #37323E;
@@ -199,13 +200,13 @@ p.no-margin {
 
 
 .show3 #red-button-container {
-    height: 60px;
+    min-height: 0;
     border: 4px solid #ffffff;
     box-shadow: 8px 8px 0 #ffffff;
 }
 
 #red-button {
-    margin: 1em 0;
+    margin-top: 1em;
     font-size: 1.2em;
     font-weight: 700;
     line-height: 1.8em;
@@ -261,13 +262,14 @@ p.no-margin {
     overflow: hidden;
     opacity: 0;
     position: absolute;
-    top: 70px;
+    top: 50%;
+    transform: translateY(-50px);
 }
 
 
 #red-button-container.showtime .counter {
     height: 100px;
-    transition-delay: 300ms;
+    transition-delay: 600ms;
     opacity: 1;
 }
 
@@ -277,7 +279,7 @@ p.no-margin {
   display: flex;
   animation: countNumber 3s;
   animation-timing-function: steps(3);
-  animation-delay: 500ms;
+  animation-delay: 600ms;
 }
 .numbers div {
   text-align: center;
@@ -316,7 +318,7 @@ p.no-margin {
     animation-iteration-count: 5;
 }
 
-.show1 #no-show, .show1 #show2-text, .show1 #show3-text {
+.show1 #no-show, .show1 #show2-text, .show1 #show3-text, .show1 #show4-text, .show1 #show5-text {
     display: none;
 }
 
@@ -328,7 +330,7 @@ p.no-margin {
     display: block;
 }
 
-.show2 #no-show, .show2 #show1-text, .show2 #show3-text {
+.show2 #no-show, .show2 #show1-text, .show2 #show3-text, .show2 #show4-text, .show2 #show5-text {
     display: none;
 }
 
@@ -340,7 +342,7 @@ p.no-margin {
     display: block;
 }
 
-.show3 #no-show, .show3 #show1-text, .show3 #show2-text {
+.show3 #no-show, .show3 #show1-text, .show3 #show2-text, .show3 #show4-text, .show3 #show5-text {
     display: none;
 }
 
@@ -356,6 +358,116 @@ p.no-margin {
     display: none;
 }
 
+@keyframes go-dark {
+    0% {background: #fff}
+    7% {background: #fff}
+    10% {background: #000}
+    20% {background: #000}
+    70% {background: #fff}
+    100% {background: #fff}
+}
+
+@keyframes disappear {
+    0% {transform: scale(1.0);}
+    7% {transform: scale(1.3);}
+    10% {transform: scale(0) translateX(0px);}
+    49% {transform: scale(0) translateX(200%);}
+    50% {transform: scale(1) translateX(200%);}
+    80% {transform: translateX(80%);}
+    90% {transform: translateX(-60%);}
+    95% {transform: translateX(40%);}
+    100% {transform: translateX(0);}
+}
+
+.show4 {
+    overflow-x: hidden;
+    animation: go-dark 8s ease;
+}
+
+.show4 main{
+    animation: disappear 8s ease;
+}
+
+.show4 #no-show, .show4 #show1-text, .show4 #show2-text, .show4 #show3-text, .show4 #show5-text {
+    display: none;
+}
+
+#show4-text {
+    display: none;
+}
+
+.show4 #show4-text {
+    display: block;
+}
+
+@keyframes breaking-button {
+ 0% { transform: translateX(50px) rotate(0deg); width: 200px; border-left: 0; border-bottom-left-radius: 0; border-top-left-radius: 0}
+ 25% { transform: translateX(50px) rotate(-5deg);}
+ 50% { transform: translateX(50px) rotate(5deg);}
+ 75% { transform: translateX(50px) rotate(-5deg);}
+ 100% { transform: translateX(50px) rotate(5deg);}
+}
+
+@keyframes breaking-text {
+    0% { transform: rotate(0deg);}
+    25% { transform: rotate(5deg);}
+    50% { transform: rotate(-15deg);}
+    75% { transform: rotate(5deg);}
+    100% { transform: rotate(-19deg);}
+}
+
+
+.show5 #red-button {
+    pointer-events: none;
+    animation: breaking-button 400ms ease;
+    transform: rotate(5deg) translateX(50px);
+    border-left: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    position: relative;
+    width: 200px;
+}
+
+.show5 #red-button::before {
+    content: "Re";
+    position: absolute;
+    background: #fff;
+    font-size: 1.2em;
+    z-index: 10;
+    left: -125px;
+    top: 13px;
+    transform: rotate(-19deg);
+    height: 52px;
+    width: 120px;
+    border: 2px solid #CC2936;
+    border-right: 0;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+    box-shadow: -1px 3px 0 #E56399;
+    text-align: right;
+    line-height: 1.8em;
+    padding-top: 8px;
+    padding-right: 4px;
+    animation: breaking-text 400ms ease;
+}
+
+.show5 #red-button div {
+    font-size: 1.2em;
+    width: 270px;
+    margin-left: -104px;
+}
+
+.show5 #no-show, .show5 #show1-text, .show5 #show2-text, .show5 #show3-text, .show5 #show4-text {
+    display: none;
+}
+
+#show5-text {
+    display: none;
+}
+
+.show5 #show5-text {
+    display: block;
+}
 
 /* Small Devices, Phones */
 @media only screen and (max-width : 600px) {
