@@ -22,6 +22,7 @@ body {
     padding: 0;
     font-family: 'Merriweather', serif;
     font-size: 1.2em;
+    text-rendering: geometricPrecision;
 }
 
 body.show3 {
@@ -92,6 +93,7 @@ h2 {
     margin-inline-start: -2px;
     animation: letterspace 800ms;
     text-shadow: 6px 6px #8AFCF6;
+    text-rendering: geometricPrecision;
 }
 
 .show3 h2 {
