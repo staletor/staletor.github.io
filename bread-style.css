@@ -1,0 +1,141 @@
+body {
+		font-family: "Arial", sans-serif;
+	}
+
+	main {
+		max-width: 768px;
+		margin: 0px auto;
+	}
+
+
+	#structure-wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		max-width: 768px;
+		margin: 32px auto;
+	}
+
+	.structure-theme {
+		margin-right: 16px;
+		flex-shrink: 0;
+	}
+
+	.structure-theme a {
+		color: #00838F;
+		font-weight: bold;
+		text-underline-offset: 0px;
+		text-decoration-thickness: 0px;
+		text-decoration-color: transparent;
+		transition: 200ms;
+	}
+
+	.structure-theme a:hover {
+		text-underline-offset: 4px;
+		text-decoration-thickness: 2px;
+		text-decoration-color: #00838F;
+	}
+
+	.bread-expanded .structure-theme {
+		display: none;
+	}
+
+	.structure-separator {
+		background: #00838F;
+		width: 4px;
+		height: 24px;
+		border-radius: 2px;
+		margin-right: 16px;
+		opacity: 0.5;
+	}
+
+	.structure-expand {
+		
+	}
+
+	#button-expand {
+		background: transparent;
+		border: none;
+		outline: none;
+		height: 32px;
+		width: 32px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 4px;
+		cursor: pointer;
+		transition: 200ms ease;
+		margin-right: 12px;
+	}
+
+	#button-expand:hover {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	#button-expand:focus {
+		box-shadow: 0 0 0 2px #e1ebe4,0 0 0 4px #0b6e4f;
+	}
+
+	#button-expand span {
+		background: #1A1A1A;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+	}
+
+	.bread-expanded #button-expand {
+		display: none;
+	}
+
+	.structure-bread {
+		display: flex;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		list-style: none;
+		padding-left: 0;
+		margin: 0;
+		align-items: center;
+		height: 32px;
+        -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 30%);
+        mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 30%);
+	}
+
+	.structure-bread li {
+		display: inline;
+		flex-shrink: 0;
+		line-height: 32px;
+	}
+
+	.structure-bread span {
+		margin:0;
+		color: #666666;
+	}
+
+	.bread-expanded .structure-bread {
+		-webkit-mask-image: none;
+        mask-image: none;
+        justify-content: flex-start;
+        height: auto;
+	}
+
+	.structure-bread li a {
+		display: block;
+		color: #1A1A1A;
+		width: 0;
+		height: 0;
+		overflow: hidden;
+	}
+
+	.bread-expanded .structure-bread li a {
+		display: inline;
+		width: auto;
+		height: auto;
+	}
+
+	.bread-expanded .structure-bread li:not(:last-child)::after {
+		content: ">";
+		margin-right: 12px;
+		margin-left: 12px;
+	}

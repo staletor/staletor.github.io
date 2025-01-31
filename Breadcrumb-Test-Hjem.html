@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hjem – Bread</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="bread-style.css">
+
+</head>
+<body>
+	<header></header>
+	<main>
+		<h1>Bufdir forside</h1>
+		<a href="breadcrumb-test-familiesamliv.html">Familie og samliv</a>
+		
+
+	</main>
+	<footer></footer>
+
+
+	<script>
+        document.getElementById("button-expand").addEventListener("click", function() {
+            let changeindex = document.querySelectorAll(".bread-link");
+            let expanded = document.getElementById("structure-wrapper");
+
+            changeindex.forEach(function(changeindex) {
+                changeindex.tabIndex = changeindex.tabIndex === -1 ? 0 : -1;
+            });
+
+            // Add or remove class from another element
+            expanded.classList.toggle("bread-expanded");
+        });
+    </script>
+
+</body>
+</html>
