@@ -9,10 +9,10 @@
 </head>
 <body>
 	<header></header>
-	<nav id="structure-wrapper">
-		<div class="structure-theme" aria-label="Tema du er på:"><a href="Breadcrumb-Test-FamilieSamliv.html">Familie og samliv</a></div>
+	<nav id="structure-wrapper" aria-label="Du er her:">
+		<div class="structure-theme"><a href="Breadcrumb-Test-FamilieSamliv.html">Familie og samlivsterapi og folk</a></div>
 		<div class="structure-expand"><button id="button-expand" title="Se hele stien" aria-expanded="false"><span></span><span></span><span></span></button></div>
-		<ul class="structure-bread" aria-label="Du er på denne stien:" aria-hidden="true">
+		<ul id="structure-bread" aria-hidden="true">
 			<li><a href="Breadcrumb-Test-Hjem.html" class="bread-link" tabindex="-1">Hjem</a></li>
 			<li><a href="Breadcrumb-Test-FamilieSamliv.html" class="bread-link" tabindex="-1">Familie og samliv</a></li>
 			<li><a href="Breadcrumb-Test-Familievernkontor.html" class="bread-link" tabindex="-1">Familievernkontor</a></li>
@@ -31,15 +31,22 @@
 
 	<script>
         document.getElementById("button-expand").addEventListener("click", function() {
-            let changeindex = document.querySelectorAll(".bread-link");
+            
+            // Åpne hele brødsmulen
             let expanded = document.getElementById("structure-wrapper");
+            expanded.classList.toggle("bread-expanded");
 
+            // Endre tabindex på lenken til 0 etter hele brødsmulen åpnes
+            let changeindex = document.querySelectorAll(".bread-link");
             changeindex.forEach(function(changeindex) {
                 changeindex.tabIndex = changeindex.tabIndex === -1 ? 0 : -1;
             });
 
-            // Add or remove class from another element
-            expanded.classList.toggle("bread-expanded");
+            // Endre aria-hidden til false
+            const changeariahidden = document.getElementById("structure-bread");
+            const isHidden = changeariahidden.getAttribute('aria-hidden') === 'true';
+            changeariahidden.setAttribute('aria-hidden', isHidden ? 'false' : 'true');
+
         });
     </script>
 
