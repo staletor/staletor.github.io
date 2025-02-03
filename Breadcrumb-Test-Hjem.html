@@ -17,20 +17,5 @@
 	</main>
 	<footer></footer>
 
-
-	<script>
-        document.getElementById("button-expand").addEventListener("click", function() {
-            let changeindex = document.querySelectorAll(".bread-link");
-            let expanded = document.getElementById("structure-wrapper");
-
-            changeindex.forEach(function(changeindex) {
-                changeindex.tabIndex = changeindex.tabIndex === -1 ? 0 : -1;
-            });
-
-            // Add or remove class from another element
-            expanded.classList.toggle("bread-expanded");
-        });
-    </script>
-
 </body>
 </html>
