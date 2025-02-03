@@ -1,10 +1,35 @@
 body {
-		font-family: "Arial", sans-serif;
+		font-family: "BufdirFont", sans-serif;
+		text-rendering: geometricPrecision;
+    	letter-spacing: .02em;
+    	color: #1A1A1A;
 	}
 
 	main {
 		max-width: 768px;
 		margin: 0px auto;
+	}
+
+
+	@font-face {
+	    font-family: 'BufdirFont'; /* Choose a name */
+	    src: url('ARSMaquettePro-Regular.otf') format('opentype'); /* OTF format */
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+	@font-face {
+	    font-family: 'BufdirFont'; /* Choose a name */
+	    src: url('ARSMaquettePro-Bold.otf') format('opentype'); /* OTF format */
+	    font-weight: bold;
+	    font-style: normal;
+	}
+
+	@font-face {
+	    font-family: 'BufdirFont'; /* Choose a name */
+	    src: url('ARSMaquettePro-RegularItalic.otf') format('opentype'); /* OTF format */
+	    font-weight: normal;
+	    font-style: italic;
 	}
 
 
@@ -14,6 +39,7 @@ body {
 		align-items: center;
 		max-width: 768px;
 		margin: 32px auto;
+		font-size: 14px;
 	}
 
 	.structure-theme {
@@ -89,7 +115,7 @@ body {
 		display: none;
 	}
 
-	.structure-bread {
+	#structure-bread {
 		display: flex;
 		justify-content: flex-end;
 		flex-wrap: wrap;
@@ -100,27 +126,28 @@ body {
 		height: 32px;
         -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 30%);
         mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 30%);
+        transition: 200ms ease;
 	}
 
-	.structure-bread li {
+	#structure-bread li {
 		display: inline;
 		flex-shrink: 0;
 		line-height: 32px;
 	}
 
-	.structure-bread span {
+	#structure-bread li span {
 		margin:0;
 		color: #666666;
 	}
 
-	.bread-expanded .structure-bread {
+	.bread-expanded #structure-bread {
 		-webkit-mask-image: none;
         mask-image: none;
         justify-content: flex-start;
         height: auto;
 	}
 
-	.structure-bread li a {
+	#structure-bread li a {
 		display: block;
 		color: #1A1A1A;
 		width: 0;
@@ -128,13 +155,13 @@ body {
 		overflow: hidden;
 	}
 
-	.bread-expanded .structure-bread li a {
+	.bread-expanded #structure-bread li a {
 		display: inline;
 		width: auto;
 		height: auto;
 	}
 
-	.bread-expanded .structure-bread li:not(:last-child)::after {
+	.bread-expanded #structure-bread li:not(:last-child)::after {
 		content: ">";
 		margin-right: 12px;
 		margin-left: 12px;
