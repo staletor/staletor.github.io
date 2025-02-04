@@ -186,7 +186,7 @@ body {
 
 	#structure-bread a {
 		color: #1A1A1A;;
-		text-decoration-thickness: 0px;
+		text-decoration-thickness: 1px;
 		text-underline-offset: 1px;
 		width: auto;
 		transition: 100ms ease;
