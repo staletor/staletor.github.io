@@ -1,0 +1,232 @@
+body {
+		font-family: "BufdirFont", sans-serif;
+		text-rendering: geometricPrecision;
+    	letter-spacing: .02em;
+    	color: #1A1A1A;
+    	word-wrap: break-word;
+	}
+
+	header {
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 20px 16px;
+	}
+
+	main {
+		max-width: 1280px;
+		margin: 0px auto;
+		padding: 16px;
+	}
+
+	h1 {
+		text-align: center;
+		font-size: 48px;
+	}
+
+	main p {
+		max-width: 768px;
+		margin: 16px auto;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	.image-container {
+		width: 100%;
+		max-width: 1280px;
+		height: 50%;
+		max-height: 480px;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.image-container img {
+		width: 100%;
+		height: auto;
+	}
+
+
+	@font-face {
+	    font-family: 'BufdirFont'; /* Choose a name */
+	    src: url('ARSMaquettePro-Regular.otf') format('opentype'); /* OTF format */
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+	@font-face {
+	    font-family: 'BufdirFont'; /* Choose a name */
+	    src: url('ARSMaquettePro-Bold.otf') format('opentype'); /* OTF format */
+	    font-weight: bold;
+	    font-style: normal;
+	}
+
+	@font-face {
+	    font-family: 'BufdirFont'; /* Choose a name */
+	    src: url('ARSMaquettePro-RegularItalic.otf') format('opentype'); /* OTF format */
+	    font-weight: normal;
+	    font-style: italic;
+	}
+
+
+	#structure-wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		max-width: 1280px;
+		margin: 0 auto;
+		font-size: 14px;
+		transition: 200ms ease;
+		padding: 0px 16px;
+	}
+
+	#button-expand {
+		background: transparent;
+		border: none;
+		outline: none;
+		height: 32px;
+		width: 40px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 8px;
+		cursor: pointer;
+		transition: 100ms ease-in-out;
+		margin-left: 8px;
+		border-radius: 6px;
+	}
+
+	#button-expand:hover {
+		padding-right: 6px;
+		padding-left: 6px;
+		background: #eeeeee;
+	}
+
+	:focus {
+		box-shadow: 0 0 0 2px #e1ebe4,0 0 0 4px #0b6e4f;
+		outline: none;
+		border-radius: 2px;
+	}
+
+	#button-expand span {
+		background: #1A1A1A;
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+	}
+
+	.bread-expanded #button-expand {
+		display: none;
+	}
+
+	#structure-bread {
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		padding-left: 0;
+		margin: 0;
+		align-items: center;
+		height: auto;
+	}
+
+	#structure-bread li {
+		display: flex;
+		position: relative;
+		flex-shrink: 0;
+		line-height: 32px;
+        width: 0; /* Start at 0 width */
+        height: 0;
+        overflow: hidden;
+        transition: width 300ms ease-in-out;
+    }
+
+	#structure-bread .current-theme {
+		width: auto;
+		height: 32px;
+		overflow: visible;
+	}
+
+	#structure-bread li span.structure-separator {
+		background: #00838F;
+		width: 2px;
+		height: 18px;
+		border-radius: 2px;
+		margin-left: 12px;
+		opacity: 0.5;
+		display: inline-block;
+		align-self: center;
+	}
+
+	.bread-expanded #structure-bread li span.structure-separator {
+		display: none;
+	}
+
+	#structure-bread .current-theme a {
+		color: #00838F;
+		font-weight: 600;
+		opacity: 1;
+	}
+
+	#structure-bread li span {
+		margin:0;
+		color: #666666;
+		opacity: 0;
+	}
+
+	.bread-expanded #structure-bread li {
+        white-space: nowrap;
+        height: 32px;
+        overflow: visible;
+	}
+
+	#structure-bread a {
+		color: #1A1A1A;;
+		text-decoration-thickness: 0px;
+		text-underline-offset: 1px;
+		width: auto;
+		transition: 100ms ease;
+		opacity: 0;
+	}
+
+	@keyframes fadeIn {
+	    from {
+	        opacity: 0;
+	    }
+	    to {
+	        opacity: 1;
+	    }
+	}
+
+	.bread-expanded #structure-bread a {
+		animation: fadeIn 500ms ease-in-out;
+		opacity: 1;
+	}
+
+	.bread-expanded #structure-bread li span {
+		animation: fadeIn 500ms ease-in-out;
+		opacity: 1;
+	}
+
+	.bread-expanded #structure-bread .current-theme a {
+		animation: none;
+		opacity: 1;
+	}
+
+	#structure-bread a:hover {
+		text-decoration-thickness: 2px;
+		text-underline-offset: 4px;
+	}
+
+	.bread-expanded #structure-bread li:not(:last-child)::after {
+		content: ">";
+		padding-right: 12px;
+		padding-left: 12px;
+		color: #666666;
+		animation: fadeIn 500ms ease-in-out;
+		opacity: 1;
+	}
