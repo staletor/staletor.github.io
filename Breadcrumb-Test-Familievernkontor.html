@@ -57,7 +57,10 @@
             });
 
             // fokus tilbake på brødsmuler når brødsmuler ekspanderes
-            document.getElementById("structure-bread").focus();
+            const firstLink = document.querySelector('#structure-bread li a'); // Selects first <a> inside <li>
+            if (firstLink) {
+                firstLink.focus();
+            }
             
 
         });
