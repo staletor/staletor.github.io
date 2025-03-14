@@ -212,6 +212,11 @@ body {
 		opacity: 1;
 	}
 
+	.ellipsis {
+		overflow:hidden;
+		text-overflow: ellipsis;
+	}
+
 	.bread-expanded #structure-bread .current-theme a {
 		animation: none;
 		opacity: 1;
