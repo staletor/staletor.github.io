@@ -52,9 +52,18 @@
             isExpanded = !isExpanded;
 
             listItems.forEach(item => {
-                item.style.width = isExpanded ? item.scrollWidth + 'px' : '0px'; // Setter bredde på list-element når brødsmuler ekspanderes
+
+                // Setter bredde på list-element når brødsmuler ekspanderes til max 85vw, pluss 10px for å gi rom til ellipsis
+		const itemWidth = Math.min(item.scrollWidth + 10, window.innerWidth * 0.85);
+		item.style.width = isExpanded ? `${itemWidth}px` : "0px";
+
+		//Sørger for ellipsis på lange smuler som fungerer med animasjon
+		const child = item.firstElementChild;
+		child.classList.add("ellipsis");
+
+		// Endre aria-hidden til false når brødsmuler ekspanderes
             	const isHidden = item.getAttribute('aria-hidden') === 'true';
-                item.setAttribute('aria-hidden', isHidden ? 'false' : 'false'); // Endre aria-hidden til false når brødsmuler ekspanderes
+                item.setAttribute('aria-hidden', isHidden ? 'false' : 'false'); 
             });
 
             // fokus tilbake på brødsmuler når brødsmuler ekspanderes
