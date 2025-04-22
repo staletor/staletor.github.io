@@ -1,0 +1,221 @@
+:root {
+  --purple-dark: #711c91;
+  --purple-bright: #ea00d9;
+  --teal: #0abdc6;
+  --teal-light: #86F9FF;
+  --blue-dark: #133e7c;
+  --blue-darkest: #091833;
+}
+
+	body {
+		font-family: "Exo 2", sans-serif;
+    	color: var(--teal-light);
+    	word-wrap: break-word;
+    	margin: 0;
+    	padding: 0;
+    	background: #0b1939;
+	}
+
+	header {
+		width: 100%;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	main {
+		max-width: 800px;
+		margin: 0px auto;
+		padding: 32px;
+		background: #091833;
+		background: radial-gradient(circle,rgba(9, 24, 51, 0.8) 0%, rgba(9, 24, 51, 0.8) 52%, rgba(9, 24, 51, 0) 100%);
+		backdrop-filter: blur(5px);
+  		-webkit-backdrop-filter: blur(5px);
+  		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+	}
+
+	footer {
+		margin: 64px 32px;
+		text-align: center;
+	}
+
+
+	h1 {
+		text-align: center;
+		font-size: 48px;
+		margin-top:	0;
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 32px;
+		margin-top:	0;
+	}
+
+	p {
+		font-size: 1.2em;
+		line-height: 1.8em;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	.background-image-container {
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		z-index: -2;
+		opacity: 0.2;
+	}
+
+	.background-image-container img {
+		min-width: 100%;
+		min-height: 100vh;	
+	}
+
+	.button-container {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 32px;
+	}
+
+	.button-style {
+		border: 2px solid var(--teal);
+		color: var(--teal);
+		font-size: 24px;
+		padding: 16px 32px;
+		text-decoration: none;
+		border-radius: 8px;
+		transition: 200ms;
+		background: transparent;
+		font-family: "Exo 2", sans-serif;
+		cursor: pointer;
+		text-align: center;
+		font-style: italic;
+	}
+
+	.button-style:hover {
+		animation: glow 1s ease-in-out infinite alternate-reverse;
+		border-color: var(--purple-bright);
+		text-shadow: 0 0 25px var(--teal-light);
+	}
+
+	@keyframes glow {
+		0% {box-shadow: 0 0 15px 5px var(--purple-bright);}
+		100% {box-shadow: 0 0 0px 0px var(--purple-bright);}
+	}
+
+	#video-logo {
+		margin-bottom: -20px;
+	}
+
+	#video-background-left, #video-background-right {
+		position: fixed;
+		z-index: -2;
+		transform: translateY(-50%);
+		top: 50%;
+		max-width: 50%;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#video-background-left {
+		left: 0;
+	}
+
+	#video-background-right {
+		right: 0;
+	}
+
+	#video-background-left video, #video-background-right video{
+		
+	}
+
+	#hypervideo {
+		position: fixed;
+		overflow: hidden;
+		height: 100vh;
+		width: 100vw;
+		z-index: 10;
+		opacity: 0;
+		mix-blend-mode: saturation;
+		transition: 1000ms ease-in-out;
+		pointer-events: none;
+		background: var(--teal-light);
+	}
+
+	#hypervideo.show-video {
+		opacity: 1;
+	}
+
+	#dotted-video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	
+
+	#aboveit-logo path {
+		fill: var(--purple-dark);
+	}
+
+	@keyframes warp {
+	  0% {
+	    transform: perspective(300px) rotateX(0deg) rotateY(0deg) scale(1);
+	  }
+	  70% { transform: perspective(20px) rotateX(5deg) rotateY(-5deg) scale(0.7); filter: blur(20px); }
+	  95% { transform: scale(1.2); }
+	  100% {
+	    transform: perspective(300px) rotateX(0deg) rotateY(0deg) scale(1);
+	  }
+	}
+
+
+	.warping {
+		animation: warp 5s ease-in-out;
+		transition: 200ms;
+	}
+
+	@keyframes videowarp {
+	  0% {
+	    transform: perspective(300px) rotateX(0deg) rotateY(0deg) scale(1);
+	  }
+	  70% { transform: perspective(50px) rotateX(-5deg) rotateY(10deg) scale(0.7); filter: blur(20px); }
+	  95% { transform: scale(1.2); }
+	  100% {
+	    transform: perspective(300px) rotateX(0deg) rotateY(0deg) scale(1);
+	  }
+	}
+
+
+	.headerwarping {
+		animation: videowarp 5s ease-in-out;
+		transition: 200ms;
+	}
+
+	@keyframes floatAround {
+	  0%   { transform: translate(0, 0); opacity:0; }
+	  10%  { transform: translate(10px, -5px); opacity:1;  }
+	  30%  { transform: translate(-10px, -10px);  opacity:1;  }
+	  50%  { transform: translate(10px, -15px);  opacity:1;  }
+	  70%  { transform: translate(-10px,-20px);  opacity:1;  }
+	  90%  { transform: translate(10px, -25px); opacity:1;  }
+	  100% { transform: translate(0, -30px); opacity:0; }
+	}
+
+	#hyper-mode {
+		z-index: 99;
+		animation: floatAround 4s ease-in-out infinite;
+		background: var(--blue-darkest);
+	}
+
+	
+
+
