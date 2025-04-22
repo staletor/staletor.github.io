@@ -13,24 +13,48 @@
 </head>
 <body>
 	<div id="video-background-left">
-		<video id="video-grid-left" autoplay muted loop playinline>
+		<video id="video-grid-left" 
+		  autoplay 
+		  muted 
+		  loop 
+		  playsinline 
+		  webkit-playsinline 
+		  preload="auto">
 			  <source src="Grid-left.mp4" type="video/mp4; codecs="hvc1"">
 			Your browser does not support the video tag.
 		</video>
 	</div>
 	<div id="video-background-right">
-		<video id="video-grid-right" autoplay muted loop playinline>
+		<video id="video-grid-right" 
+		  autoplay 
+		  muted 
+		  loop 
+		  playsinline 
+		  webkit-playsinline 
+		  preload="auto">
 			  <source src="Grid-right.mp4" type="video/mp4; codecs="hvc1"">
 			Your browser does not support the video tag.
 		</video>
 	</div>
 	<div id="hypervideo">
-		<video id="dotted-video" autoplay muted loop playinline>
+		<video id="dotted-video" 
+		  autoplay 
+		  muted 
+		  loop 
+		  playsinline 
+		  webkit-playsinline 
+		  preload="auto">
 			  <source src="https://player.vimeo.com/progressive_redirect/playback/874040210/rendition/1080p/file.mp4?loc=external&amp;log_user=0&amp;signature=7b5b03d6996215659a4d03c0c62a5a7354cf84dc7c7df4f0add4564e36660b36" data-wf-ignore="true">
 		</video>
 	</div>
-	<header>
-		<video id="video-logo" width="100%" height="auto" autoplay muted playinline>
+	<header style="text-align: center;">
+		<video id="video-logo" width="100%" height="auto"
+		  autoplay 
+		  muted 
+		  loop 
+		  playsinline 
+		  webkit-playsinline 
+		  preload="auto">
 		  <source src="CopyPasteLogo.mov" type="video/mp4; codecs="hvc1"">
 		Your browser does not support the video tag.
 		</video>
@@ -91,7 +115,7 @@
 
   function getRandomInterval() {
     // Returns a value between 9 and 23 seconds (in ms)
-    return Math.random() * (23000 - 9000) + 9000;
+    return Math.random() * (9000 - 5000) + 5000;
   }
 
   function getRandomPosition() {
