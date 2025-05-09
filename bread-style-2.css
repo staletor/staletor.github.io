@@ -375,6 +375,7 @@ body {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
+		position: relative;
 	}
 
 	.fact-block .alert-base-header {
@@ -391,19 +392,22 @@ body {
 		outline: none;
 		align-self: center;
 		margin-bottom: 16px;
+		position: absolute;
+		bottom: 0;
 	}
 
 	#fakta-innhold {
 		transition: 300ms ease-in-out;
+		padding-bottom: 56px;
 	}
 
 	.gradient-mask-bottom {
-	  height: 140px;
+	  height: 170px;
 	  overflow: hidden;
 
 	  /* Bottom-to-top gradient mask */
-	  -webkit-mask-image: linear-gradient(to bottom, black 10%, transparent 100%);
-	  mask-image: linear-gradient(to bottom, black 10%, transparent 100%);
+	  -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 65%);
+	  mask-image: linear-gradient(to bottom, black 20%, transparent 65%);
 	}
 
 	.ankerlenker {
