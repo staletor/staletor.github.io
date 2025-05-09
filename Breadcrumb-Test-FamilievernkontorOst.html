@@ -28,12 +28,11 @@
 		</div>
 		<div class="content-container">
 		<p>Familievernkontoret er åpent og tilgjengelig for familier som strever i sine relasjoner. Familier med hjemmeboende barn prioriteres i områder med stor pågang. Du trenger ikke henvisning for å komme til oss. Tilbudet er gratis.</p>
-		<p><a href="Breadcrumb-Test-Hjem.html">Tilbake til forsiden</a></p>
 		<button id="button-save">Vis toast</button>
 
-		<div class="alert-base alert-info">
+		<div class="alert-base alert-info" aria-live="off">
 			<div class="alert-base-header">
-				<div class="alert-base-icon">
+				<div class="alert-base-icon" aria-hidden="true">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" focusable="false" role="img"><path fill="currentColor" fill-rule="evenodd" d="M4 3.25a.75.75 0 0 0-.75.75v16c0 .414.336.75.75.75h16a.75.75 0 0 0 .75-.75V4a.75.75 0 0 0-.75-.75zm.75 16V4.75h14.5v14.5zM11 7.75a1 1 0 1 1 2 0 1 1 0 0 1-2 0M10.5 10a.75.75 0 0 0 0 1.5h.75v4h-.75a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-.75v-4.75A.75.75 0 0 0 12 10z" clip-rule="evenodd"></path></svg>
 				</div>
 				<span>Viktig informasjon</span>
@@ -43,26 +42,26 @@
 			</div>
 		</div>
 
-		<div class="alert-base alert-success">
+		<div class="alert-base alert-success" aria-live="off">
 			<div class="alert-base-header">
-				<div class="alert-base-icon">
+				<div class="alert-base-icon" aria-hidden="true">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" focusable="false" role="img"><path fill="currentColor" fill-rule="evenodd" d="M3.75 12a8.25 8.25 0 1 1 16.5 0 8.25 8.25 0 0 1-16.5 0M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25m4.573 7.234a.75.75 0 1 0-1.146-.968l-4.973 5.877L8.03 11.97a.75.75 0 0 0-1.06 1.06l3 3a.75.75 0 0 0 1.102-.046z" clip-rule="evenodd"></path></svg>
 				</div>
-				<span>Du er nå meld på informasjonsmøtet</span>
+				<span>Du er nå meldt på informasjonsmøtet</span>
 			</div>
 			<div class="alert-base-content">
 				<p>Du vil straks få en e-post med bekreftelse og du vil motta en påminnelse dagen før informasjonsmøtet. Takk for at du er interessert i å bli fosterforelder.</p>
 			</div>
 		</div>
 
-		<div id="toast-save" class="alert-base toast alert-success">
+		<div id="toast-save" class="alert-base toast alert-success" role="alert">
 			<div class="alert-base-header">
-				<div class="alert-base-icon">
+				<div class="alert-base-icon" aria-hidden="true">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" focusable="false" role="img"><path fill="currentColor" fill-rule="evenodd" d="M3.75 12a8.25 8.25 0 1 1 16.5 0 8.25 8.25 0 0 1-16.5 0M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25m4.573 7.234a.75.75 0 1 0-1.146-.968l-4.973 5.877L8.03 11.97a.75.75 0 0 0-1.06 1.06l3 3a.75.75 0 0 0 1.102-.046z" clip-rule="evenodd"></path></svg>
 				</div>
 				<span>Noe har blitt lagret</span>
 				<div class="cake-loader">
-					<svg class="loader-icon" width="32" height="32">
+					<svg class="loader-icon" width="32" height="32" aria-hidden="true">
 					    <circle
 					      cx="16" cy="16" r="14"
 					      stroke="#46815D"
@@ -75,9 +74,9 @@
 					      transform="rotate(-90 16 16)"
 					    />
 					</svg>
-					<button id="close-toast-button" class="alert-close-button">
-						<div class="button-icon">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" focusable="false" role="img"><path fill="currentColor" d="M6.53 5.47a.75.75 0 0 0-1.06 1.06L10.94 12l-5.47 5.47a.75.75 0 1 0 1.06 1.06L12 13.06l5.47 5.47a.75.75 0 1 0 1.06-1.06L13.06 12l5.47-5.47a.75.75 0 0 0-1.06-1.06L12 10.94z"></path></svg>
+					<button id="close-toast-button" class="alert-close-button" aria-label="Lukk melding">
+						<div class="button-icon" aria-hidden="true">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" focusable="false" role="img" ><path fill="currentColor" d="M6.53 5.47a.75.75 0 0 0-1.06 1.06L10.94 12l-5.47 5.47a.75.75 0 1 0 1.06 1.06L12 13.06l5.47 5.47a.75.75 0 1 0 1.06-1.06L13.06 12l5.47-5.47a.75.75 0 0 0-1.06-1.06L12 10.94z"></path></svg>
 						</div>
 					</button>
 					
@@ -88,9 +87,9 @@
 			</div>
 		</div>
 
-		<div class="alert-base alert-warning">
+		<div class="alert-base alert-warning" aria-live="off">
 			<div class="alert-base-header">
-				<div class="alert-base-icon">
+				<div class="alert-base-icon" aria-hidden="true">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" focusable="false" role="img"><path fill="currentColor" fill-rule="evenodd" d="M12 2.25a.75.75 0 0 1 .656.387l9.527 17.25A.75.75 0 0 1 21.526 21H2.474a.75.75 0 0 1-.657-1.113l9.527-17.25A.75.75 0 0 1 12 2.25m8.255 17.25L12 4.551 3.745 19.5zM12 8.75a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m0 6.75a1 1 0 1 0 0 2 1 1 0 0 0 0-2" clip-rule="evenodd"></path></svg>
 				</div>
 				<span>Advarsel</span>
@@ -100,9 +99,9 @@
 			</div>
 		</div>
 
-		<div class="alert-base alert-error">
+		<div class="alert-base alert-error" aria-live="off">
 			<div class="alert-base-header">
-				<div class="alert-base-icon">
+				<div class="alert-base-icon" aria-hidden="true">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" focusable="false" role="img"><path fill="currentColor" fill-rule="evenodd" d="M8.272 2.25a.75.75 0 0 0-.53.22L2.47 7.742a.75.75 0 0 0-.22.53v7.456c0 .199.079.39.22.53l5.272 5.272c.14.141.331.22.53.22h7.456a.75.75 0 0 0 .53-.22l5.272-5.272a.75.75 0 0 0 .22-.53V8.272a.75.75 0 0 0-.22-.53L16.258 2.47a.75.75 0 0 0-.53-.22zM3.75 8.583 8.583 3.75h6.834l4.833 4.833v6.834l-4.833 4.833H8.583L3.75 15.417zm5.28-.613a.75.75 0 0 0-1.06 1.06L10.94 12l-2.97 2.97a.75.75 0 1 0 1.06 1.06L12 13.06l2.97 2.97a.75.75 0 1 0 1.06-1.06L13.06 12l2.97-2.97a.75.75 0 0 0-1.06-1.06L12 10.94z" clip-rule="evenodd"></path></svg>
 				</div>
 				<span>Feilmelding</span>
@@ -114,20 +113,32 @@
 
 		<div class="alert-base fact-block">
 			<div class="alert-base-header">
-				<div class="alert-base-icon">
-					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" focusable="false" role="img"><path fill="currentColor" fill-rule="evenodd" d="M12.53 1.57a.75.75 0 0 0-1.06 0l-9.9 9.9a.75.75 0 0 0 0 1.06l9.9 9.9a.75.75 0 0 0 1.06 0l9.9-9.9a.75.75 0 0 0 0-1.06zM12 20.84 3.161 12l8.84-8.839 8.838 8.84zm-.92-11.86c-.19.19-.33.49-.33.92a.75.75 0 0 1-1.5 0c0-.77.26-1.471.77-1.98.51-.51 1.21-.77 1.98-.77s1.47.26 1.98.77c.51.509.77 1.21.77 1.98 0 .517-.217.944-.452 1.273-.224.314-.512.601-.748.837l-.02.02c-.26.26-.463.466-.607.668-.14.196-.173.319-.173.402v.4a.75.75 0 0 1-1.5 0v-.4c0-.518.217-.945.452-1.274.224-.313.512-.6.748-.837l.02-.02c.26-.26.463-.465.607-.668.14-.196.173-.319.173-.401 0-.43-.14-.73-.33-.92s-.49-.33-.92-.33-.73.14-.92.33m-.03 6.923a.95.95 0 1 1 1.9 0 .95.95 0 0 1-1.9 0" clip-rule="evenodd"></path></svg>
+				<div class="alert-base-icon" aria-hidden="true">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" focusable="false" role="img"><path fill="currentColor" fill-rule="evenodd" d="M12 3.75a8.25 8.25 0 1 0 0 16.5 8.25 8.25 0 0 0 0-16.5M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12m8.8 4.9a.95.95 0 1 1 1.9 0 .95.95 0 0 1-1.9 0m-.8-7.4c0-.966.784-1.75 1.75-1.75h.136a1.614 1.614 0 0 1 1.008 2.874l-.441.353A3.87 3.87 0 0 0 11.25 14a.75.75 0 0 0 1.5 0c0-.72.327-1.402.89-1.851l.441-.354a3.114 3.114 0 0 0-1.945-5.545H12A3.25 3.25 0 0 0 8.75 9.5a.75.75 0 0 0 1.5 0" clip-rule="evenodd"></path></svg>
 				</div>
-				<span>Fakta</span>
+				<span>Fakta + vis mer</span>
 			</div>
-			<div id="fakta-innhold" class="alert-base-content gradient-mask-bottom">
+			<button id="button-expand-fact" aria-expanded="false" aria-controls="fakta-innhold">Vis mer</button>
+			<div id="fakta-innhold" class="alert-base-content gradient-mask-bottom" inert>
 				<p>Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout.</p>
 				<ul>
 					<li>Punkt A som er kort og enkelt</li>
 					<li>Punkt B som er et helt avsnitt og alt for langt til å ligge i en punktliste. Poenget med å bruke punktliste er at det ikke skal inneholde Lorem Ipsum. I motsetning til 'Innhold her, innhold her', og gir inntrykk av å være lesbar tekst.</li>
 				</ul>
-				<p>Poenget med å bruke Lorem Ipsum er at det har en mer eller mindre normal fordeling av bokstaver i ord, i motsetning til 'Innhold her, innhold her', og gir inntrykk av å være lesbar tekst.</p>
+				<p>Poenget med å bruke Lorem Ipsum er at det har en mer eller mindre normal <a href="https://www.nrk.no/">fordeling av bokstaver</a> i ord, i motsetning til 'Innhold her, innhold her', og gir inntrykk av å være lesbar tekst.</p>
 			</div>
-			<button id="button-expand-fact">Vis mer</button>
+		</div>
+
+		<div class="alert-base fact-block">
+			<div class="alert-base-header">
+				<div class="alert-base-icon" aria-hidden="true">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" focusable="false" role="img"><path fill="currentColor" fill-rule="evenodd" d="M12 3.75a8.25 8.25 0 1 0 0 16.5 8.25 8.25 0 0 0 0-16.5M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12m8.8 4.9a.95.95 0 1 1 1.9 0 .95.95 0 0 1-1.9 0m-.8-7.4c0-.966.784-1.75 1.75-1.75h.136a1.614 1.614 0 0 1 1.008 2.874l-.441.353A3.87 3.87 0 0 0 11.25 14a.75.75 0 0 0 1.5 0c0-.72.327-1.402.89-1.851l.441-.354a3.114 3.114 0 0 0-1.945-5.545H12A3.25 3.25 0 0 0 8.75 9.5a.75.75 0 0 0 1.5 0" clip-rule="evenodd"></path></svg>
+				</div>
+				<span>Fakta</span>
+			</div>
+			<div class="alert-base-content">
+				<p>Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout. Poenget med å bruke Lorem Ipsum er at det har en mer eller mindre normal fordeling av bokstaver i ord, i motsetning til 'Innhold her, innhold her', og gir inntrykk av å være lesbar tekst.</p>
+			</div>
 		</div>
 
 		<div class="alert-base fact-block no-icon">
@@ -214,6 +225,7 @@
 			    } else {
 			      running = false;
 			      savetoast.classList.remove("visible");
+			      setTimeout(() => savetoast.classList.add("hidden"), 300);
 			    }
 			  }
 
@@ -223,6 +235,7 @@
 		    running = true;
 		    loader.style.strokeDashoffset = 0;
 		    savetoast.classList.add("visible");
+		    savetoast.classList.remove("hidden");
 		    updateCircle();
 		  });
 
@@ -230,48 +243,28 @@
 		    isCancelled = true;
 		    running = false;
 		    savetoast.classList.remove("visible");
+		    setTimeout(() => savetoast.classList.add("hidden"), 300);
 		  });
-		  
-
-			  	/*savebutton.onclick = function () {
-			    savetoast.classList.add("visible");
-
-			    let progress = 100;
-
-			    function updateLoader() {
-				    progress--;
-				    const gradient = `conic-gradient(from 360deg, 
-				      #76be92 0% ${progress}%,
-				      transparent ${progress}% 100%
-				    )`;
-				    loader.style.background = gradient;
-
-				    if (progress > 0) {
-				        requestAnimationFrame(() => setTimeout(updateLoader, 80));
-				      }
-				    }
-
-				    updateLoader();
-
-				    // Remove the class after 8,5 seconds
-
-			    setTimeout(() => {
-			      savetoast.classList.remove("visible");
-			    }, 8500);
-			  };
-
-			  closetoast.onclick = function () {
-			    savetoast.classList.remove("visible");
-				};*/
 
 
 			  const expandbutton = document.getElementById("button-expand-fact");
 			  const expandtarget = document.getElementById("fakta-innhold");
 
 			  expandbutton.addEventListener("click", () => {
-			    const isActive = expandtarget.classList.toggle("gradient-mask-bottom");
+				  const isActive = expandtarget.classList.toggle("gradient-mask-bottom");
 
-			    expandbutton.textContent = isActive ? "Vis mer" : "Vis mindre";
+				  // Toggle 'inert' on the target
+				  if (isActive) {
+				    expandtarget.setAttribute("inert", "");
+				  } else {
+				    expandtarget.removeAttribute("inert");
+				  }
+
+				  // Toggle aria-expanded on the button
+				  expandbutton.setAttribute("aria-expanded", !isActive);
+
+				  // Update button text
+				  expandbutton.textContent = isActive ? "Vis mer" : "Vis mindre";
 			  });
 
         
