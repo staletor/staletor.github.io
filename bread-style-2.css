@@ -273,6 +273,10 @@ body {
 		top: 64px;
 	}
 
+	.alert-base.toast.hidden {
+		display: none;
+	}
+
 	.alert-base-header {
 		display: flex;
 		flex-direction: row;
@@ -283,6 +287,12 @@ body {
 	.alert-base-header span {
 		flex-grow: 1;
 		line-height: 24px;
+		font-size: 1em;
+	}
+
+	.alert-base-header h2, .alert-base-header h3, .alert-base-header h4, .alert-base-header h5, .alert-base-header h6 {
+		font-size: 1em;
+		margin: 0;
 	}
 
 	.no-icon .alert-base-header, .no-icon .alert-base-content {
