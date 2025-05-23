@@ -481,14 +481,14 @@ body {
 	}
 
 	/* Table styling */
-	table {
+	.responsive-table {
 	  border-collapse: collapse;
 	  margin-bottom: 4px;
 	  line-height: 1.3em;
 	  border-bottom: 2px solid var(--sand-4);
 	}
 
-	th, td {
+	.responsive-table th, .responsive-table td {
 	  padding: 16px;
 	  text-align: left;
 	  vertical-align: baseline;
@@ -496,7 +496,7 @@ body {
 	  white-space: nowrap; /* nowrap er satt kun for testing */
 	}
 
-	td {
+	.responsive-table td {
 		font-size: 0.875em;
 	}
 
@@ -522,13 +522,13 @@ body {
 	.table-wrapper::before {
 	  left: 0px;
   	  width:0px;
-  	  border-left: 2px dashed #999;
+  	  border-left: 2px dashed var(--neutral-2);
 	}
 
 	.table-wrapper::after {
 	  right: 0px;
   	  width: 0px;
-  	  border-right: 2px dashed #999;
+  	  border-right: 2px dashed var(--neutral-2);
 	}
 
 	.table-wrapper.show-left::before {
@@ -554,7 +554,7 @@ body {
   		mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
 	}
 
-	table caption {
+	.responsive-table caption {
 		text-align: left;
 		font-size: 1.25em;
 		font-weight: 600;
@@ -567,48 +567,48 @@ body {
 	    transition: 300ms ease-in-out;
 	}
 
-	.show-left table caption {
+	.show-left .responsive-table caption {
 		padding-left: 32px;
 	}
 
-	th {
+	.responsive-table th {
 		font-weight: 600;
 	}
 
-	thead tr {
+	.responsive-table thead tr {
 		border:0;
 	}
 
-	thead tr th {
+	.responsive-table thead tr th {
 		padding-top: 4px;
 	}
 
-	tbody {
+	.responsive-table tbody {
 		border-top: 2px solid var(--neutral-4);
 		border-bottom: 2px solid var(--neutral-4);
 	}
 
-	tbody th {
+	.responsive-table tbody th {
 		border-right: 2px solid var(--neutral-4);
 		background-color: white;
 		transition: 300ms ease-in-out;
 	}
 
-	tbody tr {
+	.responsive-table tbody tr {
 		background-color: white;
 	}
 
-	tbody tr:nth-child(odd), tbody tr:nth-child(odd) th {
+	.responsive-table tbody tr:nth-child(odd), .responsive-table tbody tr:nth-child(odd) th {
 	  background-color: var(--sand-4);
 	}
 
 @media screen and (min-width: 768px) {
 
-	table caption {
+	.responsive-table caption {
 	    max-width: 704px;
 	}
   
-	.show-left tbody th {
+	.show-left .responsive-table tbody th {
 		position: sticky;
 		left: 0px;
 		z-index: 3;
