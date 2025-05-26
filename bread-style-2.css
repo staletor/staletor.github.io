@@ -8,6 +8,8 @@
   --sand-3: #DDDBCF;
   --sand-4: #F2F1ED;
   --sand-5: #F6F6F3;
+  --ocre-4: #F7F3D9;
+  --ocre-5: #FFFEF5;
 }
 
 
@@ -602,6 +604,33 @@ body {
 	  background-color: var(--sand-4);
 	}
 
+	.responsive-table th[colspan="2"], .responsive-table th[colspan="3"], .responsive-table th[colspan="4"] {
+	  position: relative;
+	  font-style: italic;
+	  font-size: 1.25em;
+	  font-weight: 400;
+	}
+
+	.responsive-table th[colspan="2"]::before, .responsive-table th[colspan="3"]::before, .responsive-table th[colspan="4"]::before {
+	  content: "";
+	  width: 2px;
+	  position: absolute;
+	  right: -1px;
+	  top: 0px;
+	  bottom: -32px;
+	  background-color: var(--neutral-4);
+	  display: inline-block;
+	}
+
+	.responsive-table tbody tr th[rowspan="2"], .responsive-table tbody tr th[rowspan="3"], .responsive-table tbody tr th[rowspan="4"] {
+	  background-color: white;
+	  font-style: italic;
+	  border-right: 8px solid white;
+	  border-bottom: 2px solid var(--neutral-4);
+	  font-size: 1.25em;
+	  font-weight: 400;
+	}
+
 @media screen and (min-width: 768px) {
 
 	.responsive-table caption {
@@ -614,6 +643,12 @@ body {
 		z-index: 3;
 		box-shadow: inset -2px 0px 0px 0px var(--neutral-4);
 		padding-left: 32px;
+	}
+
+	.show-left .responsive-table tbody tr th[rowspan="2"], .show-left .responsive-table tbody tr th[rowspan="3"], .show-left .responsive-table tbody tr th[rowspan="4"] {
+	  position: static;
+	  box-shadow: none;
+	  padding-left: 16px;
 	}
 }
 
