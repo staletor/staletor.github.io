@@ -36,63 +36,98 @@
 			Your browser does not support the video tag.
 		</video>
 	</div>
-	<div id="hypervideo">
-		<video id="dotted-video" 
-		  autoplay 
-		  muted 
-		  loop 
-		  playsinline 
-		  webkit-playsinline 
-		  preload="auto">
-			  <source src="https://player.vimeo.com/progressive_redirect/playback/874040210/rendition/1080p/file.mp4?loc=external&amp;log_user=0&amp;signature=7b5b03d6996215659a4d03c0c62a5a7354cf84dc7c7df4f0add4564e36660b36" data-wf-ignore="true">
-		</video>
-	</div>
-	<header style="text-align: center;">
-		<!--<video id="video-logo" width="100%" height="auto"
-		  autoplay 
-		  muted 
-		  loop 
-		  playsinline 
-		  webkit-playsinline 
-		  preload="auto">
-		  <source src="CopyPasteLogo.mov" type="video/mp4; codecs="hvc1"">
-		Your browser does not support the video tag.
-		</video>-->
+	<header>
+		<section id="hero" class="container">
+			<div id="logo">
+				<h1 class="scroll-animated-text" id="animatedText"><span id="heading-left">COPY</span><span id="heading-right">PASTE</span></h1>
+				<div id="logo-ctrl">ctrl</div>
+				<div id="logo-c">C</div>
+				<div id="logo-v">V</div>
+			</div>
+			
 
-		<img id="video-logo" width="100%" height="auto" src="CopyPasteLogoFancy.gif">
-		<script>
-		  const video = document.getElementById("video-logo");
+				<script>
+					const animatedText = document.getElementById('animatedText');
+					const parallaxElement = document.getElementById('logo');
 
-		  // Disable native looping
-		  video.loop = false;
+					window.addEventListener('scroll', () => {
+					  const maxScroll = document.body.scrollHeight - window.innerHeight;
+					  const scrollTop = window.scrollY;
 
-		  video.addEventListener("ended", () => {
-		    const randomDelay = Math.random() * (7000 - 2000) + 2000; // 2000–7000 ms
+					  // Calculate progress (0 to 1)
+					  const scrollProgress = scrollTop / maxScroll;
 
-		    setTimeout(() => {
-		      video.currentTime = 0;
-		      video.play();
-		    }, randomDelay);
-		  });
+					  // Letter spacing from 0px to 10px
+					  const letterSpacing = scrollProgress * 200;
 
-		  // Start playing initially
-		  video.play();
-		</script>
+					  // Blur from 0px to 5px
+					  const blurAmount = scrollProgress * 20;
 
+					  // Apply styles
+					  animatedText.style.letterSpacing = `${letterSpacing}px`;
+					  animatedText.style.filter = `blur(${blurAmount}px)`;
+
+					  // Adjust speed factor (lower is slower)
+					  const speed = 0.7;
+
+					  // Calculate the translateY value based on scroll position
+					  const translateY = scrollTop * speed;
+
+					  // Apply the parallax effect
+					  parallaxElement.style.transform = `translate(0, calc(${translateY}px))`;
+
+					});
+				</script>
+		</section>
 	</header>
-	<main id="main-content">
-		<h1>Copy & paste 2025</h1>
-		<p>Velkommen til årets interne fagdag i Aboveit. Det kommer til å bli en ut-av-dæ-sjæl-opplevelse.</p>
-		<div class="button-container">
-			<a class="button-style" href="https://www.aboveit.no/">Meld deg på</a>
-		</div>
-
-		
-
-		<h2>Program</h2>
-		<p>Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout. Poenget med å bruke Lorem Ipsum er at det har en mer eller mindre normal fordeling av bokstaver i ord, i motsetning til 'Innhold her, innhold her', og gir inntrykk av å være lesbar tekst.</p>
-		<p>Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout. Poenget med å bruke Lorem Ipsum er at det har en mer eller mindre normal fordeling av bokstaver i ord, i motsetning til 'Innhold her, innhold her', og gir inntrykk av å være lesbar tekst.</p>
-		<p>Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout. Poenget med å bruke Lorem Ipsum er at det har en mer eller mindre normal fordeling av bokstaver i ord, i motsetning til 'Innhold her, innhold her', og gir inntrykk av å være lesbar tekst.</p>
+	<main id="main-content">		
+		<section id="section-program">
+			<div class="container">
+				<p>Velkommen til årets interne fagdag i Aboveit. Det kommer til å bli en ut-av-dæ-sjæl-opplevelse.</p>
+				<div class="button-container">
+					<a class="button-style" href="https://www.aboveit.no/">Meld deg på</a>
+				</div>
+				<h2>Design</h2>
+				<ul class="program-list">
+					<li>
+						<div class="program-content">
+							<img src="bilder/Staale_BladeRunner.png">
+							<div class="program-info">
+								<h3>Verdien av design</h3>
+								<p>Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout. Poenget med å bruke Lorem Ipsum er at det har en mer eller mindre normal fordeling av bokstaver i ord, i motsetning til 'Innhold her, innhold her', og gir inntrykk av å være lesbar tekst.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="program-content">
+							<img src="bilder/Staale_BladeRunner.png">
+							<div class="program-info">
+								<h3>Verdien av design</h3>
+								<p>Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout. Poenget med å bruke Lorem Ipsum er at det har en mer eller mindre normal fordeling av bokstaver i ord, i motsetning til 'Innhold her, innhold her', og gir inntrykk av å være lesbar tekst.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="program-content">
+							<img src="bilder/Staale_BladeRunner.png">
+							<div class="program-info">
+								<h3>Verdien av design</h3>
+								<p>Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout. Poenget med å bruke Lorem Ipsum er at det har en mer eller mindre normal fordeling av bokstaver i ord, i motsetning til 'Innhold her, innhold her', og gir inntrykk av å være lesbar tekst.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="program-content">
+							<img src="bilder/Staale_BladeRunner.png">
+							<div class="program-info">
+								<h3>Verdien av design</h3>
+								<p>Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout. Poenget med å bruke Lorem Ipsum er at det har en mer eller mindre normal fordeling av bokstaver i ord, i motsetning til 'Innhold her, innhold her', og gir inntrykk av å være lesbar tekst.</p>
+							</div>
+						</div>
+					</li>
+				</ul>			
+			</div>
+		</section>
 	</main>
 	<footer>
 		<svg id="aboveit-logo" xmlns="http://www.w3.org/2000/svg" width="161" height="30" viewBox="0 0 161 30">
@@ -109,6 +144,8 @@
 		</svg>
 
 	</footer>
+
+<!-- HYPERMODE 
 
 	<button class="button-style" style="display:none; position: absolute; z-index: 999;" id="hyper-mode">Copy knowledge</button>
 
@@ -178,6 +215,8 @@
 		    }, 5000);
 		  });
 		</script>
+
+	-->
 
 </body>
 </html>
