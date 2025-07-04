@@ -4,6 +4,7 @@
   --teal: #0abdc6;
   --teal-light: #86F9FF;
   --blue-dark: #133e7c;
+  --blue-darker: #13274b;
   --blue-darkest: #091833;
   --above-blue: #0014c6;
 }
@@ -123,12 +124,12 @@
 	}
 
 	h3 {
-		font-size: 28px;
+		font-size: 24px;
 	}
 
 	p {
-		font-size: 1.2em;
-		line-height: 1.8em;
+		font-size: 1em;
+		line-height: 1.6em;
 		color: #fff;
 		font-family: "Inter", sans-serif;
 	}
@@ -152,6 +153,10 @@
 	.background-image-container img {
 		min-width: 100%;
 		min-height: 100vh;	
+	}
+
+	.ingress {
+		font-size: 1.2em;
 	}
 
 	.button-container {
@@ -190,13 +195,23 @@
 	}
 
 	.program-list li {
-		width: calc(33% - 32px);
+		width: calc(33% - 16px);
 	}
 
 	.program-list img {
 		width: 100%;
 		height: auto;
 	}
+
+	.program-content {
+		height: 100%;
+		background: var(--blue-darker);
+	}
+
+	.program-info {
+		padding: 16px;
+	}
+
 
 	@keyframes glow {
 		0% {box-shadow: 0 0 15px 5px var(--purple-bright);}
@@ -234,7 +249,7 @@
 	@media only screen and (max-width: 1024px) {
 
 		.program-list li {
-			width: calc(50% - 32px);
+			width: calc(50% - 16px);
 		}
 	}
 
@@ -297,11 +312,6 @@
 		.program-list li {
 			width: 100%;
 			margin: 0 0 20px 0;
-		}
-
-		.program-list img {
-			width: 30%;
-			height: auto;
 		}
 	  
 
