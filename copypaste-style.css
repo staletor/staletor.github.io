@@ -22,7 +22,7 @@
 	}
 
 	main {
-
+		overflow: hidden;
 	}
 
 	section {
@@ -30,6 +30,8 @@
 	}
 
 	#hero {
+		max-width: 100%;
+		overflow: hidden;
 	}
 
 	#logo {
@@ -110,17 +112,19 @@
 
 	h1, h2, h3, h4 {
 		margin-top:	0;
-		color: var(--teal-light);
 		font-family: "Exo 2", sans-serif;
 	}
 
 
 	h1 {
+		color: var(--teal-light);
 		font-size: 48px;
+		margin-bottom: 0;
 	}
 
 	h2 {
 		font-size: 32px;
+		margin-bottom: 0.2em;
 	}
 
 	h3 {
@@ -157,12 +161,16 @@
 
 	.ingress {
 		font-size: 1.2em;
+		text-align: center;
+		max-width: 720px;
+		margin: 32px auto;
 	}
 
 	.button-container {
 		display: flex;
 		flex-direction: row;
-		margin-bottom: 32px;
+		margin-bottom: 72px;
+		justify-content: center;
 	}
 
 	.button-style {
@@ -176,12 +184,36 @@
 		cursor: pointer;
 		text-align: center;
 		font-style: italic;
+		border-radius: 2px;
 	}
 
 	.button-style:hover {
 		animation: glow 1s ease-in-out infinite alternate-reverse;
 		border-color: var(--purple-bright);
 		text-shadow: 0 0 25px var(--teal-light);
+	}
+
+	.button-style-secondary {
+		color: var(--teal);
+		font-size: 24px;
+		padding: 16px 32px;
+		text-decoration-line: underline;
+  	text-decoration-style: solid;
+  	text-underline-offset: 3px;
+  	text-decoration-thickness: 2px;
+		transition: 200ms;
+		font-family: "Exo 2", sans-serif;
+		cursor: pointer;
+		text-align: center;
+		font-style: italic;
+		background: none;
+		border: none;
+	}
+
+	.button-style-secondary:hover {
+		text-shadow: 0 0 25px var(--teal-light);
+		text-decoration-thickness: 3px;
+		text-underline-offset: 6px;
 	}
 
 	.program-list {
@@ -196,6 +228,7 @@
 
 	.program-list li {
 		width: calc(33% - 16px);
+		margin-bottom: 32px;
 	}
 
 	.program-list img {
@@ -209,7 +242,99 @@
 	}
 
 	.program-info {
-		padding: 16px;
+		padding: 24px 16px;
+		position: relative;
+	}
+
+	.tag-list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		position: absolute;
+		top: -16px;
+	}
+
+	.tag {
+		font-size: 16px;
+		padding: 0px 6px;
+		margin-right: 8px;
+		margin-left: 8px;
+		position: relative;
+		height: 26px;
+		line-height: 26px;
+	}
+
+	.tag::before, .tag::after {
+		content: "";
+		width: 8px;
+		height: 100%;
+		transform: skewX(-10deg);
+		display: block;
+		position: absolute;
+		top: 0;
+		background: inherit;
+		border-radius: 2px;
+	}
+
+	.tag::before {
+		left:-4px;
+	}
+
+	.tag::after {
+		right:-4px;
+	}
+
+	.design-tag {
+	  background: var(--purple-bright);
+	  font-family: 'Brush Script MT', cursive;
+	  font-weight: 500;
+	  font-size: 18px;
+	}
+	.prosjekt-tag {
+	  background: var(--purple-dark);
+	  font-family: 'Helvetica Neue', sans-serif;
+	  font-style: italic;
+	  font-weight: 400;
+	}
+	.utvikling-tag {
+	  background: var(--teal);
+	  color: var(--blue-dark);
+	  font-family: 'Courier New', monospace;
+	  font-style: normal;
+	  font-weight: 400;
+	}
+	.forretning-tag {
+	  background: var(--above-blue);
+	  font-family: 'Georgia', serif;
+  	font-style: normal;
+  	font-weight: 500;
+	}
+
+	.info-list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		opacity: 0.7;
+	}
+
+	.info-tid, .info-sted, .info-hvem {
+		padding-left: 28px;
+		background-repeat: no-repeat;
+		min-height: 24px;
+		line-height: 24px;
+		margin: 8px 16px 0px 0px;
+	}
+
+	.info-tid {
+		background-image: url("bilder/Clock.svg");
+	}
+
+	.info-sted {
+		background-image: url("bilder/LocationPin.svg");
+	}
+
+	.info-hvem {
+		background-image: url("bilder/SlayDude.svg");
 	}
 
 
@@ -244,6 +369,47 @@
 
 	#aboveit-logo path {
 		fill: var(--purple-dark);
+	}
+
+	@keyframes warpAway {
+	  0% {
+	    transform: perspective(80px) rotateX(0deg) scale(1);
+	    filter: blur(0px);
+	    opacity: 1;
+	  }
+	  20% {
+	    transform: perspective(80px) rotateX(8deg) scale(4);
+	    filter: blur(20px);
+	    opacity: 0;
+	  }
+	  90% {
+	    transform: perspective(80px) rotateX(10deg) scale(0.1);
+	    filter: blur(20px);
+	    opacity: 0;
+	  }
+	  96% {
+	    transform: perspective(80px) rotateX(0deg) scale(1.1);
+	    filter: blur(3px);
+	    opacity: 1;
+	  }
+	  98% {
+	    transform: perspective(80px) rotateX(0deg) scale(0.9);
+	    filter: blur(3px);
+	    opacity: 1;
+	  }
+	  100% {
+	    transform: perspective(80px) rotateX(0deg) scale(1);
+	    filter: blur(0);
+	    opacity: 1;
+	  }
+
+
+	}
+
+	.takeoff {
+		animation: warpAway 5s ease-in-out forwards;
+		transform-origin: bottom center;
+		transform-style: preserve-3d;
 	}
 
 	@media only screen and (max-width: 1024px) {
