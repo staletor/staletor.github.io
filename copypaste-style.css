@@ -29,15 +29,12 @@
 		width: 100%;
 	}
 
-	#hero {
-		max-width: 100%;
-		overflow: hidden;
-	}
-
 	#logo {
 		position: relative;
 		height: 380px;
 		margin-top: 80px;
+		max-width: 100%;
+		overflow: hidden;
 		color: var(--teal-light);
 		font-family: "Exo 2", sans-serif;
 	}
@@ -94,15 +91,14 @@
 
 	#section-program {
 		background: linear-gradient(128deg,rgba(9, 24, 51, 0.4) 18%, rgba(10, 189, 198, 0.4) 20%, rgba(9, 24, 51, 0.4) 29%, rgba(9, 24, 51, 0.4) 75%, rgba(234, 0, 217, 0.4) 84%, rgba(9, 24, 51, 0.4) 85%);
-		backdrop-filter: blur(20px);
-		-webkit-backdrop-filter: blur(20px);
-		box-shadow: 0 0px 60px rgba(0, 0, 0, 0.8);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
 	}
 
 	.container {
 		max-width: 1120px;
 		margin: 0px auto;
-		padding: 32px;
+		padding: 32px 16px;
 	}
 
 	footer {
@@ -142,35 +138,17 @@
 		box-sizing: border-box;
 	}
 
-	.background-image-container {
-		width: 100%;
-		height: 100vh;
-		overflow: hidden;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		position: fixed;
-		z-index: -2;
-		opacity: 0.2;
-	}
-
-	.background-image-container img {
-		min-width: 100%;
-		min-height: 100vh;	
-	}
-
 	.ingress {
 		font-size: 1.2em;
 		text-align: center;
 		max-width: 720px;
 		margin: 32px auto;
+		padding: 0 16px;
 	}
 
-	.button-container {
-		display: flex;
-		flex-direction: row;
-		margin-bottom: 72px;
-		justify-content: center;
+	.focus-text {
+		font-weight: 600;
+		color: var(--teal-light);
 	}
 
 	.button-style {
@@ -227,7 +205,7 @@
 	}
 
 	.program-list li {
-		width: calc(33% - 16px);
+		width: 100%;
 		margin-bottom: 32px;
 	}
 
@@ -237,77 +215,15 @@
 	}
 
 	.program-content {
-		height: 100%;
-		background: var(--blue-darker);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 	}
 
 	.program-info {
-		padding: 24px 16px;
-		position: relative;
-	}
-
-	.tag-list {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		position: absolute;
-		top: -16px;
-	}
-
-	.tag {
-		font-size: 16px;
-		padding: 0px 6px;
-		margin-right: 8px;
-		margin-left: 8px;
-		position: relative;
-		height: 26px;
-		line-height: 26px;
-	}
-
-	.tag::before, .tag::after {
-		content: "";
-		width: 8px;
-		height: 100%;
-		transform: skewX(-10deg);
-		display: block;
-		position: absolute;
-		top: 0;
-		background: inherit;
-		border-radius: 2px;
-	}
-
-	.tag::before {
-		left:-4px;
-	}
-
-	.tag::after {
-		right:-4px;
-	}
-
-	.design-tag {
-	  background: var(--purple-bright);
-	  font-family: 'Brush Script MT', cursive;
-	  font-weight: 500;
-	  font-size: 18px;
-	}
-	.prosjekt-tag {
-	  background: var(--purple-dark);
-	  font-family: 'Helvetica Neue', sans-serif;
-	  font-style: italic;
-	  font-weight: 400;
-	}
-	.utvikling-tag {
-	  background: var(--teal);
-	  color: var(--blue-dark);
-	  font-family: 'Courier New', monospace;
-	  font-style: normal;
-	  font-weight: 400;
-	}
-	.forretning-tag {
-	  background: var(--above-blue);
-	  font-family: 'Georgia', serif;
-  	font-style: normal;
-  	font-weight: 500;
+		padding: 24px 24px 16px 24px;
+		background: var(--blue-darker);
+		width: calc(50% - 16px);
 	}
 
 	.info-list {
@@ -317,16 +233,24 @@
 		opacity: 0.7;
 	}
 
-	.info-tid, .info-sted, .info-hvem {
+	.info-tid {
+		background-image: url("bilder/Clock.svg");
+		padding-left: 28px;
+		background-repeat: no-repeat;
+		min-height: 24px;
+		line-height: 24px;
+		width: fit-content;
+		margin: 32px auto;
+		font-size: 20px;
+		color: var(--teal-light);
+	}
+
+	.info-sted, .info-hvem {
 		padding-left: 28px;
 		background-repeat: no-repeat;
 		min-height: 24px;
 		line-height: 24px;
 		margin: 8px 16px 0px 0px;
-	}
-
-	.info-tid {
-		background-image: url("bilder/Clock.svg");
 	}
 
 	.info-sted {
@@ -362,10 +286,6 @@
 	#video-background-right {
 		right: 0;
 	}
-
-	#video-background-left video, #video-background-right video{
-		
-	}	
 
 	#aboveit-logo path {
 		fill: var(--purple-dark);
@@ -410,13 +330,6 @@
 		animation: warpAway 5s ease-in-out forwards;
 		transform-origin: bottom center;
 		transform-style: preserve-3d;
-	}
-
-	@media only screen and (max-width: 1024px) {
-
-		.program-list li {
-			width: calc(50% - 16px);
-		}
 	}
 
 
@@ -470,14 +383,26 @@
 	    top: 98px;
 		}
 
-		.program-list {
-			display: flex;
-			flex-direction: column;
+		.program-content {
+    	flex-direction: column;
+  	}
+
+		.program-info {
+			width: 100%;
+			margin-bottom: 24px;
 		}
 
-		.program-list li {
-			width: 100%;
-			margin: 0 0 20px 0;
+		#video-background-left {
+			left: -30px;
+		}
+
+		#video-background-right {
+			right: -30px;
+		}
+
+		#section-program {
+			backdrop-filter: blur(6px);
+			-webkit-backdrop-filter: blur(6px);
 		}
 	  
 
