@@ -151,23 +151,27 @@
 		color: var(--teal-light);
 	}
 
+	.button-container {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 16px;
+	}
+
 	.button-style {
-		color: #fff;
+		color: var(--teal-light);
 		font-size: 24px;
 		padding: 16px 32px;
 		text-decoration: none;
 		transition: 200ms;
-		background: var(--teal);
 		font-family: "Exo 2", sans-serif;
 		cursor: pointer;
 		text-align: center;
 		font-style: italic;
-		border-radius: 2px;
+		border: 2px solid var(--purple-bright);
 	}
 
 	.button-style:hover {
 		animation: glow 1s ease-in-out infinite alternate-reverse;
-		border-color: var(--purple-bright);
 		text-shadow: 0 0 25px var(--teal-light);
 	}
 
