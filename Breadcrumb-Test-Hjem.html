@@ -4,6 +4,8 @@
 <title>Hjem – Bread</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
 <link rel="stylesheet" href="bread-style-2.css">
 
 </head>
@@ -17,7 +19,38 @@
 		
 
 	</main>
-	<footer></footer>
+	<footer>
+
+		<!--  ----------------------------------------------------------------------  -->
+		<!--  MERK: Legg til følgende <FORM>-element på siden.                        -->
+		<!--  ----------------------------------------------------------------------  -->
+
+		<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWV00000Gr5Et" method="POST">
+
+		<input type=hidden name="oid" value="00DWV00000Gr5Et">
+		<input type=hidden name="retURL" value="https://www.bufdir.no/">
+
+		<!--  ----------------------------------------------------------------------  -->
+		<!--  MERK: Disse feltene er valgfrie feilsøkingselementer. Fjern kommentar   -->
+		<!--  for disse linjene hvis du vil teste i feilsøkingsmodus.                 -->
+		<!--  <input type="hidden" name="debug" value=1>                              -->
+		<!--  <input type="hidden" name="debugEmail"                                  -->
+		<!--  value="staletorger.stokke@bufdir.no">                                   -->
+		<!--  ----------------------------------------------------------------------  -->
+
+		<label for="first_name">Fornavn</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+
+		<label for="last_name">Etternavn</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+
+		<label for="email">E-post</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+		<label for="city">Poststed</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
+
+		<input type="submit" name="submit">
+
+		</form>
+		
+	</footer>
 
 </body>
 </html>
