@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/0.9">
+  <url>
+    <loc>https://example.com/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://example.com/img/balkong-hero.jpg</image:loc>
+      <image:title>Balkong, Wilses gate 8A, Oslo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/kjokken-aeg.jpg</image:loc>
+      <image:title>HTH kjøkken fra 2020</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/kjokken-open.jpg</image:loc>
+      <image:title>Kjøkken mot entré med teglsten</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/kjokken-teak.jpg</image:loc>
+      <image:title>Teak-detalj</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/stue-vinduer.jpg</image:loc>
+      <image:title>Stue, takhøyde ca. 2,43 m</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/stue-spise.jpg</image:loc>
+      <image:title>Spiseplass</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/eik-akustikk.jpg</image:loc>
+      <image:title>Eik akustikkpanel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/soverom-bred.jpg</image:loc>
+      <image:title>Soverom mot miljøgate</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/soverom-seng.jpg</image:loc>
+      <image:title>Plassbygd garderobe i eik</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/soverom-garderobe.jpg</image:loc>
+      <image:title>Garderobe-detalj</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/bad-bred.jpg</image:loc>
+      <image:title>Bad fra 2019</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/entre-tegl.jpg</image:loc>
+      <image:title>Entré med teglsten</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/skyvedor.jpg</image:loc>
+      <image:title>Skyvedørsgarderobe</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/terrazzo-detalj.jpg</image:loc>
+      <image:title>Terrazzo møter parkett</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/balkong-tall.jpg</image:loc>
+      <image:title>Balkong, 3 m²</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/balkong-utgang.jpg</image:loc>
+      <image:title>Utgang fra kjøkken til balkong</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/balkong-bord.jpg</image:loc>
+      <image:title>Sommermorgen på balkongen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/plantegning.jpg</image:loc>
+      <image:title>Plantegning Wilses gate 8A</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/bakgaard.jpg</image:loc>
+      <image:title>Bakgården, Kristparken Borettslag</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/eff-eff.jpg</image:loc>
+      <image:title>EFF EFF Østers og vinbar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/nektar.jpg</image:loc>
+      <image:title>Nektar vin- og matbar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/mathallen.jpg</image:loc>
+      <image:title>Mathallen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/sthanshaugen.jpg</image:loc>
+      <image:title>St. Hanshaugen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/akerselva.jpg</image:loc>
+      <image:title>Akerselva</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/brostein.jpg</image:loc>
+      <image:title>Miljøgaten utenfor</image:title>
+    </image:image>
+  </url>
+</urlset>
