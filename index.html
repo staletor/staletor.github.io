@@ -150,8 +150,14 @@
   .meta-cell .k{font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mute);margin-bottom:8px}
   .meta-cell .v{font-family:var(--sans);font-size:24px;letter-spacing:-0.02em;font-weight:500}
   .meta-cell .v sup{font-size:14px;font-weight:400}
-  .hero-image{margin-top:48px;height:78vh;min-height:560px;overflow:hidden;border-radius:2px;position:relative}
-  .hero-image img{width:100%;height:100%;object-fit:cover}
+  .hero-pin-wrap{position:relative;margin-top:48px;height:calc(78vh + 600px);min-height:calc(560px + 600px)}
+  .hero-image{position:sticky;top:80px;height:78vh;min-height:560px;overflow:hidden;border-radius:2px}
+  .hero-image img{width:100%;height:100%;object-fit:cover;will-change:transform;transform-origin:center center}
+  @media (prefers-reduced-motion: reduce){
+    .hero-pin-wrap{height:auto;min-height:0}
+    .hero-image{position:relative}
+    .hero-image img{transform:none !important}
+  }
 
   /* ===== SECTION SCAFFOLD ===== */
   section{padding:120px 40px;max-width:1480px;margin:0 auto}
@@ -289,7 +295,8 @@
 
     .hero-grid{grid-template-columns:1fr 1fr;gap:16px;margin-bottom:36px}
     .hero h1{font-size:clamp(56px,10vw,128px)}
-    .hero-image{height:60vh;min-height:420px;margin-top:36px}
+    .hero-pin-wrap{margin-top:36px;height:calc(60vh + 600px);min-height:calc(420px + 600px)}
+    .hero-image{height:60vh;min-height:420px;margin-top:0;top:80px}
 
     .section-head{grid-template-columns:1fr;gap:16px;margin-bottom:44px}
     .intro{grid-template-columns:1fr;gap:24px}
@@ -348,7 +355,8 @@
     .hero-meta{grid-template-columns:repeat(2,1fr);gap:20px 16px;padding-top:14px}
     .meta-cell .v{font-size:18px}
     .meta-cell .v sup{font-size:11px}
-    .hero-image{height:auto;min-height:0;aspect-ratio:4/5;margin-top:28px}
+    .hero-pin-wrap{margin-top:28px;height:auto;min-height:0}
+    .hero-image{height:auto;min-height:0;aspect-ratio:4/5;margin-top:0;position:relative;top:auto}
 
     .section-head h2{font-size:clamp(36px,9vw,56px)}
 
@@ -459,8 +467,10 @@
       <div class="v">1898 · 5.</div>
     </div>
   </div>
-  <div class="hero-image">
-    <img src="img/balkong-hero.jpg" alt="Balkong med utsikt over bakgården" />
+  <div class="hero-pin-wrap">
+    <div class="hero-image">
+      <img src="img/balkong-hero.jpg" alt="Balkong med utsikt over bakgården" />
+    </div>
   </div>
 </section>
 
@@ -823,6 +833,30 @@
       if(el){ e.preventDefault(); window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 80, behavior:'smooth'}); }
     });
   });
+
+  // Hero image: scroll-pinned zoom — the image stays in place for a few hundred
+  // pixels of scroll while scaling up, then releases and the page continues.
+  (function(){
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if(window.innerWidth <= 640) return; // skip on mobile (image becomes portrait/static)
+    const wrap = document.querySelector('.hero-pin-wrap');
+    const img  = wrap && wrap.querySelector('img');
+    if(!wrap || !img) return;
+    const MAX_SCALE = 1.45;
+    let ticking = false;
+    const update = () => {
+      const rect = wrap.getBoundingClientRect();
+      const pinDistance = wrap.offsetHeight - (wrap.firstElementChild ? wrap.firstElementChild.offsetHeight : 0);
+      const scrolled = Math.max(0, -rect.top);
+      const progress = pinDistance > 0 ? Math.min(1, scrolled / pinDistance) : 0;
+      img.style.transform = `scale(${1 + progress * (MAX_SCALE - 1)})`;
+      ticking = false;
+    };
+    const onScroll = () => { if(!ticking){ requestAnimationFrame(update); ticking = true; } };
+    window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('resize', onScroll, {passive:true});
+    update();
+  })();
 
   // Page background color zones — transitions as you scroll past each section
   (function(){
