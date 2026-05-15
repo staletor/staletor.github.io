@@ -19,7 +19,7 @@
   "@type": "RealEstateListing",
   "name": "2 roms leilighet for salg — Wilses gate 8A",
   "description": "Fredfull, solrik oase i 5. etasje på Fredensborg. Forrige århundres sjarm møter moderne utførelse. HTH kjøkken (2020), bad (2019), solrik balkong med sol fra ca. 10–19.",
-  "datePosted": "2026-01-15",
+  "datePosted": "2026-05-18",
   "inLanguage": "nb-NO",
   "about": {
     "@type": "Apartment",
@@ -73,21 +73,29 @@
   }
   *{box-sizing:border-box}
   html{margin:0;padding:0;overflow-x:clip}
-  body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision;overflow-x:clip}
+  body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision;overflow-x:clip;transition:background-color 700ms ease}
+  body.bg-kjokken{background:#CE8E78;--mute:#4D2418}
+  body.bg-soverom{background:#BFD8C0;--mute:#2E5341}
+  body.bg-entre  {background:#F6E1A2;--mute:#6B5118}
+  /* Smooth color transitions for every element that uses var(--mute) */
+  .eyebrow,.meta-cell .k,.section-head .num,.kvalitet .n,.room-num,.plan-num,
+  .quote blockquote .open,.quote blockquote .close,.quote .attribution,
+  .nabolag-card .tag,.fakta-row .k,.kontakt .lede,.megler .title,
+  footer .row,[style*="var(--mute)"],[style*="--mute"]{transition:color 700ms ease}
   a{color:inherit;text-decoration:none}
   img{max-width:100%;display:block}
   ::selection{background:var(--ink);color:var(--bg)}
 
   /* ===== NAV ===== */
-  .nav{position:sticky;top:0;z-index:50;background:var(--bg);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
   .nav-inner{max-width:1480px;margin:0 auto;padding:18px 40px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:40px}
   .brand{font-family:var(--serif);font-style:italic;font-size:22px;letter-spacing:-0.01em}
   .brand b{font-family:var(--sans);font-style:normal;font-weight:700;letter-spacing:-0.02em}
   .nav ul{display:flex;gap:28px;justify-content:center;list-style:none;margin:0;padding:0;font-family:var(--mono);font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase}
   .nav ul a{opacity:.75;transition:opacity .2s}
   .nav ul a:hover{opacity:1}
-  .nav .cta{font-family:var(--mono);font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;padding:10px 16px;border:1px solid var(--ink);border-radius:999px;transition:all .2s;justify-self:end;white-space:nowrap;width:max-content}
-  .nav .cta:hover{background:var(--ink);color:var(--bg)}
+  .nav .cta{font-family:var(--mono);font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;padding:10px 16px;border:none;border-radius:999px;background:var(--ink);color:var(--bg);transition:all .2s;justify-self:end;white-space:nowrap;width:max-content}
+  .nav .cta:hover{background:var(--sage);color:var(--ink)}
 
   /* Hamburger button — hidden on desktop, centered on smaller screens */
   .nav .hamburger{display:none;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:transparent;border:none;padding:10px;color:var(--ink);cursor:pointer;display:none;align-items:center;justify-content:center;z-index:2}
@@ -99,18 +107,6 @@
 
   /* Mobile drawer */
   .nav .drawer{display:none}
-  @media (max-width:1024px){
-    .nav-inner{position:relative}
-    .nav .hamburger{display:inline-flex}
-    .nav .desktop-menu{display:none}
-    .nav .drawer{display:block;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);overflow:hidden;max-height:0;transition:max-height .35s ease}
-    .nav .drawer[data-open="true"]{max-height:80vh}
-    .nav .drawer ul{display:flex;flex-direction:column;gap:0;padding:8px 28px 28px;max-width:1480px;margin:0 auto;list-style:none;font-family:var(--mono);font-size:13px;letter-spacing:0.1em;text-transform:uppercase}
-    .nav .drawer ul li{border-bottom:1px solid var(--line)}
-    .nav .drawer ul li:last-child{border-bottom:none}
-    .nav .drawer ul a{display:block;padding:18px 4px;opacity:.85;transition:opacity .2s, padding-left .2s}
-    .nav .drawer ul a:hover{opacity:1;padding-left:10px}
-  }
 
   /* ===== HERO ===== */
   .hero{padding:60px 40px 40px;max-width:1480px;margin:0 auto}
@@ -129,13 +125,33 @@
   .hero h1 .row{display:block}
   .hero h1 .row.r2{text-align:right;padding-right:8%}
   .hero h1 .row.r3{padding-left:14%}
+
+  /* Hero H1 entrance animation */
+  @keyframes heroSlideFromRight{from{opacity:0;transform:translateX(80px);color:var(--row-from)}to{opacity:1;transform:translateX(0);color:var(--ink)}}
+  @keyframes heroSlideFromLeft{from{opacity:0;transform:translateX(-80px);color:var(--row-from)}to{opacity:1;transform:translateX(0);color:var(--ink)}}
+  @keyframes heroSlideFromRightWide{from{opacity:0;transform:translateX(90vw);color:var(--row-from)}to{opacity:1;transform:translateX(0);color:var(--ink)}}
+  @keyframes heroSlideFromLeftWide{from{opacity:0;transform:translateX(-90vw);color:var(--row-from)}to{opacity:1;transform:translateX(0);color:var(--ink)}}
+  @keyframes heroFadeIn{from{opacity:0;color:var(--row-from)}to{opacity:1;color:var(--ink)}}
+  .hero h1 .row.r1{--row-from:#BFD8C0;animation:heroSlideFromRight 900ms cubic-bezier(0.16,1,0.3,1) 500ms both}
+  .hero h1 .row.r2{--row-from:#F6E1A2;animation:heroSlideFromLeft 900ms cubic-bezier(0.16,1,0.3,1) 500ms both}
+  .hero h1 .row.r3{--row-from:#CE8E78;animation:heroFadeIn 900ms ease-out 950ms both}
+  @media (min-width: 641px){
+    .hero h1 .row.r1{animation:heroSlideFromRightWide 1500ms cubic-bezier(0.16,1,0.3,1) 500ms both}
+    .hero h1 .row.r2{animation:heroSlideFromLeftWide 1500ms cubic-bezier(0.16,1,0.3,1) 500ms both}
+    .hero h1 .row.r3{animation:heroFadeIn 900ms ease-out 1250ms both}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero h1 .row.r1,.hero h1 .row.r2,.hero h1 .row.r3{animation:none}
+  }
+  @media (min-width: 1025px){
+    .bad-pullquote{margin-left:auto}
+  }
   .hero-meta{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:start;padding-top:18px;border-top:1px solid var(--line)}
   .meta-cell .k{font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--mute);margin-bottom:8px}
   .meta-cell .v{font-family:var(--sans);font-size:24px;letter-spacing:-0.02em;font-weight:500}
   .meta-cell .v sup{font-size:14px;font-weight:400}
   .hero-image{margin-top:48px;height:78vh;min-height:560px;overflow:hidden;border-radius:2px;position:relative}
   .hero-image img{width:100%;height:100%;object-fit:cover}
-  .hero-image .cap{position:absolute;bottom:16px;left:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:0.12em;color:#f4efe2;background:#0006;padding:8px 12px;backdrop-filter:blur(8px);text-transform:uppercase}
 
   /* ===== SECTION SCAFFOLD ===== */
   section{padding:120px 40px;max-width:1480px;margin:0 auto}
@@ -150,7 +166,10 @@
   .intro .body{font-size:16px;line-height:1.62;color:var(--ink);max-width:48ch;text-wrap:pretty}
   .intro .body p{margin:0 0 18px}
   .kvaliteter{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:72px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .kvalitet{background:var(--bg);padding:36px 24px;display:flex;flex-direction:column;gap:6px}
+  .kvalitet{background:var(--bg);padding:36px 24px;display:flex;flex-direction:column;gap:6px;transition:background-color 700ms ease}
+  body.bg-kjokken .kvalitet{background:#CE8E78}
+  body.bg-soverom .kvalitet{background:#BFD8C0}
+  body.bg-entre   .kvalitet{background:#F6E1A2}
   .kvalitet .n{font-family:var(--mono);font-size:11px;letter-spacing:0.12em;color:var(--mute)}
   .kvalitet .t{font-family:var(--sans);font-weight:500;font-size:22px;letter-spacing:-0.02em}
 
@@ -163,7 +182,6 @@
   .room-body{font-size:16px;line-height:1.6;max-width:42ch;color:var(--ink);text-wrap:pretty}
   .img-box{overflow:hidden;border-radius:2px;position:relative}
   .img-box img{width:100%;height:100%;object-fit:cover;display:block}
-  .img-box .caption{position:absolute;bottom:12px;left:12px;right:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:0.08em;color:#f4efe2;background:#0006;padding:8px 10px;backdrop-filter:blur(6px);text-transform:uppercase}
 
   /* ===== PULL QUOTES ===== */
   .quote{padding:140px 40px;max-width:1480px;margin:0 auto;position:relative}
@@ -183,6 +201,9 @@
 
   /* ===== PLAN ===== */
   .plan{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:center;padding:80px 0}
+  .plan-info .plan-num{font-family:var(--mono);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mute);margin-bottom:24px}
+  .plan-info .plan-heading{margin:0 0 32px;font-family:var(--sans);font-weight:500;font-size:clamp(40px,5.6vw,84px);letter-spacing:-0.035em;line-height:.95}
+  .plan-info .plan-heading em{font-family:var(--serif);font-style:italic;font-weight:400}
   .plan-info h3{font-family:var(--sans);font-weight:500;font-size:48px;letter-spacing:-0.03em;margin:0 0 24px}
   .plan-info ul{list-style:none;padding:0;margin:0;display:grid;gap:12px;font-size:15px}
   .plan-info ul li{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:12px;letter-spacing:0.06em;text-transform:uppercase}
@@ -248,7 +269,16 @@
 
   /* ===== RESPONSIVE ===== */
   @media (max-width: 1024px){
-    .nav-inner{padding:16px 24px;gap:20px}
+    .nav-inner{padding:16px 24px;gap:20px;position:relative}
+    .nav .hamburger{display:inline-flex}
+    .nav .desktop-menu{display:none}
+    .nav .drawer{display:block;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);overflow:hidden;max-height:0;transition:max-height .35s ease}
+    .nav .drawer[data-open="true"]{max-height:80vh}
+    .nav .drawer ul{display:flex;flex-direction:column;gap:0;padding:8px 28px 28px;max-width:1480px;margin:0 auto;list-style:none;font-family:var(--mono);font-size:13px;letter-spacing:0.1em;text-transform:uppercase}
+    .nav .drawer ul li{border-bottom:1px solid var(--line)}
+    .nav .drawer ul li:last-child{border-bottom:none}
+    .nav .drawer ul a{display:block;padding:18px 4px;opacity:.85;transition:opacity .2s, padding-left .2s}
+    .nav .drawer ul a:hover{opacity:1;padding-left:10px}
 
     section{padding:80px 28px}
     .hero{padding:40px 28px 28px}
@@ -270,6 +300,7 @@
     .spread-grid{grid-template-columns:1fr;gap:16px}
     .spread-grid > *{grid-column:1 / -1 !important;padding-bottom:0 !important}
     .spread-grid + .spread-grid{margin-top:16px !important}
+    .spread-grid + .spread-grid.tomater-quote-row{margin-top:32px !important}
     .spread-grid .img-box + div{padding-top:64px}
 
     .gallery-grid{grid-template-columns:repeat(6,1fr);gap:14px}
@@ -364,7 +395,7 @@
   }
 </style>
 </head>
-<body style="background-color: rgb(247, 245, 243)">
+<body>
 
 <!-- NAV -->
 <header class="nav" data-screen-label="Nav">
@@ -383,7 +414,7 @@
     <button class="hamburger" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Meny">
       <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
     </button>
-    <a href="#kontakt" class="cta">Se annonse →</a>
+    <a href="https://www.finn.no/realestate/homes/preview.html?finnkode=463606146&secret=bdd23add0051db759bab07a7456ef980b5d2e7eb5f3817154adcdf57c4f7e366" target="_blank" rel="noopener" class="cta">Se annonse →</a>
   </div>
   <div class="drawer" id="mobile-drawer" data-open="false">
     <ul>
@@ -430,7 +461,6 @@
   </div>
   <div class="hero-image">
     <img src="img/balkong-hero.jpg" alt="Balkong med utsikt over bakgården" />
-    <div class="cap">01 — Balkong, Wilses gate 8A, Oslo</div>
   </div>
 </section>
 
@@ -458,120 +488,135 @@
   </div>
 </section>
 
-<!-- QUOTE 1 -->
-<section class="quote" data-screen-label="03 Sitat">
-  <div class="num" style="font-family:var(--mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mute);margin-bottom:36px">Sitat — selger</div>
-  <blockquote><span class="open">«</span>Jeg har suksessfullt dyrket <em style="font-style:italic">tomater</em> flere somre på rad takket være gode solforhold.<span class="close">»</span></blockquote>
-  <div class="attribution">— Om balkongen, sol fra 10 til 19</div>
-</section>
-
 <!-- KJØKKEN -->
-<section class="spread" id="rom" data-screen-label="04 Kjøkken">
+<section class="spread" id="rom" data-screen-label="03 Kjøkken">
   <div class="spread-grid">
     <div style="grid-column:1/6">
       <div class="room-num">№ 02 — Kjøkken</div>
       <h3 class="room-title">HTH, <em>eik</em><br/>& sortmatt.</h3>
-      <p class="room-body">Lekkert kjøkken fra 2020 med HTH-innredning, Siemens hvitevarer, AEG avtrekksvifte og Vola blandebatteri i rustfritt stål. Bak vask og platetopp er det bakplater i eik med treutskjæring. Gulvet er belagt med varmefolie.</p>
+      <p class="room-body">Lekkert kjøkken fra 2020 med HTH-innredning, Siemens hvitevarer, AEG avtrekksvifte og Vola blandebatteri i krom. Bak vask og platetopp er det bakplater i eik med treutskjæring. Gulvet er belagt med varmefolie.</p>
     </div>
     <div class="img-box" style="grid-column:6/13;aspect-ratio:4/5">
       <img src="img/kjokken-aeg.jpg" alt="Kjøkken med HTH-innredning og AEG"/>
-      <div class="caption">02.1 — HTH kjøkken fra 2020</div>
     </div>
   </div>
   <div class="spread-grid" style="margin-top:24px">
     <div class="img-box" style="grid-column:1/8;aspect-ratio:16/10">
       <img src="img/kjokken-open.jpg" alt="Kjøkken sett mot entré"/>
-      <div class="caption">02.2 — Kjøkken mot entré med teglsten</div>
     </div>
     <div class="img-box" style="grid-column:8/13;aspect-ratio:4/5">
       <img src="img/kjokken-teak.jpg" alt="Teak hyller og kjøkkendetalj"/>
-      <div class="caption">02.3 — Teak-detalj</div>
     </div>
   </div>
 </section>
 
 <!-- STUE -->
-<section class="spread" data-screen-label="05 Stue">
+<section class="spread" data-screen-label="04 Stue">
   <div class="spread-grid">
     <div class="img-box" style="grid-column:1/8;aspect-ratio:3/2">
       <img src="img/stue-vinduer.jpg" alt="Stue med store vinduer"/>
-      <div class="caption">03.1 — Stue, takhøyde ca. 2,43 m</div>
     </div>
     <div style="grid-column:8/13;padding-bottom:24px">
       <div class="room-num">№ 03 — Stue</div>
       <h3 class="room-title">Lys gjennom <em>dagen.</em></h3>
-      <p class="room-body">Rommets størrelse gir gode møbleringsmuligheter, med plass til både sofa- og TV-krok samt spisebord. Stuen har en egen og rolig plassering, samtidig som den henger godt sammen med kjøkkenet. Akustikkpanel med spiler binder rommene harmonisk sammen.</p>
+      <p class="room-body">Stuen har en egen og rolig plassering, samtidig som den henger godt sammen med kjøkkenet. Rommets størrelse gir gode møbleringsmuligheter, med god plass til sofa- og TV-krok. Akustikkpanel med spiler binder rommene harmonisk sammen.</p>
     </div>
   </div>
   <div class="spread-grid" style="margin-top:24px">
     <div class="img-box" style="grid-column:1/6;aspect-ratio:4/5">
-      <img src="img/stue-spise.jpg" alt="Spiseplass"/>
-      <div class="caption">03.2 — Plass for ekstra gjester</div>
+      <img src="img/eik-akustikk.jpg" alt="Eik akustikkpanel"/>
     </div>
     <div class="img-box" style="grid-column:6/13;aspect-ratio:3/2">
-      <img src="img/eik-akustikk.jpg" alt="Eik akustikkpanel"/>
-      <div class="caption">03.3 — Eik akustikkpanel</div>
+      <img src="img/stue-bred.jpg" alt="Stue, bredt utsyn"/>
     </div>
   </div>
 </section>
 
-<!-- QUOTE 2 -->
-<section class="quote" data-screen-label="06 Sitat">
-  <div class="num" style="font-family:var(--mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mute);margin-bottom:36px">Sitat — selger</div>
-  <blockquote style="padding-left:8%"><span class="open">«</span>Jeg ser på leiligheten som min <em style="font-style:italic">rolige oase</em> sentralt i Oslo.<span class="close">»</span></blockquote>
-  <div class="attribution" style="padding-left:8%">— Om hjemmet</div>
+<!-- SPISESTUE -->
+<section class="spread" data-screen-label="05 Spisestue">
+  <div class="spread-grid">
+    <div style="grid-column:1/5">
+      <div class="room-num">№ 04 — Spisestue</div>
+      <h3 class="room-title">Plass til <em>gjester.</em></h3>
+      <p class="room-body">Spisebordet får sin egen plass i forlengelsen av stuen, godt knyttet til kjøkkenet. Romslig nok til en lang søndagsfrokost eller middag med venner — og lyset følger gjennom hele dagen.</p>
+    </div>
+    <div class="img-box" style="grid-column:5/13;aspect-ratio:16/10">
+      <img src="img/spisestue.jpg" alt="Spiseplass med spisebord, stoler og teak-reol"/>
+    </div>
+  </div>
+  <div class="spread-grid" style="margin-top:24px">
+    <div class="img-box" style="grid-column:1/6;aspect-ratio:4/5">
+      <img src="img/spisestue-detalj.jpg" alt="Frokost: brød, kaffe og egg på bordet"/>
+    </div>
+    <div style="grid-column:7/13;padding-bottom:8px;align-self:end">
+      <blockquote style="margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(24px,2.6vw,34px);line-height:1.3;letter-spacing:-0.01em;max-width:24ch;color:var(--ink);text-wrap:pretty"><span style="color:var(--mute)">«</span>Jeg ser på leiligheten som min rolige oase sentralt i Oslo.<span style="color:var(--mute)">»</span></blockquote>
+      <div style="font-family:var(--mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mute);margin-top:18px">— Selger, om hjemmet</div>
+    </div>
+  </div>
 </section>
 
 <!-- SOVEROM -->
-<section class="spread" data-screen-label="07 Soverom">
+<section class="spread" id="soverom" data-screen-label="06 Soverom">
   <div class="spread-grid">
     <div style="grid-column:1/5">
-      <div class="room-num">№ 04 — Soverom</div>
+      <div class="room-num">№ 05 — Soverom</div>
       <h3 class="room-title" data-om-id="17e5e734:139">Her sover du <em>godt.</em></h3>
       <p class="room-body">Soverommet vender mot rolig miljøgate. Rundt sengen er det etablert en plassbygd garderobeløsning med skuffer, skap, nattbord og overhylle. Holder seg svalt selv på varme dager.</p>
     </div>
     <div class="img-box" style="grid-column:5/13;aspect-ratio:16/10">
       <img src="img/soverom-bred.jpg" alt="Soverom"/>
-      <div class="caption">04.1 — Soverom mot miljøgate</div>
     </div>
   </div>
   <div class="spread-grid" style="margin-top:24px">
     <div class="img-box" style="grid-column:1/8;aspect-ratio:3/2">
       <img src="img/soverom-seng.jpg" alt="Plassbygd garderobeløsning" data-om-id="17e5e734:147"/>
-      <div class="caption">04.2 — Plassbygd garderobe i eik</div>
     </div>
     <div class="img-box" style="grid-column:8/13;aspect-ratio:4/5">
       <img src="img/soverom-garderobe.jpg" alt="Garderobe-detalj" style="object-position:25% center" data-om-id="17e5e734:150"/>
-      <div class="caption">04.3 — Detalj</div>
     </div>
   </div>
 </section>
 
-<!-- BAD + ENTRÉ -->
-<section class="spread" data-screen-label="08 Bad og entré">
+<!-- BAD -->
+<section class="spread" data-screen-label="07 Bad">
   <div class="spread-grid">
-    <div class="img-box" style="grid-column:1/8;aspect-ratio:3/2">
+    <div class="img-box" style="grid-column:1/7;aspect-ratio:3/2">
       <img src="img/bad-bred.jpg" alt="Bad fra 2019" data-om-id="17e5e734:155"/>
-      <div class="caption">05.1 — Bad fra 2019</div>
     </div>
-    <div style="grid-column:8/13;padding-bottom:24px">
-      <div class="room-num">№ 05 — Bad &amp; entré</div>
-      <h3 class="room-title">Detaljer som <em>varer.</em></h3>
-      <p class="room-body">Pent flislagt baderom fra 2019 med servant fra Kuma i kompositt, Vola blandebatteri og HTH-skuffer. Første møte med boligen er en lekker entré med støpt terrazzogulv og dørkarm i eik — innrammet av selgers framhentede teglsten, «ruinen min».</p>
+    <div style="grid-column:7/13;padding-bottom:8px;align-self:end">
+      <div class="room-num">№ 06 — Bad</div>
+      <h3 class="room-title">Stilrent, mykt, <em>moderne.</em></h3>
+      <p class="room-body">Pent flislagt baderom fra 2019 med servant fra Kuma i kompositt, Vola blandebatteri og HTH-skuffer. Lekkre materialer og skårne løsninger gir et bad som både fungerer i hverdagen og holder seg vakkert over tid.</p>
     </div>
   </div>
   <div class="spread-grid" style="margin-top:24px">
-    <div class="img-box" style="grid-column:1/5;aspect-ratio:3/4">
+    <div style="grid-column:1/7;padding-bottom:8px;align-self:end">
+      <p class="room-body bad-pullquote" style="font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.4vw,30px);line-height:1.35;letter-spacing:-0.01em;max-width:28ch;color:var(--ink)">Krom, kompositt og mørke fliser — valgt for å vare.</p>
+    </div>
+    <div class="img-box" style="grid-column:7/13;aspect-ratio:3/2">
+      <img src="img/bad-detalj-vola.jpg" alt="Vola blandebatteri og Kuma-servant"/>
+    </div>
+  </div>
+</section>
+
+<!-- ENTRÉ -->
+<section class="spread" id="entre" data-screen-label="08 Entré">
+  <div class="spread-grid">
+    <div style="grid-column:1/5">
+      <div class="room-num">№ 07 — Entré</div>
+      <h3 class="room-title">Ruinen <em>min.</em></h3>
+      <p class="room-body">Første møte med boligen er en lekker entré med støpt terrazzogulv og dørkarm i eik — innrammet av selgers framhentede teglsten, «ruinen min». En kontrast mot den moderne, rene stilen ellers i leiligheten.</p>
+    </div>
+    <div class="img-box" style="grid-column:5/13;aspect-ratio:16/10">
       <img src="img/entre-tegl.jpg" alt="Entré med teglsten" data-om-id="17e5e734:164"/>
-      <div class="caption">05.2 — Entré med teglsten</div>
     </div>
-    <div class="img-box" style="grid-column:5/9;aspect-ratio:3/4">
+  </div>
+  <div class="spread-grid" style="margin-top:24px">
+    <div class="img-box" style="grid-column:1/7;aspect-ratio:3/4">
       <img src="img/skyvedor.jpg" alt="Skyvedørsgarderobe"/>
-      <div class="caption">05.3 — Skyvedørsgarderobe</div>
     </div>
-    <div class="img-box" style="grid-column:9/13;aspect-ratio:3/4">
+    <div class="img-box" style="grid-column:7/13;aspect-ratio:3/4">
       <img src="img/terrazzo-detalj.jpg" alt="Terrazzo og parkett"/>
-      <div class="caption">05.4 — Terrazzo møter parkett</div>
     </div>
   </div>
 </section>
@@ -587,36 +632,37 @@
 <section class="spread" data-screen-label="10 Balkong">
   <div class="spread-grid">
     <div style="grid-column:1/5">
-      <div class="room-num">№ 06 — Balkong</div>
+      <div class="room-num">№ 08 — Balkong</div>
       <h3 class="room-title">Sol fra <em>10</em> til <em>19.</em></h3>
       <p class="room-body">Balkongen vender mot rolig indre gårdsrom, og selger opplyser om sol fra ca. 10.00 til 19.00 på sommerstid. Her bor du høyt og fritt i 5. etasje med svært lite innsyn. Plass til både soling, frokost og en liten urtehage.</p>
     </div>
-    <div class="img-box" style="grid-column:5/13;aspect-ratio:21/9">
-      <img src="img/balkong-tall.jpg" alt="Balkong med planter"/>
-      <div class="caption">06.1 — Balkong, 3 m²</div>
+    <div class="img-box" style="grid-column:5/13;aspect-ratio:6/7">
+      <img src="img/balkong-portrett.jpg" alt="Balkong med planter og utsikt over takene"/>
     </div>
   </div>
   <div class="spread-grid" style="margin-top:24px">
     <div class="img-box" style="grid-column:1/8;aspect-ratio:3/2">
       <img src="img/balkong-utgang.jpg" alt="Utgang til balkong"/>
-      <div class="caption">06.2 — Utgang fra kjøkken</div>
     </div>
     <div class="img-box" style="grid-column:8/13;aspect-ratio:4/5">
       <img src="img/balkong-bord.jpg" alt="Frokost på balkongen"/>
-      <div class="caption">06.3 — Sommermorgen</div>
+    </div>
+  </div>
+  <div class="spread-grid tomater-quote-row" style="margin-top:112px">
+    <div style="grid-column:3/12">
+      <blockquote style="margin:0;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(30px,4vw,60px);line-height:1.08;letter-spacing:-0.02em;text-wrap:balance"><span style="color:var(--mute)">«</span>Jeg har suksessfullt dyrket <em style="font-style:italic">tomater</em> flere somre på rad takket være gode solforhold.<span style="color:var(--mute)">»</span></blockquote>
+      <div style="font-family:var(--mono);font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mute);margin-top:24px">— Selger, om balkongen</div>
     </div>
   </div>
 </section>
 
 <!-- PLAN -->
 <section id="plan" data-screen-label="11 Plantegning">
-  <div class="section-head">
-    <div class="num">№ 02 — Plantegning</div>
-    <h2>52 m² <em>uten dødplass.</em></h2>
-  </div>
   <div class="plan">
     <div class="plan-info">
-      <h3 style="font-family:var(--serif);font-style:italic;font-weight:400">«Velutnyttet planløsning hvor ingen rom føles trange.»</h3>
+      <div class="num plan-num">№ 02 — Plantegning</div>
+      <h2 class="plan-heading">52 m² <em>uten dødplass.</em></h2>
+      <p class="room-body">Velutnyttet planløsning hvor ingen rom føles trange.</p>
     </div>
     <div class="plan-img">
       <img src="img/plantegning.jpg" alt="Plantegning Wilses gate 8A" />
@@ -633,7 +679,6 @@
   <div class="borettslag">
     <div class="big img-box">
       <img src="img/bakgaard.jpg" alt="Bakgården"/>
-      <div class="caption">07.1 — Bakgården, opparbeidet med heller og brostein</div>
     </div>
     <div class="text">
       <div>
@@ -733,7 +778,7 @@
       <h2>Se annonsen på <em>finn.no</em></h2>
       <p class="lede">Bilder, salgsoppgave, visningstider og budskjema — alt samlet ett sted.</p>
       <div class="kontakt-cta">
-        <a class="btn solid" href="#" target="_blank" rel="noopener">Åpne på finn.no →</a>
+        <a class="btn solid" href="https://www.finn.no/realestate/homes/preview.html?finnkode=463606146&secret=bdd23add0051db759bab07a7456ef980b5d2e7eb5f3817154adcdf57c4f7e366" target="_blank" rel="noopener">Åpne på finn.no →</a>
       </div>
     </div>
   </div>
@@ -778,6 +823,41 @@
       if(el){ e.preventDefault(); window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 80, behavior:'smooth'}); }
     });
   });
+
+  // Page background color zones — transitions as you scroll past each section
+  (function(){
+    // Ordered zones: each one activates when its element's top crosses the viewport center.
+    // The last zone here (#plan) clears the class — it represents "back to default".
+    const zones = [
+      {id: 'rom',     className: 'bg-kjokken'}, // Kjøkken → terracotta
+      {id: 'soverom', className: 'bg-soverom'}, // Soverom → mint
+      {id: 'entre',   className: 'bg-entre'},   // Entré   → warm yellow
+      {id: 'plan',    className: null}          // Plantegning → default
+    ].map(z => ({...z, el: document.getElementById(z.id)})).filter(z => z.el);
+    if(!zones.length) return;
+    const allClasses = zones.map(z => z.className).filter(Boolean);
+    let ticking = false, current = null;
+    const update = () => {
+      const trigger = window.innerHeight * 0.5;
+      // Walk from last to first; the deepest section whose top has passed the trigger wins.
+      let active = null;
+      for(let i = zones.length - 1; i >= 0; i--){
+        if(zones[i].el.getBoundingClientRect().top <= trigger){ active = zones[i].className; break; }
+      }
+      if(active !== current){
+        allClasses.forEach(c => document.body.classList.remove(c));
+        if(active) document.body.classList.add(active);
+        current = active;
+      }
+      ticking = false;
+    };
+    const onScroll = () => {
+      if(!ticking){ requestAnimationFrame(update); ticking = true; }
+    };
+    window.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('resize', onScroll, {passive:true});
+    update();
+  })();
 </script>
 </body>
 </html>

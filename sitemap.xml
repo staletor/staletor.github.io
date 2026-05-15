@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/0.9">
   <url>
     <loc>https://example.com/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -27,12 +27,20 @@
       <image:title>Stue, takhøyde ca. 2,43 m</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://example.com/img/stue-spise.jpg</image:loc>
-      <image:title>Spiseplass</image:title>
-    </image:image>
-    <image:image>
       <image:loc>https://example.com/img/eik-akustikk.jpg</image:loc>
       <image:title>Eik akustikkpanel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/stue-bred.jpg</image:loc>
+      <image:title>Stue mot vinduer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/spisestue.jpg</image:loc>
+      <image:title>Spiseplass for hele gjengen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://example.com/img/spisestue-detalj.jpg</image:loc>
+      <image:title>Frokost med Chemex</image:title>
     </image:image>
     <image:image>
       <image:loc>https://example.com/img/soverom-bred.jpg</image:loc>
@@ -51,6 +59,10 @@
       <image:title>Bad fra 2019</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://example.com/img/bad-detalj-vola.jpg</image:loc>
+      <image:title>Vola blandebatteri og Kuma vask</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://example.com/img/entre-tegl.jpg</image:loc>
       <image:title>Entré med teglsten</image:title>
     </image:image>
@@ -63,8 +75,8 @@
       <image:title>Terrazzo møter parkett</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://example.com/img/balkong-tall.jpg</image:loc>
-      <image:title>Balkong, 3 m²</image:title>
+      <image:loc>https://example.com/img/balkong-portrett.jpg</image:loc>
+      <image:title>Balkong, 3 m² — utsikt over takene</image:title>
     </image:image>
     <image:image>
       <image:loc>https://example.com/img/balkong-utgang.jpg</image:loc>
