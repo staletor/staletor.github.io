@@ -36,4 +36,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: /sitemap.xml
+Sitemap: https://ststokke.com/sitemap.xml
